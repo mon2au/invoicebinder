@@ -1,0 +1,393 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/08/2014, 3:58:56 PM
+    Author     : msushil
+*/
+
+/*// <editor-fold defaultstate="collapsed" desc="Invoice Styles - Default"> */
+
+.standardinvoice-main-header {
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+.standardinvoice-content-column {
+    vertical-align: top;    
+    width:50%;
+}
+
+.standardinvoice-component-header {
+    border: solid 1px #3c342e;
+    background-color: #777777;
+    color: #ffffff;
+    padding: 2px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;    
+}
+
+.standardinvoice-item-header {
+    border: solid 1px black;
+    background-color: #3c342e;
+    color: #ffffff; 
+    padding: 2px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;    
+}
+
+.standardinvoice-totals {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    background-color: #3c342e;
+    color: #ffffff; 
+    padding: 2px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;      
+}
+
+/*// </editor-fold>  */
+
+/*// <editor-fold defaultstate="collapsed" desc="Invoice Styles - Professional"> */
+
+.professionalinvoice-main-header {
+    font-size: 20px;
+    font-weight: bold; 
+    border: solid 1px darkred;
+    font-family:sans-serif;
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+    background-color:#FF0000;
+    color:#ffffff;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */    
+}
+
+.professionalinvoice-content-column {
+    vertical-align: top;    
+    width:50%;
+}
+
+.professionalinvoice-component-header {
+    border-bottom: solid 1px gray;
+    color: #ff0000; 
+    padding: 0px;
+    font-family:serif;   
+    font-weight: bold;
+    font-size: 12px;    
+    padding-left: 0px;
+    padding-right: 0px;    
+}
+
+.professionalinvoice-item-header {
+    border-bottom: solid 1px gray;
+    color: #ff0000; 
+    padding: 0px;
+    font-family:serif;   
+    font-weight: bold;
+    font-size: 12px;    
+    padding-left: 0px;
+    padding-right: 0px;    
+}
+
+.professionalinvoice-totals {
+    border-bottom: solid 1px gray;
+    color: #ff0000; 
+    padding: 0px;
+    font-family:serif;   
+    font-weight: bold;
+    font-size: 12px;    
+    padding-left: 0px;
+    padding-right: 0px;     
+}
+
+.professionalinvoice-red-box {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.professionalinvoice-box {
+    border-left: solid 1px gray;    
+    border-bottom: solid 1px gray;  
+    border-right: solid 1px gray;      
+    height:70px;
+    font-family:sans-serif;
+    font-size: 16px;        
+}
+
+.professionalinvoice-standard-box {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.professionalinvoice-section-top {
+    border-top: solid 1px gray; 
+    width:100%;   
+}
+
+.professionalinvoice-box-header {
+    margin: 0 auto; 
+    text-align:center;
+    text-transform:capitalize;
+    font-family:monospace;
+    font-size: 10px;
+    font-weight:900;     
+    padding: 10px;
+}
+
+.professionalinvoice-box-value {
+    margin: 0 auto; 
+    text-align: center;
+    text-transform:capitalize;
+    font-family:sans-serif;
+    font-size: 16px;
+    font-weight:900;     
+    width: 100%;
+    display:block;
+}
+
+.professionalinvoice-billtotext {
+    margin-top: 5px;    
+    font-family:sans-serif;
+    font-size: 16px;
+}
+
+/*// </editor-fold>  */
+
+/*// <editor-fold defaultstate="collapsed" desc="Invoice Styles - Minimalist"> */
+
+.minimalistinvoice-main-header {
+    font-size: 20px;
+    font-weight: bold; 
+    font-family: sans-serif;
+}
+
+.minimalistinvoice-content-column {
+    vertical-align: top;    
+    width:50%;
+}
+
+.minimlistinvoice-text {
+    font-family:calibri;
+    font-size: 14px;
+}
+
+.minimalistinvoice-component-header {
+    border-bottom: solid 2px #3c342e;
+    text-transform: uppercase;
+    padding: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;    
+}
+
+.minimalistinvoice-item-header {
+    border-bottom: solid 2px black;
+    padding: 2px;
+    text-transform: uppercase;  
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;    
+}
+
+.minimalistinvoice-totals {
+    border-top: solid 1px black;
+    border-bottom: solid 2px black;
+    padding: 2px;
+    text-transform: uppercase;  
+    font-size: 14px;    
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;      
+}
+
+/*// </editor-fold>  */
+
+/*// <editor-fold defaultstate="collapsed" desc="Invoice Styles - Artistic"> */
+
+.artisticinvoice-main-header {
+    font-size: 20px;
+    font-weight: bold; 
+    font-family: 'Courgette', cursive;
+    font-style: italic;
+}
+
+.artisticinvoice-content-column {
+    vertical-align: top;    
+    width:50%;
+}
+
+.artisticinvoice-text {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.artisticinvoice-component-header {
+    background-color: #E0E0E3;
+    border-top: solid 1px black;    
+    border-bottom: solid 1px #3c342e;
+    padding: 2px;
+    font-size: 14px;
+    color:#2F4F4F;        
+    font-family: 'Courgette', cursive;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;    
+}
+
+.artisticinvoice-item-header {
+    background-color: #E0E0E3;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    padding: 2px;
+    color:#2F4F4F;   
+    font-family: 'Courgette', cursive;    
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;    
+}
+
+.artisticinvoice-totals {
+    background-color: #E0E0E3;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    padding: 2px;
+    font-family: 'Courgette', cursive;    
+    color:#2F4F4F;  
+    text-transform: uppercase;  
+    font-size: 14px;    
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;      
+}
+
+/*// </editor-fold>  */
+
+/*// <editor-fold defaultstate="collapsed" desc="View Invoice"> */
+
+.invoice-main-container {
+    border: 1px solid #3c342e; 
+    padding:30px;
+    -moz-box-shadow: 0 0 3px 3px #999;
+    -webkit-box-shadow: 0 0 3px 3px #999;
+    background-color: #ffffff;    
+}
+
+.invoice-inner-container {
+    width: 800px;
+    height: 1100px;    
+    background-color: #ffffff;
+}
+
+.view-invoice-actions {
+    margin-left: 30px;
+    width:300px;
+}
+
+.view-invoice-actions td {
+    text-align:left;
+}
+
+.action-label {
+    text-transform:capitalize;
+    font-weight: bold;    
+    font-size: 10px;
+}
+
+.action-img { 
+    vertical-align: text-top;
+}
+
+.action-label:hover { 
+    text-decoration: underline;
+    text-decoration-color: #777777;  
+    color: #777777;
+}
+
+.print-preview {
+    background-color: #ffffff;    
+    margin-right: 15px;    
+    padding: 15px;
+}
+
+.business-logo {
+    height: 120px;
+    width:240px;
+    border: 1px solid gray;
+}
+
+.invoice-logo {
+    height: 120px;
+    width:240px;
+}
+
+.invoice-status { 
+    font-size: 16px;
+    font-weight: bold;
+    position: relative; 
+    left: -0.3em; 
+    bottom: -0.6em; 
+    padding: 1px 0.5em; 
+    margin: 0; 
+    text-transform: uppercase;
+    border-style: solid; 
+    border-width: 1px 1px 1px 0.8em;  
+    border-color: #9c8b7e #9c8b7e #9c8b7e #9c8b7e;
+    background-color: #3c342e;
+    color: #ffffff;
+    width: 140px;
+}
+
+/*// </editor-fold>  */
+
+/*// <editor-fold defaultstate="collapsed" desc="Invoice Template Styles"> */
+.invoice-template-active {
+    background-color: #00ff00;    
+}
+
+.invoice-template {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-transform:capitalize;
+    font-weight: bold;  
+    color: #2F4F4F;
+    font-size: 10px; 
+}
+
+.invoice-template-inactive {
+    background-color: #63D1F4;    
+}
+
+.invoice-template-preview {
+    width: 530px;
+    height: 681px;
+    margin-top: 25px;
+    padding: 0px;
+    border: solid 1px gray;
+}
+
+.invoice-template-container {
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px;
+}
+
+.invoice-template-container-selected {
+    background-color:rgb(156, 139, 126);
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px #2F4F4F;
+}
+/*// </editor-fold>  */

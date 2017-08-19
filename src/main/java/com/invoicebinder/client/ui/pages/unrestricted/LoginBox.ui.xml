@@ -1,0 +1,319 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+        input, button, label {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        }
+
+        input[type=text], input[type=password] {
+        padding: 0 10px;
+        width: 300px;
+        height: 40px;
+        color: #bbb;
+        text-shadow: 1px 1px 1px black;
+        background: rgba(0, 0, 0, 0.16);
+        border: 0;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+        }
+        
+        input[type=text]:focus, input[type=password]:focus {
+        color: white;
+        background: rgba(0, 0, 0, 0.1);
+        outline: 0;
+        }
+        
+        #loginMainDiv, #forgotMainDiv, #forgotpasssubmit, #loginsubmit, #loginsubmit:before, #loginsubmit:after, #forgotpasssubmit:before, #forgotpasssubmit:after {
+        background: #373737 url("images/misc/bg.png") 0 0 repeat;
+        }
+        
+        #loginform {
+        position: relative;
+        margin: 80px auto;
+        width: 400px;
+        padding-right: 32px;
+        font-weight: 300;
+        color: #a8a7a8;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+        }
+        
+        #forgotpassform {
+        position: relative;
+        margin: 80px auto;
+        width: 400px;
+        padding-right: 32px;
+        font-weight: 300;
+        color: #a8a7a8;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+        }        
+        
+        #loginform p {
+        margin: 0 0 10px;
+        }
+        
+        #forgotpassform p {
+        margin: 0 0 10px;
+        }
+                
+        #loginsubmit, #loginsubmit:before, #loginsubmit:after, #forgotpasssubmit, #forgotpasssubmit:before, #forgotpasssubmit:after {
+        background: #373737 url("images/misc/bg.png") 0 0 repeat;
+        }
+        
+        label {
+        float: left;
+        width: 100px;
+        line-height: 40px;
+        padding-right: 10px;
+        font-weight: 100;
+        text-align: right;
+        letter-spacing: 1px;
+        }
+        
+        #loginbutton {
+        position: relative;
+        z-index: 2;
+        width: 48px;
+        height: 48px;
+        padding: 0 0 48px;
+        text-indent: 120%;
+        white-space: nowrap;
+        overflow: hidden;
+        background: none;
+        border-radius: 24px;
+        cursor: pointer;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.1);
+        }  
+        
+        #loginbutton:before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        left: 5px;
+        right: 5px;
+        background: #00a2d3;
+        border-radius: 24px;
+        background-image: -webkit-linear-gradient(top, #00a2d3, #0d7796);
+        background-image: -moz-linear-gradient(top, #00a2d3, #0d7796);
+        background-image: -o-linear-gradient(top, #00a2d3, #0d7796);
+        background-image: linear-gradient(to bottom, #00a2d3, #0d7796);
+        -webkit-box-shadow: inset 0 0 0 1px #00a2d3, 0 0 0 5px rgba(0, 0, 0, 0.16);
+        box-shadow: inset 0 0 0 1px #00a2d3, 0 0 0 5px rgba(0, 0, 0, 0.16);
+        }
+        
+        #loginbutton:active:before {
+        background: #0591ba;
+        background-image: -webkit-linear-gradient(top, #0591ba, #00a2d3);
+        background-image: -moz-linear-gradient(top, #0591ba, #00a2d3);
+        background-image: -o-linear-gradient(top, #0591ba, #00a2d3);
+        background-image: linear-gradient(to bottom, #0591ba, #00a2d3);
+        }
+        
+        #loginbutton:after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        width: 25px;
+        height: 19px;
+        background: url("images/icons/arrow.png") 0 0 no-repeat;
+        }  
+        
+        #cancelbutton {
+        position: relative;
+        z-index: 2;
+        width: 30px;
+        height: 30px;
+        padding: 0 0 0px;
+        text-indent: 120%;
+        white-space: nowrap;
+        overflow: hidden;
+        background: none;
+        border-radius: 28px;
+        cursor: pointer;
+        -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0), 0 0px rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0), 0 0px rgba(255, 255, 255, 0.1);
+        }  
+        
+        #cancelbutton:before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        border-radius: 30px;
+        background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+        background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+        background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+        background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+        }
+        
+        #cancelbutton:active:before {
+        background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+        background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+        background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+        background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+        }
+        
+        #cancelbutton:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 28px;
+        height: 28px;
+        background: url("images/icons/cancel.png") 0 0 no-repeat;
+        }  
+        
+         #returnlogin,  #forgotpassword {
+        padding-left: 100px;
+        font-size: 13px;
+        font-weight: 100;
+        letter-spacing: 1px;
+        }
+
+        #loginsubmit {
+        position: absolute;
+        top: 12px;
+        right: 0;
+        width: 48px;
+        height: 48px;
+        padding: 8px;
+        border-radius: 32px;
+        -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+        }
+        
+        #forgotpasssubmit {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 48px;
+        height: 48px;
+        padding: 8px;
+        border-radius: 32px;
+        -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+        }
+        
+        #cancelsubmit {
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        width: 28px;
+        height: 28px;
+        padding: 2px;
+        border-radius: 22px;
+        -webkit-box-shadow: 0 0 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0.35);
+        }
+        
+        #forgotpasssubmit:before, #loginsubmit:before, .login-submit:after {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        }
+        
+        #forgotpasssubmit:before, #loginsubmit:before {
+        top: 28px;
+        left: -4px;
+        width: 4px;
+        height: 10px;
+        -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+        }
+        
+        #forgotpasssubmit:after, #loginsubmit:after {
+        top: -4px;
+        bottom: -4px;
+        right: -4px;
+        width: 36px;
+        }
+                
+        #loginMainDiv {
+        padding: 1px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        border: 1px solid #000000;
+        }
+        
+        #loginMainDiv a:link, #loginMainDiv a:visited, #loginMainDiv a:hover, #loginMainDiv a:active  {
+            color: #ffffff;
+        }
+        
+        #forgotMainDiv {
+        padding: 1px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        border: 1px solid #000000;
+        }
+          
+        #forgotMainDiv a:link, #forgotMainDiv a:visited, #forgotMainDiv a:hover, #forgotMainDiv a:active  {
+            color: #ffffff;
+        }        
+              
+    </ui:style>
+    <g:HTMLPanel>
+        <g:HTMLPanel ui:field="loginPanel">
+            <div id="loginMainDiv">
+                <p id="cancelsubmit">
+                    <g:Button ui:field="cancelLoginButton">Cancel</g:Button>
+                </p>
+                <form id="loginform">
+                    <p>
+                        <label for="login">Login:</label>
+                        <g:TextBox ui:field="login"></g:TextBox>
+                    </p>
+                    <p>
+                        <label for="password">Password:</label>
+                        <g:PasswordTextBox ui:field="password"></g:PasswordTextBox>
+                    </p>
+                    <p id="loginsubmit">
+                        <g:Button ui:field="loginButton">Login</g:Button>
+                    </p>
+                    <p id="forgotpassword">
+                        <g:Anchor ui:field="forgotPassword"></g:Anchor>
+                    </p>
+                    <p id="messagearea">
+                        <g:Label ui:field="loginMessage"></g:Label>
+                    </p>
+                </form>
+            </div>
+        </g:HTMLPanel>
+        <g:HTMLPanel ui:field="forgotPasswordPanel">    
+            <div id="forgotMainDiv">
+                <p id="cancelsubmit">
+                    <g:Button ui:field="cancelForgotButton">Cancel</g:Button>
+                </p>
+                <form id="forgotpassform">
+                    <p>Enter your username or email address.</p>
+                    <p>
+                        <label for="login">Login/Email:</label>
+                        <g:TextBox ui:field="userNameOrEmail"></g:TextBox>                        
+                    </p>
+                    <p id="forgotpasssubmit">
+                        <g:Button ui:field="forgotPasswordButton">Submit</g:Button>                        
+                    </p>
+                    <p id="returnlogin">
+                        <g:Anchor ui:field="returnToLogin"></g:Anchor>
+                    </p>
+                    <p id="messagearea">
+                        <g:Label ui:field="forgotPasswordMessage"></g:Label>                        
+                    </p>
+                </form>
+            </div>        
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,56 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+        @external .content;
+        @external .imgstyle;
+
+        .content {
+	width: 800px;
+	margin: 0px auto;
+        }
+        
+        .imgstyle {
+	border-radius: 5px;
+        border: solid 1px #3c342e;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="container">
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <h5><span>polishing</span></h5>
+                            <div class="content">
+                                <p>
+                                    <img class="imgstyle" src="images/pic01.jpg" width="800" height="300" alt="" />
+                                </p>
+                                <p>
+                                    This is <strong>Mini-Break </strong>, a free, fully standards-compliant CSS template designed by <a href="http://www.freecsstemplates.org">FCT</a>.   The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attributions 3.0</a> license, so you are pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)						
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <h5><span>cleaning</span></h5>
+                            <div class="content">
+                                <p>
+                                    <img class="imgstyle" src="images/pic02.jpg" width="800" height="300" alt="" />
+                                </p>
+                                <p>    
+                                    Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus. Pellentesque ornare, consectetuer nisl felis ac diam. Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. Mauris vitae nisl nec metus placerat consectetuer. Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget, tempus et, tellus. Etiam neque. Vivamus consequat lorem at nisl. Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Duis pretium velit ac mauris. Proin eu wisi suscipit nulla suscipit interdum. Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<br />
+                                </p>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

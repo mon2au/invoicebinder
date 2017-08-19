@@ -1,0 +1,50 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div id="window">
+            <div id="toolbar">
+                <div class="top">
+                    <div id="lights">
+                        <div class="light red">
+                            <div class="glyph">×</div>
+                            <div class="shine"></div>
+                            <div class="glow"></div>
+                        </div>				
+                        <div class="light yellow">
+                            <div class="glyph">-</div>
+                            <div class="shine"></div>
+                            <div class="glow"></div>
+                        </div>
+                        <div class="light green">
+                            <div class="glyph">+</div>
+                            <div class="shine"></div>
+                            <div class="glow"></div>
+                        </div>
+                    </div>
+                    <div id="title">
+                        <div class="folder">
+                            <div class="tab"></div>
+                            <div class="body"></div>
+                        </div>
+                        Installation Process
+                    </div>
+                    <div id="bubble">
+                        <div class="shine"></div>
+                        <div class="glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="body">
+                <g:HTMLPanel ui:field="terminalContent"></g:HTMLPanel>	
+                <div class="cursor"></div>
+            </div>	
+        </div>    
+    </g:HTMLPanel>           
+</ui:UiBinder>

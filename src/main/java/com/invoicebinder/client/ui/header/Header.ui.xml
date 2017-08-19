@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+        @external .container;    
+        @external .slogan;
+        @external .logoImage;
+                                    
+        .container {
+        width: 1200px;
+        margin: 0px auto;
+        }
+
+        .slogan {
+        text-align: center;
+        margin-top: -10px;
+        padding: 0px 0px 0px 5px;
+        font-size: 20px;
+        font-weight: 300;
+        color: #696969;
+        }
+        
+        .logoImage {
+            position: absolute;
+            left: 30px; 
+            top: 20px;
+            width:240px;
+            height:120px;
+        }
+    </ui:style>
+    <g:HTMLPanel ui:field="mainPanel">
+        <div class="container">
+            <div class="logoImage"><img src="logo/logo.png"></img></div>
+            <h1 class="title">prestige car detailing</h1>
+            <p class="slogan">Feel the magic of prestige car detailing. You'll feel better in a clean car.</p>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder> 

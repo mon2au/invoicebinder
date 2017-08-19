@@ -1,0 +1,2 @@
+delimiter $$
+CREATE DATABASE IF NOT EXISTS `sys_signupdb` /*!40100 DEFAULT CHARACTER SET utf8 */$$

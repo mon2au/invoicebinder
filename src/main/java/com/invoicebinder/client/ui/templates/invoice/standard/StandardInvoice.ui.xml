@@ -1,0 +1,197 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <g:VerticalPanel ui:field="invoicePanel">
+            <g:HTMLPanel>
+                <table border="0" width="100%" height="100%" cellpadding="2" cellspacing="2" ui:field="tblMain">
+                    <tr>
+                        <td>
+                            <table width="100%">
+                                <tr>
+                                    <td align="right">
+                                        <g:Label ui:field="lblTaxInvoice"></g:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="standardinvoice-logo">
+                                <g:Image ui:field="imgLogo"></g:Image>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="100%">
+                                <tr>
+                                    <td class="standardinvoice-content-column">
+                                        <!-- Business Details Table -->
+                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblCompanyName"></g:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblCompanyABN"></g:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblCompanyAddress"></g:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblCompanySuburb"></g:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblCompanyStateAndPostCode"></g:Label>
+                                                </td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblCompanyPhone"></g:Label>
+                                                </td>
+                                            </tr>                                                                                                                                                
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblCompanyEmail"></g:Label>
+                                                </td>
+                                            </tr>  
+                                        </table>  
+                                    </td>
+                                    <td class="standardinvoice-content-column">
+                                        <!-- Client Details Table -->
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblClientHeader"></g:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblClientName"></g:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblClientAddress"></g:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblClientSuburb"></g:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblClientPhone"></g:Label>
+                                                </td>
+                                            </tr>                                                                                                                                                
+                                            <tr>
+                                                <td>
+                                                    <g:Label ui:field="lblClientEmail"></g:Label>
+                                                </td>
+                                            </tr>  
+                                        </table> 
+                                    </td>
+                                </tr>
+                            </table>                                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br/>
+                            <br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="100%">
+                                <tr>
+                                    <td class="standardinvoice-content-column">
+                                        <!-- Custom Attributes Table -->
+                                        <g:HTMLPanel ui:field="customAttribPanel"></g:HTMLPanel>
+                                    </td>
+                                    <td class="standardinvoice-content-column">
+                                        <!-- Invoice Details Table -->
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <g:InlineLabel>Invoice No:</g:InlineLabel> 
+                                                    <g:InlineLabel ui:field="lblInvoiceNumber"></g:InlineLabel>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <g:InlineLabel>Invoice Date:</g:InlineLabel> 
+                                                    <g:InlineLabel ui:field="lblInvoiceDate"></g:InlineLabel>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <g:InlineLabel>Due Date:</g:InlineLabel> 
+                                                    <g:InlineLabel ui:field="lblDueDate"></g:InlineLabel>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <g:InlineLabel>Purchase Order No:</g:InlineLabel> 
+                                                    <g:InlineLabel ui:field="lblPurchaseOrderNo"></g:InlineLabel>
+                                                </td>
+                                            </tr>
+                                        </table> 
+                                    </td>
+                                </tr>
+                            </table>                                     
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br/>
+                        </td>
+                    </tr>                        
+                    <tr>
+                        <td>
+                            <!-- Invoice Items Table -->
+                            <g:HTMLPanel ui:field="itemsPanel"></g:HTMLPanel>                                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br/>
+                            <br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="standardinvoice-component-header">
+                            <span>Comments</span>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Description Panel -->
+                            <g:HTMLPanel ui:field="descPanel"></g:HTMLPanel>                                  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>                    
+                </table>
+            </g:HTMLPanel>
+        </g:VerticalPanel>             
+    </g:HTMLPanel>
+</ui:UiBinder>

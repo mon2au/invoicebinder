@@ -1,0 +1,70 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div id="installheader-wrapper">
+            <div id="installheader" class="installheader-container">
+                <div id="logo">
+                    <div class="installheader-logo headers-all">
+                        <div style="float:left;">
+                            <g:Image ui:field="logoImage"></g:Image>
+                        </div>
+                        <g:Label ui:field="title"></g:Label>
+                    </div>
+                </div>
+            </div>
+        </div>         
+        <div class="container">            
+            <div class="wrapped-box">
+                <div class="install-messages">
+                    <br/>
+                    <g:Label ui:field="lblInstallMessages"></g:Label>                    
+                </div>                
+                <div class="introduction">
+                    <br/>
+                    <br/>
+                    <p class="installpage-headertext">Setup Application Configuration</p>
+                </div>
+                <table class="centered" cellpadding="10">
+                    <tr>
+                        <td>WKHTMLtoPDF Installation Location *</td>
+                        <td>
+                            <g:TextBox ui:field="txtHtmlToPdfAppLocation" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><g:Label>Currency Code *</g:Label></td>
+                        <td>
+                            <g:VerticalPanel ui:field="suggestPanel"></g:VerticalPanel> 
+                        </td>
+                    </tr>                       
+                    <tr>
+                        <td><g:Label>Business Name *</g:Label></td>
+                        <td>
+                            <g:TextBox ui:field="txtBusinessName"></g:TextBox> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><g:Label>Business Number</g:Label></td>
+                        <td>
+                            <g:TextBox ui:field="txtBusinessNumber"></g:TextBox> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><g:Label>Business Number Label</g:Label></td>
+                        <td>
+                            <g:TextBox ui:field="txtBusinessNumberLabel"></g:TextBox> 
+                        </td>
+                    </tr>                                     
+                </table>
+                <g:Button text="Next" ui:field="nextBtn" styleName="appbutton-default"></g:Button><br/><br/>
+            </div>
+        </div>        
+    </g:HTMLPanel>
+</ui:UiBinder>

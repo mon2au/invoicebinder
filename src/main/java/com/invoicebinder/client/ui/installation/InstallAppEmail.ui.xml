@@ -1,0 +1,92 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div id="installheader-wrapper">
+            <div id="installheader" class="installheader-container">
+                <div id="logo">
+                    <div class="installheader-logo headers-all">
+                        <div style="float:left;">
+                            <g:Image ui:field="logoImage"></g:Image>
+                        </div>
+                        <g:Label ui:field="title"></g:Label>
+                    </div>
+                </div>
+            </div>
+        </div>         
+        <div class="container">            
+            <div class="wrapped-box">
+                <div class="install-messages">
+                    <br/>
+                    <g:Label ui:field="lblInstallMessages"></g:Label>                    
+                </div>                
+                <div class="introduction">
+                    <br/>
+                    <br/>
+                    <p class="installpage-headertext">Setup Email Configuration</p>
+                </div>
+                <div>
+                    Please configure your email server to allows external apps. For gmail, please allow less secure apps to send emails. <br/>
+                    For more details see <a href="https://support.google.com/accounts/answer/6010255">https://support.google.com/accounts/answer/6010255</a><br/><br/>
+                </div>
+                <table class="centered" cellpadding="10">
+                    <tr>
+                        <td>Email Hostname * (e.g. smtp.gmail.com))</td>
+                        <td>
+                            <g:TextBox ui:field="emailHost" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email Port * (e.g. 465)</td>
+                        <td>
+                            <g:IntegerBox ui:field="emailPort" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email Username * (your email address)</td>
+                        <td>
+                            <g:TextBox ui:field="emailUsername" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email Password * (your email password)</td>
+                        <td>
+                            <g:PasswordTextBox ui:field="emailPassword" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>From Email Address * (emails will be send using this address)</td>
+                        <td>
+                            <g:TextBox ui:field="emailFromAddress" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Business Email Address * (your business email)</td>
+                        <td>
+                            <g:TextBox ui:field="emailContactAddress" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Authentication Type * (e.g. SMTP)</td>
+                        <td>
+                            <g:TextBox ui:field="emailAuthType" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Use SSL</td>
+                        <td>
+                            <g:CheckBox ui:field="chkUseSSLForEmail" />
+                        </td>
+                    </tr>
+                </table>
+                <g:Button text="Send Test Email" ui:field="nextBtn" styleName="appbutton-default"></g:Button><br/><br/>
+            </div>
+        </div>        
+    </g:HTMLPanel>
+</ui:UiBinder>

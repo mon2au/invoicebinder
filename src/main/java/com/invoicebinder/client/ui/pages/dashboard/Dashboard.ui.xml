@@ -1,0 +1,402 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+        @external .icn_new_client .icn_new_invoice .icn_new_receipt .icn_new_product .icn_new_payment .icn_reports .icn_settings .icn_profile .icn_logout .icn_add_user .icn_view_users .icn_security;
+        @external .width_3_quarter .overview_day .overview_count_exp .overview_count_inc;
+        @external .clear .spacer .app-title .width_full .width_half .width_quarter .stats_graph .stats_overview;
+        @external .overview_today .overview_previous;
+               
+        #dashboardTable {
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        width:100%;
+        }
+        
+        .clear {
+        clear: both;
+        }
+
+        .spacer {
+        height: 20px;
+        }
+
+        /* Header */
+
+        header#header {
+        height: 55px;
+        width: 100%;
+        background: #222222 url(images/misc/header_bg.png) repeat-x;
+        }
+
+        header#header h1.site_title, header#header h2.section_title {
+        float: left;
+        margin: 0;
+        font-size: 22px;
+        display: block;
+        width: 23%;
+        height: 55px;
+        font-weight: normal;
+        text-align: left;
+        text-indent: 1.8%;
+        line-height: 55px;
+        color: #fff;
+        text-shadow: 0 -1px 0 #000;
+        }
+
+        header#header h1.site_title a {
+        color: #fff;
+        text-decoration: none;
+        }
+
+        header#header h2.section_title {
+        text-align: center;
+        text-indent: 4.5%;
+        width: 68%;
+        background: url(images/misc/header_shadow.png) no-repeat left top;
+        }
+
+        /* Secondary Header Bar */
+
+        section#secondary_bar {
+        height: 1px;
+        width: 100%;
+        background: #F1F1F4 url(images/misc/secondary_bar.png) repeat-x;
+        }
+
+        /* Sidebar */
+
+        aside#sidebar {
+        width:90%;
+        height:100%;
+        background: #E0E0E3 url(images/misc/sidebar.png) repeat;
+        margin-top: -4px;
+        }
+
+        #sidebar hr {
+        border: none;
+        outline: none;
+        background: url(images/icons/sidebar_divider.png) repeat-x;
+        height: 2px;
+        }
+
+        .app-title {
+        text-align: center;
+        padding: 6px 0 2px 0;
+        font-size: 18px;        
+        }
+
+        .icn_new_client {
+        background: url(images/icons/newclient.png) no-repeat center left;
+        }
+        .icn_new_invoice {
+        background: url(images/icons/newinvoice.png) no-repeat center left;
+        }
+        .icn_new_receipt {
+        background: url(images/icons/newreceipt.png) no-repeat center left;
+        }
+        .icn_new_product {
+        background: url(images/icons/newproduct.png) no-repeat center left;
+        }
+        .icn_new_payment {
+        background: url(images/icons/payment.png) no-repeat center left;
+        }
+        .icn_reports {
+        background: url(images/icons/viewreports.png) no-repeat center left;
+        }
+        .icn_logout {
+        background: url(images/icons/logout.png) no-repeat center left;
+        }
+        .icn_add_user {
+        background: url(images/icons/icn_profile.png) no-repeat center left;
+        }
+        .icn_view_users {
+        background: url(images/icons/icn_folder.png) no-repeat center left;
+        }
+        .icn_profile {
+        background: url(images/icons/icn_photo.png) no-repeat center left;
+        }
+        .icn_security {
+        background: url(images/icons/security.png) no-repeat center left;
+        }
+        .icn_settings {
+        background: url(images/icons/config.png) no-repeat center left;
+        }
+
+        /* Modules */
+
+        #main .module header h3 {
+        display: block;
+        width: 90%;
+        float: left;
+        }
+
+        /* Module Widths */
+
+        .width_full {
+        width: 95%;
+        }
+
+        .width_half {
+        width: 46%;
+        margin-right: 0;
+        float: left;
+        }
+
+        .width_quarter {
+        width: 26%;
+        margin-right: 0;
+        float: left;
+        }
+
+        .width_3_quarter {
+        width: 66%;
+        margin-right: 0;
+        float: left;
+        }
+
+        /* Stats Module */
+
+        .stats_graph {
+        width: 50%;
+        float: left;
+        }
+
+        .stats_overview {
+        background: #F6F6F6;
+        border: 1px solid #ccc;
+        float: right;
+        width: 39%;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        margin: 0; padding: 0;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0 1px 0 #fff;
+        padding-right:10;
+        }
+
+        .overview_today, .overview_previous {
+        width: 33%;
+        float: left;}
+
+        .overview_day {
+        font-size: 12px;
+        font-weight: bold;
+        margin: 6px 0;
+        }
+
+        .overview_count_exp {
+        font-size: 18px;
+        font-weight: bold;
+        color: #ff0000;}
+
+        .overview_count_inc {
+        font-size: 18px;
+        font-weight: bold;
+        color: #0000ff;}
+        
+        .overview_type {
+        font-size: 10px;
+        color: #999999;
+        margin-bottom: 8px}
+    </ui:style>
+    <g:HTMLPanel ui:field="dashboard">
+        <div class="container">
+            <table cellpadding="0" cellspacing="0" id="dashboardTable">
+                <tr>
+                    <td style="margin-top: -4px; vertical-align: top; background: #E0E0E3 url(images/misc/sidebar.png) repeat;">
+                        <!-- sidebar -->
+                        <aside id="dashSidebar" class="side-bar">
+                            <form class="app-title">
+                                <g:Label ui:field="lblApplicationTitle"></g:Label>  
+                            </form>
+                            <hr/>
+                            <h3>Actions</h3>
+                            <ul>
+                                <li class="icn_new_client">
+                                    <a class="asidelink" href="#newclient">New Client</a>
+                                </li>
+                                <li class="icn_new_invoice">
+                                    <a class="asidelink" href="#newinvoice">New Invoices</a>
+                                </li>
+                                <li class="icn_new_receipt">
+                                    <a class="asidelink" href="#newexpense">New Expense</a>
+                                </li>
+                                <li class="icn_new_product">
+                                    <a class="asidelink" href="#newproduct">New Product</a>
+                                </li>
+                                <li class="icn_new_payment">
+                                    <a class="asidelink" href="#newpayment">New Payment</a>
+                                </li>
+                            </ul>
+                            <h3>Users</h3>
+                            <ul>
+                                <li class="icn_add_user">
+                                    <a class="asidelink" href="#newuser">New User</a>
+                                </li>
+                                <li class="icn_view_users">
+                                    <a class="asidelink" href="#users">Users</a>
+                                </li>
+                                <li class="icn_profile">
+                                    <a class="asidelink" href="#useraccountdetails">Your Profile</a>
+                                </li>
+                            </ul> 
+                            <h3>Admin</h3>
+                            <ul>
+                                <li class="icn_settings">
+                                    <a class="asidelink" href="#settings_business">Options</a>
+                                </li>
+                                <!-- not implimented
+                                <li class="icn_security">
+                                    <a class="asidelink" href="#settings">Security</a>
+                                </li>
+                                -->
+                                <li class="icn_logout">
+                                    <a class="asidelink" href="#logout">Logout</a>
+                                </li>
+                            </ul>
+                        </aside>
+                        <!-- end of sidebar -->
+                    </td>
+                    <td style="width: 80%; vertical-align: top;">
+                        <!-- main section -->
+                        <section id="main">
+                            <h2 class="message-box notice message-box-margin">Welcome to the Dashboard.</h2>
+                            <article class="module width_full">
+                                <header>
+                                    <span class="panel-header-text">Stats</span>
+                                </header>
+                                <div class="module_content">
+                                    <article class="stats_graph">
+                                        <g:HTMLPanel ui:field="statsPanel"></g:HTMLPanel>
+                                    </article>
+
+                                    <article class="stats_overview">
+                                        <div class="overview_today">
+                                            <p class="overview_day">This Month</p>
+                                            <p class="overview_count_exp">
+                                                <g:Label ui:field="lblExpenseThisMonth"></g:Label>
+                                            </p>
+                                            <p class="overview_count_inc">
+                                                <g:Label ui:field="lblIncomeThisMonth"></g:Label>                                                
+                                            </p>
+                                        </div>
+                                        <div class="overview_previous">
+                                            <p class="overview_day">Last Month</p>
+                                            <p class="overview_count_exp">
+                                                <g:Label ui:field="lblExpenseLastMonth"></g:Label>                                                
+                                            </p>
+                                            <p class="overview_count_inc">
+                                                <g:Label ui:field="lblIncomeLastMonth"></g:Label>                                                
+                                            </p>
+                                        </div>
+                                        <div class="overview_previous">
+                                            <p class="overview_day">YTD</p>
+                                            <p class="overview_count_exp">
+                                                <g:Label ui:field="lblExpenseYTD"></g:Label>                                                                 
+                                            </p>
+                                            <p class="overview_count_inc">
+                                                <g:Label ui:field="lblIncomeYTD"></g:Label>                                                                 
+                                            </p>
+                                        </div>
+                                    </article>
+                                    <div class="clear"></div>
+                                </div>
+                            </article><!-- end of stats article -->
+                            <article class="module width_full">
+                                <header>
+                                    <span class="panel-header-text">Overdue Invoices</span>
+                                </header>
+                                <div>                                    
+                                    <g:HTMLPanel ui:field="gridPanel">
+                                    </g:HTMLPanel>
+                                </div>
+                            </article>
+                            <!-- not implimented                            
+                            <article class="module width_quarter">
+                                <header>
+                                    <h3>Messages</h3>
+                                </header>
+                                <div class="message_list">
+                                    <div class="module_content">
+                                        <div class="message">
+                                            <p>Can you please resend me the invoice for september.</p>
+                                            <p>
+                                                <strong>John Doe</strong>
+                                            </p>
+                                        </div>
+                                        <div class="message">
+                                            <p>Hi, I would like to know why this $310 charge is on my invoice with invoice number INV10100.</p>
+                                            <p>
+                                                <strong>John Doe</strong>
+                                            </p>
+                                        </div>
+                                        <div class="message">
+                                            <p>Can you please tell me the balance amount i owe.</p>
+                                            <p>
+                                                <strong>Steve Jobs</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <footer>
+                                    <form class="post_message">
+                                        <span style="padding:10px;"></span><input type="button" class="appbutton-default" value="View all"/>
+                                    </form>
+                                </footer>
+                            </article>
+                            <div class="clear"></div>
+                            <article class="module width_full">
+                                <header>
+                                    <h3>Post New Article</h3>
+                                </header>
+                                <div class="module_content">
+                                    <fieldset>
+                                        <label>Post Title</label>
+                                        <input type="text"></input>
+                                    </fieldset>
+                                    <fieldset>
+                                        <label>Content</label>
+                                        <textarea rows="12"></textarea>
+                                    </fieldset>
+                                    <fieldset style="width:48%; float:left; margin-right: 3%;">
+                                        <label>Category</label>
+                                        <select style="width:92%;">
+                                            <option>Articles</option>
+                                            <option>Tutorials</option>
+                                            <option>Freebies</option>
+                                        </select>
+                                    </fieldset>
+                                    <fieldset style="width:48%; float:left;">
+                                        <label>Tags</label>
+                                        <input type="text" style="width:92%;"></input>
+                                    </fieldset>
+                                    <div class="clear"></div>
+                                </div>
+                                <footer>
+                                    <div class="submit_link">
+                                        <select>
+                                            <option>Draft</option>
+                                            <option>Published</option>
+                                        </select>
+                                        <input type="button" class="appbutton-default" value="Publish"></input>
+                                        <input type="button" class="appbutton-default" value="Reset"></input>
+                                    </div>
+                                </footer>
+                            </article>
+                            -->
+                            <div class="spacer"></div>
+                        </section>
+                        <!-- main section -->      
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

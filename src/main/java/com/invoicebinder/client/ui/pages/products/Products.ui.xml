@@ -1,0 +1,53 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>           
+        .cellTable {
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+        margin-bottom: 4px;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="container">
+            <table>
+                <tr>
+                    <td class="buttonscolumn-left">
+                        <g:Button ui:field="newProduct">New</g:Button>
+                        <g:Button ui:field="editProduct">Edit</g:Button>
+                        <g:Button ui:field="deleteProduct">Delete</g:Button>                             
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gridcolumn">
+                        <table>
+                            <tr>
+                                <td>
+                                    <g:TextBox ui:field="txtSearch"></g:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <article class="grid-header">
+                                            <header>
+                                                <span class="panel-header-text">Products</span>
+                                            </header>                             
+                                            <div class="module_content">
+                                                <g:HTMLPanel ui:field="productsPanel">
+                                                </g:HTMLPanel>
+                                            </div>
+                                        </article>
+                                    </div>   
+                                </td>
+                            </tr>
+                        </table>   
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

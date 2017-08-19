@@ -1,0 +1,574 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+        @external .box-style .box-style01 .box-style02 .box-style03 .divider; 
+        @external .boxstyleimage  .container .boxstyleh2 .boxstylep;
+        
+        #wrapper {
+        overflow: hidden;
+        background: #F1F2E9;
+        }
+
+        .container {
+	width: 1200px;
+	margin: 0px auto;
+        }
+
+        /* Header */
+        #signupheader-wrapper {
+        overflow:
+        hidden;
+        height: 600px;
+        }
+
+        #signupheader {
+        width: 960px;
+        height: 200px;
+        margin: 0
+        auto;
+        padding: 0px 20px;
+        }
+
+        /* Banner */
+        #banner {
+        overflow: hidden;
+        height:	400px;
+        background: url(images/icons/img04.jpg) no-repeat center bottom;
+        }
+
+        #banner .image-style {
+        border: 15px solid #F4F4F4;
+        }
+
+        /* Splash */
+        #splash {
+        overflow: hidden;
+        padding: 0px 0px 50px 0px;
+        border-bottom: 1px dashed #E7E2DC;
+        letter-spacing: -3px;
+        text-align: center;
+        font-size: 48px;
+        }
+
+        #splash span {
+        color: #313131;
+        }
+
+        /* Search */
+        #search {
+        float: right;
+        width: 280px;
+        height: 60px;
+        padding: 20px 0px 0px 0px;
+        }
+
+        #search form {
+        height: 41px;
+        margin: 0;
+        padding: 10px 0 0 20px;
+        }
+
+        #search fieldset {
+        margin: 0;
+        padding: 0;
+        border: none;
+        }
+
+        #search-text {
+        width: 170px;
+        padding: 6px 5px 2px 5px;
+        border: 1px solid #DEDEDE;
+        background: #FFFFFF;
+        text-transform: lowercase;
+        font: normal 11px Arial, Helvetica, sans-serif;
+        color: #5D781D;
+        }
+
+        #search-submit {
+        width: 50px;
+        height: 22px;
+        border: none;
+        background: #B9B9B9;
+        color: #000000;
+        }
+
+
+        /* Page */
+        #page {
+        overflow: hidden;
+        padding: 20px 20px 40px 20px;
+        }
+
+        /* Content */
+        #maincontent {
+        float: left;
+        width: 700px;
+        padding: 0px 0px 0px 0px;
+        }
+
+        .post {
+        overflow:
+        hidden;
+        }
+
+        .post .title {
+        margin: 0px 0px 30px 0px;
+        padding: 0px 0px 10px 0px;
+        border-bottom: 3px solid #E0E1D6;
+        text-shadow: 1px 1px 0px #FFFFFF;
+        font-size: 26px;
+        color: #373737;
+        }
+
+        .post .title a {
+        border: none;
+        color: #373737;
+        }
+
+        .post .meta {
+        margin-bottom: 30px;
+        padding: 0px;
+        text-align: left;
+        font-size: 16px;
+        }
+
+        .post .meta .date {
+        float: left;
+        }
+
+        .post .meta .posted {
+        float: right;
+        }
+
+        .post .meta a {
+        }
+
+        .post .entry {
+        padding: 0px 0px 20px 0px;
+        padding-bottom: 20px;
+        text-align: justify;
+        }
+
+        .links {
+        padding-top: 20px;
+        margin-bottom: 30px;
+        }
+
+        .more {
+        display: block;
+        float: left;
+        width: 88px;
+        height: 25px;
+        padding: 2px 0px 0px 0px;
+        margin-right: 10px;
+        background: url(images/icons/img08.jpg) no-repeat left top;
+        text-align: center;
+        color: #FFFFFF;
+        }
+
+        .comments {
+        display: block;
+        float: left;
+        width: 88px;
+        height: 25px;
+        padding: 2px 0px 0px 0px;
+        background: url(images/icons/img08.jpg) no-repeat left top;
+        text-align: center;
+        color: #FFFFFF;
+        }
+
+        /* Sidebar */
+        #sidebar {
+        float: right;
+        width: 384px;
+        margin: 0px;
+        padding: 0px 0px 0px 0px;
+        color: #787878;
+        }
+
+        #sidebar h2
+        {
+        margin: 0px 0px	30px 0px;
+        padding: 0px 0px 10px 0px;
+        border-bottom: 3px solid #E0E1D6;
+        text-shadow: 1px 1px 0px #FFFFFF;
+        font-size: 26px;
+        color: #373737;
+        }
+
+        #sidebar a {
+        border: none;
+        }
+
+        #sidebar a:hover {
+        text-decoration: underline;
+        }
+
+        /* Calendar */
+        #calendar {
+        }
+
+        #calendar_wrap {
+        padding: 20px;
+        }
+
+        #calendar table {
+        width: 100%;
+        }
+
+        #calendar tbody td {
+        text-align: center;
+        }
+
+        #calendar #next {
+        text-align: right;
+        }
+
+        /* Three Column Footer Content */
+        #footer-bg {
+        overflow: hidden;
+        padding: 70px 0px;
+        background: #3C342E;
+        border-top: 10px solid #E5E6DD;
+        width:1185px;
+        }
+
+        #footer-content {
+        }
+
+        #footer-content h2 {
+        margin: 10px 10px 10px 10px;
+        padding: 0px 0px 10px 0px;
+        border-bottom: 4px
+        solid #DE5635;
+        font-size: 22px;
+        color: #FFFFFF;
+        }
+
+        #column1 {
+        float: left;
+        width: 375px;
+        margin-right: 20px;
+        }
+
+        #column2 {
+        float: left;
+        width: 375px;
+        }
+
+        #column3 {
+        float: right;
+        width: 375px;
+        margin-right: 20px;
+        }
+
+        .list-style1 {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        }
+
+        .list-style1
+        li {
+        padding: 7px 0px 7px 0px;
+        border-top: 1px dashed #E7E2DC;
+        }
+
+        .list-style1 .first {
+        padding-top: 0px;
+        border-top: none;
+        }
+
+        .list-style2 {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        }
+
+        .list-style2 li {
+        padding:
+        7px 0px 7px 0px;
+        }
+
+        .list-style2 a {
+        color: #8A8985;
+        }
+
+        .list-style2 a:hover
+        {
+        text-decoration: underline;
+        }
+
+        .list-style2 .first {
+        padding-top: 0px;
+        border-top: none;
+        background: none;
+        }
+
+        /* Banner */
+
+        #banner {
+        overflow:
+        hidden;
+        height: 450px;
+        background: url(images/icons/img04.png) no-repeat
+        center bottom;
+        }
+
+        /* Three Column Content */
+
+        #three-column {
+	overflow: hidden;
+	padding: 10px 0px 50px 0px;
+        }
+       
+        #tbox1 {
+        float: left;
+        width: 384px;
+        margin-right: 24px;
+        }
+
+        #tbox2 {
+        float: left;
+        width: 384px;
+        }
+        
+        #tbox3 {
+        float: right;
+        width: 384px;
+        }
+
+        .box-style {
+        background: #3C342E;
+        margin: 0 auto;
+        }
+
+        .box-style01
+        {
+        border-bottom: 5px solid #DE5635;
+        }
+
+
+        .box-style02
+        {
+        border-bottom: 5px solid #F8AF00;
+        }
+
+        .box-style03
+        {
+        border-bottom: 5px solid #A2B837;
+        }
+
+
+        .boxstyleh2 {
+        padding-left: 30px;
+        padding-right:30px;
+        letter-spacing: -1px;
+        font-size: 22px;
+        color: #FFFFFF;
+        }
+
+        .boxstylep {
+        padding-left: 30px;
+        padding-right:30px;
+        }
+        
+        .boxstyleimage
+        {
+        width: 324px;
+        margin-left:30px;
+        margin-top:30px;
+        }
+
+        .boxstylecontent {
+        overflow: hidden;
+        width: 324px;
+        padding: 30px;
+        }
+
+
+        .divider {
+        overflow: hidden;
+        height:
+        50px;
+        background:
+        url(images/icons/img04.png) no-repeat center top;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <div id="main" style="width:1152px; margin:0 auto;">
+            <g:HTMLPanel>
+                <div id="three-column" class="container">
+                    <div id="tbox1">
+                        <div class="box-style box-style01">
+                            <div class="boxstylecontent">
+                                <div class="boxstyleimage">
+                                    <br></br>
+                                    <img src="images/icons/img01.jpg" width="324" height="200" alt="" />
+                                </div>
+                                <h2 class="boxstyleh2">Polishing</h2>
+                                <p class="boxstylep">Polishing is usually a 2 –3 step process, 
+                                    starting first with an aggressive polish to remove imperfections. 
+                                    then a finishing polish to remove any hazing and bring the gloss to the finish.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tbox2">
+                        <div class="box-style box-style02">
+                            <div class="boxstylecontent">
+                                <div class="boxstyleimage">
+                                    <br></br>
+                                    <img src="images/icons/img02.jpg" width="324" height="200" alt="" />
+                                </div>
+                                <h2 class="boxstyleh2">Restoration</h2>
+                                <p class="boxstylep">We offer expert automotive interior restoration services 
+                                    and recoloring, quick wash, basic, standard and deluxe auto detailing packages, 
+                                    as well as commercial make ready and fleet services.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tbox3">
+                        <div class="box-style box-style03">
+                            <div class="boxstylecontent">
+                                <div class="boxstyleimage">
+                                    <br></br>                                    
+                                    <img src="images/icons/img03.jpg" width="324" height="200" alt="" />
+                                </div>
+                                <h2 class="boxstyleh2">Cleaning</h2>
+                                <p class="boxstylep">
+                                    The safest way to get your car cleaned, especially if you already have a 
+                                    protective coating applied to the vehicle is by using only the best quality 
+                                    products avaiable to us.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page" class="container">
+                    <div id="maincontent">
+                        <div class="post">
+                            <h2 class="title">
+                                <p>prestige car detailing</p>
+                            </h2>
+                            <div class="entry">
+                                <p>
+                                    <strong>Exterior detailing</strong> involves cleaning and bringing back the shine and gloss
+                                    to the car's paintwork, chrome trim, windows, wheels, and tires as well as all 
+                                    other visible components on the exterior of a vehicle. Different detailers use 
+                                    different products and techniques to do this. Products include but are not 
+                                    limited to detergents, degreasers, acid free, detail clay, waxes, polishes, 
+                                    and a variety of applicators, brushes and special plush drying towels. 
+                                    The main components of exterior car detailing are preparation, the right 
+                                    polishes, and protecting.
+                                </p>
+                                <p>
+                                    <strong>Interior detailing</strong> involves a deep cleaning of the whole 
+                                    interior as well as the boot of the car. All of the dash area, panels, 
+                                    windows, seats and carpets are cleaned extensively. Vacuuming is standard, 
+                                    and steam cleaning, liquid cleaners, and brushes may be used to remove 
+                                    stains on upholstery. Some nonporous surfaces may also be polished. 
+                                    Some detailers remove seats and other interior components to provide the 
+                                    most thorough clean possible.
+                                </p>
+                                <p>
+                                    <strong>Engine detailing</strong> does not include major body work. 
+                                    As detailing the engine involves electronics located inside the engine compartment, 
+                                    it is a delicate process. Detailers need to clean and protect all painted surfaces, 
+                                    rubber pipes and all metal and chrome. If not done properly, the engine of the 
+                                    car and other important parts and electronics can be ruined from water damage, 
+                                    chemicals and pressure.
+                                </p>
+                            </div>
+                        </div>
+                        <div style="clear: both;">&nbsp;</div>
+                    </div>
+                    <!-- end #content -->
+                    <div id="sidebar">
+                        <div>
+                            <h2>We Offer</h2>
+                            <ul class="list-style2">
+                                <li class="first">
+                                    <a href="#">Full Detailing.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Minor Detailing.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cleaning.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Carpet Wash.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Restoration.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Minor touch ups.</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end #sidebar -->
+                    <div style="clear: both;">&nbsp;</div>
+                </div>
+                <!-- end #page -->
+
+                <div id="footer-bg">
+                    <div id="footer-content" class="footer-container">
+                        <div id="column1">
+                            <h2>Our Location</h2>
+                            <ul id="location" class="list-style2">
+                                <li class="first">
+                                    <g:Label ui:field="lblAddress1"></g:Label>
+                                    <g:Label ui:field="lblAddress2"></g:Label>
+                                </li>
+                                <li>
+                                    <g:Label ui:field="lblSuburb"></g:Label>
+                                </li>
+                                <li>
+                                    <g:Label ui:field="lblPhone"></g:Label>
+                                </li>
+                                <li>
+                                    <g:Label ui:field="lblFax"></g:Label>
+                                </li>
+                                <li>
+                                    <g:Label ui:field="lblEmail"></g:Label>
+                                </li>
+                                <li>
+                                    <g:Label ui:field="lblABN"></g:Label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="column2">
+                            <h2>Directions</h2>
+                            <ul id="location" class="list-style2">
+                                <li class="first">
+                                    <div ui:field="divMap">                                        
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="column3">
+                            <h2>Follow Us</h2>
+                            <ul class="list-style2 social">
+				<li class="facebook">
+                                    <g:Anchor ui:field="facebookUrl">Google Plus</g:Anchor>
+                                </li>
+				<li class="twitter">
+                                    <g:Anchor ui:field="twitterUrl">Twitter</g:Anchor>
+                                </li>
+				<li class="googleplus">
+                                    <g:Anchor ui:field="googlePlusUrl">Google Plus</g:Anchor>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </g:HTMLPanel>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder> 

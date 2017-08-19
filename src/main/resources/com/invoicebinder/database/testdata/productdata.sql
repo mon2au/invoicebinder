@@ -1,0 +1,11 @@
+-- products
+INSERT INTO `product` (`name`, `description`, `unitprice`) VALUES ('Living Doll', 'A soft flowing maxi dress with ruffles and a high low hem, it''s wonderful for those warm days when you want to be cool yet feel fantastic.', 49.95);
+INSERT INTO `product` (`name`, `description`, `unitprice`) VALUES ('Sunny Girl', ' Horizontal stripes, longer length and side splits, we are going to be great friends.', 59.95);
+INSERT INTO `product` (`name`, `description`, `unitprice`) VALUES ('Espirit', 'Drift through the warmer months without a care in the world in your Border Paisley Strap Maxi Dress from Esprit.', 99.95);
+INSERT INTO `product` (`name`, `description`, `unitprice`) VALUES ('Jersey Girl', 'Brought to you by Jersey Girl, the Lolita V Neck Maxi Dress is a slinky piece, deliciously garnished with flowers fresh from a country garden.', 159.00);
+INSERT INTO `product` (`name`, `description`, `unitprice`) VALUES ('Firefly', 'Way down yonder there is a lovely lady in a long flowing dress with a soft knitted scarf around her neck.', 59.95);
+INSERT INTO `product` (`name`, `description`, `unitprice`) VALUES ('Martini', 'Think slinky, feminine styling of 40s icons in evening gowns at dazzling soirées. Wear your best jewels, killer heels and a mega watt smile.', 129.95);
+INSERT INTO `product` (`name`, `description`, `unitprice`) VALUES ('Ladhakh', 'The Lil Lots Dress by Ladakh will have you feeling flirty and sweet. Just add some little flats to finish off your look.', 89.95);
+INSERT INTO `product` (`name`, `description`, `unitprice`) VALUES ('Naudic', 'The Pippa Silk Dress by Naudic is the epitome of elegance. Classic black drapes beautfully over your body, skimming you and providing a foolproof blank canvas for your outfit.', 119.95);
+INSERT INTO `product` (`name`, `description`, `unitprice`) VALUES ('Sass', 'Be bold in the Papercut Dress by Sass. This eye catching dress will look stunning with black heels and a bight blazer.', 69.95);
+INSERT INTO `product` (`name`, `description`, `unitprice`) VALUES ('Neemah', 'The comfortable and easy flow of the fabric in the Swing Layer Dress is flattering and feminine. Express your individuality by adding colourful, interesting accessories.', 69.95);

@@ -1,0 +1,319 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+        @external .settings;
+        @external .menucontainer;
+        @external .gwt-MenuBar;
+        @external .gwt-MenuBar-horizontal;      
+        @external .gwt-MenuItem;
+        @external .gwt-MenuItem-selected;
+               
+        @external .gwt-MenuBarPopup;
+        @external .Popup;
+        @external .menuPopupTop;
+        @external .menuPopupTopLeftInner;
+        @external .menuPopupTopCenterInner;
+        @external .menuPopupTopRightInner;
+
+        @external .menuPopupMiddle;    
+        @external .menuPopupMiddleLeft;
+        @external .menuPopupMiddleRight;
+
+        @external .menuPopupBottomLeftInner;
+        @external .menuPopupBottomCenterInner;
+        @external .menuPopupBottomRightInner;
+        
+        @external .subItem;   
+        #menu-wrapper {
+        display: inline-block;
+        margin: 0px auto;
+        width: 100%;
+        min-width:1200px;
+        height: 48px;
+        background: #3C342E;
+        }
+
+        #menu {
+        width: 100%;
+        display: inline-block;
+        height: 48px;
+        }
+        
+        #menutable {
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+        #menu ul {
+        margin: 0;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        line-height: normal;
+        text-align: center;
+        }
+
+        #menu li {
+        display: inline-block;
+        }
+
+        #menu a {
+        display: block;
+        padding: 0px 30px;
+        line-height: 48px;
+        border: none;
+        text-decoration: none;
+        text-transform: lowercase;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        color: #FFFFFF;
+        }
+
+        #menu a:hover, #menu .current_page_item a {
+        background: #DE5635;
+        text-decoration: none;
+        color: #FFFFFF;
+        }
+
+        #menu .current_page_item a {
+        }
+        
+        #authmenu {
+        height: 48px;
+        }
+
+        #authmenu ul {
+        margin: 0;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        line-height: normal;
+        text-align: center;
+        }
+
+        #authmenu a {
+        display: block;
+        padding: 0px 30px;
+        line-height: 48px;
+        border: none;
+        text-decoration: none;
+        text-transform: lowercase;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-size: 11px;
+        font-weight: 300;
+        color: #FFFFFF;
+        }
+
+        #authmenu a:hover, #menu .current_page_item a {
+        background: #DE5635;
+        text-decoration: none;
+        color: #FFFFFF;
+        }
+
+        #authmenu .current_page_item a {
+        }
+        
+        .settings {
+        text-align:center; 
+        top:25px;
+        width:70px;
+        }
+        
+        .settings:hover {
+        text-align:center; 
+        top:25px;
+        width:70px;        
+        background: #DE5635;        
+        }
+        
+        .menucontainer {
+        margin: 0px auto;
+        width: 1360px;
+        }
+        
+        .gwt-MenuBar {
+        vertical-align:middle;   
+        background: #3C342E;
+        border:0px;
+        }
+        
+        .gwt-MenuItem  {
+        vertical-align:middle;  
+        background: #3C342E;
+        border:0px;
+        }
+        
+        .gwt-MenuItem-selected {
+        vertical-align:middle;
+        border:0px;
+        }
+        
+        .gwt-MenuBar .gwt-MenuItem-selected {
+        height: 48px;
+        border: 0px;
+        padding: 0px;
+        background: #DE5635;
+        }         
+        
+        .gwt-MenuBar table {
+        border-spacing:0;
+        } 
+        
+        .gwt-MenuBar-horizontal .gwt-MenuItem {
+        padding: 0px 10px;
+        color: #fff;
+        font-weight: bold;
+        vertical-align: middle;
+        border: 0px;
+        }         
+        
+        .gwt-MenuBarPopup {
+        border:1px;
+        margin: 0px;
+        }
+        
+        .gwt-MenuBarPopup .menuPopupTopLeftInner {
+        width: 0px;
+        height: 0px;
+        zoom: 0;
+        }
+
+        .gwt-MenuBarPopup .menuPopupTopCenterInner {
+        width: 0px;
+        height: 0px;
+        zoom: 0;
+        }                
+
+        .gwt-MenuBarPopup .menuPopupTopRightInner {
+        width: 0px;
+        height: 0px;
+        zoom: 0;
+        } 
+        
+        .gwt-MenuBarPopup .menuPopupMiddleLeft {
+        background:#3C342E;
+        }
+                
+        .gwt-MenuBarPopup .menuPopupMiddleRight {
+        background:#3C342E;
+        }  
+        
+        .gwt-MenuBarPopup .menuPopupBottomLeftInner {
+        width: 0px;
+        height: 0px;
+        zoom: 0;
+        }
+
+        .gwt-MenuBarPopup .menuPopupBottomCenterInner {
+        width: 0px;
+        height: 0px;
+        zoom: 0;
+        }                
+
+        .gwt-MenuBarPopup .menuPopupBottomRightInner {
+        width: 0px;
+        height: 0px;
+        zoom: 0;
+        }         
+                                
+        .Popup {
+        }
+                
+        .menuPopupTop .menuPopupTopLeftInner .menuPopupTopCenterInner .menuPopupTopRightInner {
+        background: #3C342E;
+        background-color: #3C342E;
+        }
+        .gwt-MenuBarPopup .menuPopupMiddle .menuPopupMiddleCenterInner {
+        background-color: #3C342E;
+        }
+        .menuPopupBottom {
+        background-color: #3C342E;
+        }
+        
+        .menuPopupMiddle {
+        background-color: #3C342E;
+        }
+        
+        .subItem {
+        padding-left:10px;
+        padding-right:10px;
+        color:#fff;        
+        }        
+        .subItem:hover {
+        background: #DE5635;        
+        } 
+    </ui:style>
+    <g:HTMLPanel ui:field="MenuPanel">
+        <div id="menu-wrapper">
+            <div ui:field="Menu" class="menucontainer">
+                <table id="menutable" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="current_page_item">
+                            <g:Anchor ui:field="Home"></g:Anchor>
+                        </td>
+                        <td>
+                            <g:Anchor ui:field="Services"></g:Anchor>
+                        </td>
+                        <td>
+                            <g:Anchor ui:field="AboutUs"></g:Anchor>
+                        </td>
+                        <td>
+                            <g:Anchor ui:field="ContactUs"></g:Anchor>
+                        </td>
+                        <td>
+                            <g:Anchor ui:field="Login"></g:Anchor>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div ui:field="AuthMenu" class="menucontainer">
+                <table id="authmenutable" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="current_page_item">
+                            <g:Anchor ui:field="Dashboard"></g:Anchor>
+                        </td>
+                        <td>
+                            <g:Anchor ui:field="Clients"></g:Anchor>
+                        </td>
+                        <td>
+                            <g:Anchor ui:field="Invoices"></g:Anchor>
+                        </td>
+                        <td>
+                            <g:Anchor ui:field="Payments"></g:Anchor>
+                        </td>
+                        <td>
+                            <g:Anchor ui:field="Products"></g:Anchor>
+                        </td>
+                        <td>
+                            <g:Anchor ui:field="Expenses"></g:Anchor>
+                        </td>
+                        <td>
+                            <g:Anchor ui:field="Reports"></g:Anchor>
+                        </td>
+                        <td>
+                            <span style="padding-left:10px;padding-right:10px;"></span>    
+                        </td>
+                        <td class="settings">
+                            <g:Image ui:field="Settings"></g:Image>
+                        </td>
+                        <td>
+                            <span style="padding-left:10px;padding-right:10px;"></span>    
+                        </td>
+                        <td>
+                            <g:MenuBar ui:field="mainMenu" animationEnabled="true" autoOpen="true">
+                                <g:MenuItem ui:field="loginItem">
+                                    <g:MenuBar ui:field="subMenu" vertical="true">
+                                    </g:MenuBar>                                
+                                </g:MenuItem>                                                                       
+                            </g:MenuBar>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder> 

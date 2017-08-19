@@ -1,0 +1,3 @@
+-- use database
+USE invoicebinder;
+$$

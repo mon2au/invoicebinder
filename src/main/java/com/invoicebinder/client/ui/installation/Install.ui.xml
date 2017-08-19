@@ -1,0 +1,50 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+    </ui:style>
+    <g:HTMLPanel ui:field="install">
+        <div id="installheader-wrapper">
+            <div id="installheader" class="installheader-container">
+                <div id="logo">
+                    <div class="installheader-logo headers-all">
+                        <div style="float:left;">
+                            <g:Image ui:field="logoImage"></g:Image>
+                        </div>
+                        <g:Label ui:field="title"></g:Label>
+                    </div>
+                </div>
+            </div>
+        </div>         
+        <div class="container">            
+            <div class="wrapped-box">
+                <div class="install-messages">                 
+                </div>
+                <div class="introduction">
+                    <br/>
+                    <br/>
+                    <p class="installpage-headertext">Welcome to Invoice Binder</p>
+                    <p class="installpage-text">This is the first time we are running invoice binder so we need to setup a few things to get up and running.</p>
+                    <p class="installpage-text">In order to get Invoice Binder up and running please make sure you meet the 
+                        following pre-requisite for setting up Invoice Binder.</p>
+                    <ul>
+                        <li>
+                            <a href="https://dev.mysql.com/downloads/mysql/">MySQL Server 5.5 or above</a>
+                        </li>
+                        <li>
+                            <a href="https://tomcat.apache.org/download-80.cgi">Apache Tomcat 8.0 or above</a>
+                        </li>
+                        <li>
+                            <a href="http://wkhtmltopdf.org/">wkhtmltopdf Pdf generator</a>
+                        </li>
+                        <li>
+                            <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java JDK 1.8</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <g:Button text="Next" ui:field="nextBtn" styleName="appbutton-default"></g:Button>
+            </div>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder> 

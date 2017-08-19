@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='com.invoicebinder.webinvoice' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/invoicebinder/greet" class="com.invoicebinder.server.GreetingServiceImpl" />
+
+</module>

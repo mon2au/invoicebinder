@@ -1,0 +1,87 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div id="installheader-wrapper">
+            <div id="installheader" class="installheader-container">
+                <div id="logo">
+                    <div class="installheader-logo headers-all">
+                        <div style="float:left;">
+                            <g:Image ui:field="logoImage"></g:Image>
+                        </div>
+                        <g:Label ui:field="title"></g:Label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container"> 
+            <div class="install-wrapper">      
+                <div class="install-fields-wrapper">
+                    <br/>
+                    <br/>          
+                    <br/>
+                    <br/>  
+                    <p class="installpage-headertext">Setup Admin User</p>                   
+                    <p>
+                        <g:Label>First Name *</g:Label>
+                        <g:TextBox ui:field="firstName"></g:TextBox>
+                    </p>
+                    <p>
+                        <g:Label>Last Name *</g:Label>
+                        <g:TextBox ui:field="lastName"></g:TextBox>
+                    </p>                    
+                    <p>
+                        <g:Label>User Name *</g:Label>
+                        <g:TextBox ui:field="userName"></g:TextBox>
+                    </p>
+                    <p>                            
+                        <g:Label>Password *</g:Label>
+                        <g:PasswordTextBox ui:field="password"></g:PasswordTextBox>
+                    </p>
+                    <p>
+                        <g:Label>Confirm Password *</g:Label>
+                        <g:PasswordTextBox ui:field="confirmPassword"></g:PasswordTextBox>        
+                    </p>
+                    <p>
+                        <g:Label>Email Address *</g:Label>
+                        <g:TextBox ui:field="emailAddress"></g:TextBox>        
+                    </p>
+                    <p> 
+                        <g:Button ui:field="btnSubmit" styleName="appbutton-default"></g:Button>
+                    </p> 
+                    <p>
+                    </p>
+                    <p>
+                    </p>  
+                    <p>
+                    </p>  
+                </div>
+                <div class="terminal-wrapper"> 
+                    <br/>                     
+                    <br/> 
+                    <br/>                      
+                    <div class="install-messages">
+                        <g:Label ui:field="lblInstallMessages"></g:Label>
+                        <div style="padding-left:10px;margin-top:-50px;">
+                            <g:Button ui:field="btnLogin" styleName="appbutton-default"></g:Button>                    
+                        </div>
+                    </div>    
+                    <div class="install-progress">                  
+                        <g:HTMLPanel ui:field="progressPanel">
+                            <progress id="progressbar"></progress>
+                        </g:HTMLPanel>
+                    </div>  
+                    <br/>                                          
+                    <g:HTMLPanel ui:field="consolePanel">
+                    </g:HTMLPanel>        
+                </div>
+            </div>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

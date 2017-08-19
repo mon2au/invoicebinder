@@ -1,0 +1,108 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <g:VerticalPanel ui:field="mainPanel">
+            <g:Label ui:field="lblHeader"></g:Label>
+            <g:Label ui:field="lblInvoiceHeader"></g:Label>
+            <g:HorizontalPanel ui:field="contentPanel">
+                <g:VerticalPanel>
+                    <g:HTMLPanel>                    
+                        <table class="view-invoice-actions" cellpadding="5" cellspacing="5">
+                            <tr>
+                                <td class="action-img">
+                                    <img src="images/icons/print.png"></img>
+                                </td>
+                                <td>
+                                    <g:Button ui:field="btnPrint">Print Preview</g:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="action-img">
+                                    <img src="images/icons/pdf.png"></img>
+                                </td>                                
+                                <td>
+                                    <g:Button ui:field="btnExportPdf">PDF Export</g:Button>                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr ui:field="trEmail">
+                                <td class="action-img">
+                                    <img src="images/icons/email.png"></img>
+                                </td>
+                                <td>
+                                    <g:Button ui:field="btnSendEmail">Email Invoice</g:Button>                                    
+                                </td>   
+                            </tr>
+                            <tr ui:field="trEmailDisc">
+                                <td colspan="2">
+                                    <g:DisclosurePanel ui:field="discPnlEmail"></g:DisclosurePanel>                              
+                                </td>
+                            </tr>
+                            <tr ui:field="trRecordPayment">
+                                <td class="action-img">
+                                    <img src="images/icons/paid.png"></img>
+                                </td>
+                                <td>
+                                    <g:Button ui:field="btnProcessPayment">Record Payment</g:Button>                                    
+                                </td> 
+                            </tr>    
+                            <tr ui:field="trRecordPaymentSpacing">
+                                <td></td>
+                            </tr>                                                                                                                                                                                 
+                            <tr ui:field="trChangeTemplate">
+                                <td class="action-img">
+                                    <img src="images/icons/template.png"></img>
+                                </td>
+                                <td>
+                                    <g:Button ui:field="btnChangeTemplate">Change Template</g:Button>                                    
+                                </td> 
+                            </tr> 
+                            <tr ui:field="trChangeTemplateSpacing">
+                                <td></td>
+                            </tr>
+                            <tr ui:field="trPaypalPayment">
+                                <td class="action-img">
+                                    <img src="images/icons/template.png"></img>
+                                </td>
+                                <td>
+                                    <g:Button ui:field="btnPayPaypal">Paypal Payment</g:Button>
+                                </td>
+                            </tr>
+                            <tr ui:field="trPaypalPaymentSpacing">
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <g:Label ui:field="lblInvoiceStatus"></g:Label>                                    
+                                </td> 
+                            </tr>                                                           
+                        </table>
+                    </g:HTMLPanel>
+                </g:VerticalPanel> 
+            </g:HorizontalPanel>       
+        </g:VerticalPanel>
+        <g:VerticalPanel>
+            <g:HTMLPanel>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" ui:field="frmPaypal">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="business" value="invoicebinder@gmail.com" />
+                    <input type="hidden" name="currency_code" value="AUD" />
+                </form>
+            </g:HTMLPanel>
+        </g:VerticalPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>

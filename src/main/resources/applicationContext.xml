@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+  http://www.springframework.org/schema/aop 
+  http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+  http://www.springframework.org/schema/context 
+  http://www.springframework.org/schema/context/spring-context-4.3.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+    <!-- data sources -->
+    <bean id="dataSourceWebInvoice" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://${invdb.hostname}:3306/${invdb.dbname}?useUnicode=true&amp;characterEncoding=UTF-8" />
+        <property name="username" value="${invdb.user}" />
+        <property name="password" value="${invdb.password}" />
+    </bean>
+    <!-- data sources -->
+    
+    <!-- session factories -->             
+    <bean id="sessionFactoryWebInvoice" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSourceWebInvoice" />
+        <property name="packagesToScan" value="com.invoicebinder.shared.entity" />
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.autoReconnect">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">${hibernate.invdb.showsql}</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.invdb.hbm2ddl.auto}</prop>
+                <prop key="hibernate.hbm2ddl.import_files">${hibernate.invdb.importfiles}</prop>
+            </props>
+        </property>
+    </bean>
+    <!-- session factories -->   
+    
+    <!-- transaction managers -->      
+    <bean id="txManagerWebInvoice" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactoryWebInvoice" />
+    </bean>
+    <!-- transaction managers -->  
+    <tx:annotation-driven transaction-manager="txManagerWebInvoice" />
+    <aop:aspectj-autoproxy />
+    <context:component-scan base-package="com.invoicebinder" />
+    
+    <bean id="environmentVariablesConfiguration"
+       class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+        <property name="algorithm" value="PBEWITHMD5ANDDES" />
+        <property name="password" value="encrypt" />
+    </bean>    
+    <bean id="configurationEncryptor"
+          class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+        <property name="config" ref="environmentVariablesConfiguration" />
+    </bean>
+    <bean id="propertyConfigurer" name="contextProperties"
+          class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
+        <constructor-arg ref="configurationEncryptor" />        
+        <property name="location">
+            <value>classpath:contextSettings.properties</value>
+        </property>
+    </bean>    
+</beans>
