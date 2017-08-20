@@ -22,7 +22,7 @@ import javax.mail.internet.MimeMultipart;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class EmailManager {
     public static void SendEmail (

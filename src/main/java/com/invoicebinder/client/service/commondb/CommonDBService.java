@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 @RemoteServiceRelativePath("/invoicebinder/services/commondb")
 public interface CommonDBService extends RemoteService {

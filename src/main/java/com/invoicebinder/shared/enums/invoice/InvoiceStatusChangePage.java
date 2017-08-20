@@ -8,7 +8,7 @@ package com.invoicebinder.shared.enums.invoice;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public enum InvoiceStatusChangePage {
     INVOICES,

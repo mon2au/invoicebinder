@@ -15,7 +15,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface CommonDBServiceAsync {
     public void loadCountryData(AsyncCallback<CountryInfo> asyncCallback);

@@ -6,7 +6,7 @@ package com.invoicebinder.shared.enums.client;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public enum ClientStatus {   
     ALL,

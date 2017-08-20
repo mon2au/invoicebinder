@@ -9,7 +9,7 @@ import com.google.gwt.user.client.ui.SuggestOracle;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class CitySuggestOracle extends SuggestOracle {
     

@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/InvoiceBinder.iml" filepath="$PROJECT_DIR$/InvoiceBinder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../invoicebindercore/InvoiceBinderCore.iml" filepath="$PROJECT_DIR$/../invoicebindercore/InvoiceBinderCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../invoicebinderhome/InvoiceBinderHome.iml" filepath="$PROJECT_DIR$/../invoicebinderhome/InvoiceBinderHome.iml" />
     </modules>
   </component>
 </project>

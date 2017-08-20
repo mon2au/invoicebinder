@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface ClientServiceClientInt {
     void getAllClients(int start, int length, ArrayList<GridColSortInfo> sortList, String filter,

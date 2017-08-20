@@ -4,7 +4,7 @@ import com.google.gwt.user.client.rpc.IsSerializable;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class ClientInfo implements IsSerializable {
     

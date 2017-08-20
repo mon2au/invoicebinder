@@ -8,7 +8,7 @@ package com.invoicebinder.server.core.exception;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public enum ExceptionType {
     DataAccessException,

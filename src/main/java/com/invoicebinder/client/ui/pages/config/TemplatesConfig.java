@@ -35,7 +35,7 @@ import java.util.HashMap;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class TemplatesConfig extends Composite {
     

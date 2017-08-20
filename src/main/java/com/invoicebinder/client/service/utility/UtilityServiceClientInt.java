@@ -12,7 +12,7 @@ import com.invoicebinder.shared.model.MailInfo;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface UtilityServiceClientInt {
     void getNextAutoNum(String autoNumId);  

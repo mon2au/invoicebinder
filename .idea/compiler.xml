@@ -6,11 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="core" />
         <module name="InvoiceBinder" />
+        <module name="InvoiceBinderCore" />
+        <module name="InvoiceBinderHome" />
+        <module name="InvoiceBinderSignup" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="core" target="1.7" />
       <module name="InvoiceBinder" target="1.8" />
+      <module name="InvoiceBinderCore" target="1.7" />
+      <module name="InvoiceBinderHome" target="1.8" />
+      <module name="InvoiceBinderSignup" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

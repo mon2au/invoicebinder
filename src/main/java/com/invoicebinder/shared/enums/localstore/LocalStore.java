@@ -8,7 +8,7 @@ package com.invoicebinder.shared.enums.localstore;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public enum LocalStore {
     CLIENTCOUNT    

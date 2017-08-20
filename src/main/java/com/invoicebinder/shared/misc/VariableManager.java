@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class VariableManager {
     public static String replaceVariables(String msg, HashMap vars) {

@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class AccountDetails implements IsSerializable {
     private Long id;

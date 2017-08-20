@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class ViewManager {
     private static ArrayList<String> getStandardViews() {

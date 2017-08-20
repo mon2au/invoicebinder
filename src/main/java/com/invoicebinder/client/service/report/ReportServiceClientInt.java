@@ -9,7 +9,7 @@ package com.invoicebinder.client.service.report;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface ReportServiceClientInt {
     void getIncomeAndExpense(int startMonth, int startYear, int totalMonths);

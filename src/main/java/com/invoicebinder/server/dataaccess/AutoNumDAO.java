@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 @Repository
 public class AutoNumDAO  extends BaseDAO<AutoNum,String> {

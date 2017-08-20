@@ -10,7 +10,7 @@ import com.invoicebinder.client.ui.widget.globaladdress.GlobalAddressPanel;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface CommonDBServiceClientInt {
     void loadCountryData(GlobalAddressPanel addressPanel);

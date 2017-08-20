@@ -10,7 +10,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface SystemServiceAsync {
     public void getSystemInfo(AsyncCallback asyncCallback);     

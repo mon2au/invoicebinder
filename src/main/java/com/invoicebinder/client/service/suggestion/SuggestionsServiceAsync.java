@@ -8,7 +8,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface SuggestionsServiceAsync {
     public void getCitySuggestions(CitySuggestOracle.Request req, String countryCode, String stateCode, AsyncCallback callback);

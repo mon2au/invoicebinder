@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface UserServiceClientInt {
     void registerUser(UserInfo info);

@@ -31,7 +31,7 @@ import com.google.gwt.user.client.ui.Widget;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class NewUser extends Composite {
     

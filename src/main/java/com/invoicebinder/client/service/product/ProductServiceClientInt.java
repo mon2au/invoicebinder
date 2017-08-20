@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface ProductServiceClientInt {
     void getAllProducts(int start, int length, ArrayList<GridColSortInfo> sortList, String filter, AsyncDataProvider<ProductInfo> provider);

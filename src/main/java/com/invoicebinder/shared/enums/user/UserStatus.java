@@ -8,7 +8,7 @@ package com.invoicebinder.shared.enums.user;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public enum UserStatus {
     ACTIVE,

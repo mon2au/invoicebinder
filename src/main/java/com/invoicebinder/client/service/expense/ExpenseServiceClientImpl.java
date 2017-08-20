@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class ExpenseServiceClientImpl implements  ExpenseServiceClientInt {
     private final ExpenseServiceAsync service;

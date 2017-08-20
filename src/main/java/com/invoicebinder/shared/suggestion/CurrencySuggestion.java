@@ -11,7 +11,7 @@ import com.google.gwt.user.client.ui.SuggestOracle.Suggestion;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class CurrencySuggestion implements IsSerializable, Suggestion {
     private String suggestion;

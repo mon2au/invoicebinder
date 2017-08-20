@@ -37,7 +37,7 @@ import java.util.HashMap;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class ApplicationConfig extends Composite {
     

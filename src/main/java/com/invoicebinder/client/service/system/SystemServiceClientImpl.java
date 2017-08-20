@@ -16,7 +16,7 @@ import com.google.gwt.user.client.rpc.ServiceDefTarget;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class SystemServiceClientImpl implements SystemServiceClientInt {
     private final SystemServiceAsync service;

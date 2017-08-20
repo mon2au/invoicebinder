@@ -6,7 +6,7 @@ package com.invoicebinder.client.service.suggestion;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface SuggestionsServiceClientInt {
     void getCitySuggestions(CitySuggestOracle.Request req, String countryCode, String stateCode, SuggestionsCallback callback);

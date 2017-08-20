@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class PlanItem implements IsSerializable {
     private Long id;

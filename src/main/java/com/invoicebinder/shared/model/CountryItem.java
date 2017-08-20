@@ -10,7 +10,7 @@ import com.google.gwt.user.client.rpc.IsSerializable;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class CountryItem implements IsSerializable {
     private Long id;

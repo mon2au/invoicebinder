@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class ReportServiceClientImpl implements ReportServiceClientInt {
     private final ReportServiceAsync service;

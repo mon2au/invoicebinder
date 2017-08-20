@@ -21,12 +21,10 @@
         </repository>
     </repositories>
     <properties>
-        <hibernate.invdb.hbm2ddl.auto>validate</hibernate.invdb.hbm2ddl.auto>      
         <buildVersion>1.0.0</buildVersion>
         <buildDate>01/01/2014</buildDate>
         <gwtVersion>2.8.1</gwtVersion>
         <springVersion>4.3.9.RELEASE</springVersion>
-        <hibernateVersion>4.2.0.Final</hibernateVersion>
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <runTarget>index.html</runTarget>

@@ -23,7 +23,7 @@ import static com.invoicebinder.server.core.exception.ExceptionManager.getFormat
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class ServerSettingsManager {
     private static Properties getSettings(String propertyFileName) {

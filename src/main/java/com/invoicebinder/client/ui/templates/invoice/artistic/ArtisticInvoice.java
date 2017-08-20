@@ -34,7 +34,7 @@ import java.util.List;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class ArtisticInvoice extends Composite {
     

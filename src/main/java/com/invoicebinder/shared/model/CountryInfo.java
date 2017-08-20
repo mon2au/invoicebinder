@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class CountryInfo implements IsSerializable {
     private List<CountryItem> countryList;

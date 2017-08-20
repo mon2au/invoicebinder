@@ -6,7 +6,7 @@ package com.invoicebinder.shared.enums.config;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public enum SiteTemplate {
 	Default;   

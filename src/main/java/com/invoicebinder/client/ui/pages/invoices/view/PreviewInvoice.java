@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class PreviewInvoice extends Composite {
     

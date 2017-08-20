@@ -8,7 +8,7 @@ package com.invoicebinder.client.service.system;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface SystemServiceClientInt {
     void getSystemInfo();    

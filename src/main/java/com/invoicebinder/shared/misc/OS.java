@@ -8,7 +8,7 @@ package com.invoicebinder.shared.misc;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class OS {
     private static final String OS = System.getProperty("os.name").toLowerCase();

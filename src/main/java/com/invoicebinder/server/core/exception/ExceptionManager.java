@@ -8,7 +8,7 @@ package com.invoicebinder.server.core.exception;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class ExceptionManager {
     public static String getFormattedExceptionMessage(ExceptionType exType, Exception ex) {

@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class ProductServiceClientImpl implements  ProductServiceClientInt {
     private final ProductServiceAsync service;

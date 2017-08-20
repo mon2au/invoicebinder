@@ -23,7 +23,7 @@ import java.util.List;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class InvoiceServiceClientImpl implements InvoiceServiceClientInt {
     private final InvoiceServiceAsync service;

@@ -2,9 +2,118 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f4df7de-e425-4e46-98af-a686debdd11a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_1_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_2_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_2_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_15_0_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_0_Final.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InvoiceBinder.iml" afterPath="$PROJECT_DIR$/InvoiceBinder.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/client/ClientServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/client/ClientServiceClientImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/client/ClientServiceClientInt.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/client/ClientServiceClientInt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/commondb/CommonDBService.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/commondb/CommonDBService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/commondb/CommonDBServiceAsync.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/commondb/CommonDBServiceAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/commondb/CommonDBServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/commondb/CommonDBServiceClientImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/commondb/CommonDBServiceClientInt.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/commondb/CommonDBServiceClientInt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/expense/ExpenseServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/expense/ExpenseServiceClientImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/expense/ExpenseServiceClientInt.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/expense/ExpenseServiceClientInt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/invoice/InvoiceServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/invoice/InvoiceServiceClientImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/invoice/InvoiceServiceClientInt.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/invoice/InvoiceServiceClientInt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/product/ProductServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/product/ProductServiceClientImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/product/ProductServiceClientInt.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/product/ProductServiceClientInt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/report/ReportService.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/report/ReportService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/report/ReportServiceAsync.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/report/ReportServiceAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/report/ReportServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/report/ReportServiceClientImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/report/ReportServiceClientInt.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/report/ReportServiceClientInt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/suggestion/CitySuggestOracle.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/suggestion/CitySuggestOracle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/suggestion/CurrencySuggestOracle.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/suggestion/CurrencySuggestOracle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/suggestion/SuggestionsServiceAsync.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/suggestion/SuggestionsServiceAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/suggestion/SuggestionsServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/suggestion/SuggestionsServiceClientImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/suggestion/SuggestionsServiceClientInt.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/suggestion/SuggestionsServiceClientInt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/system/SystemService.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/system/SystemService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/system/SystemServiceAsync.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/system/SystemServiceAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/system/SystemServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/system/SystemServiceClientImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/system/SystemServiceClientInt.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/system/SystemServiceClientInt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/user/UserServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/user/UserServiceClientImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/user/UserServiceClientInt.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/user/UserServiceClientInt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/utility/UtilityService.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/utility/UtilityService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/utility/UtilityServiceAsync.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/utility/UtilityServiceAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/utility/UtilityServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/utility/UtilityServiceClientImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/utility/UtilityServiceClientInt.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/utility/UtilityServiceClientInt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/alert/Loading.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/alert/Loading.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/controller/ViewManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/controller/ViewManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/history/HistoryHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/history/HistoryHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/clients/Clients.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/clients/Clients.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/config/ApplicationConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/config/ApplicationConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/config/SystemInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/config/SystemInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/config/TemplatesConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/config/TemplatesConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/expenses/Expenses.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/expenses/Expenses.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/invoices/Invoices.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/invoices/Invoices.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/invoices/view/Invoice.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/invoices/view/Invoice.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/invoices/view/PreviewInvoice.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/invoices/view/PreviewInvoice.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/reports/IncomeAndExpense.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/reports/IncomeAndExpense.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/reports/Reports.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/reports/Reports.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/users/NewUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/users/NewUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/users/UserDetails.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/users/UserDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/users/Users.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/pages/users/Users.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/templates/invoice/artistic/ArtisticInvoice.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/templates/invoice/artistic/ArtisticInvoice.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/templates/invoice/minimalist/MinimalistInvoice.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/templates/invoice/minimalist/MinimalistInvoice.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/templates/invoice/professional/ProfessionalInvoice.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/templates/invoice/professional/ProfessionalInvoice.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/templates/invoice/standard/StandardInvoice.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/templates/invoice/standard/StandardInvoice.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/email/EmailManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/email/EmailManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/exception/ExceptionManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/exception/ExceptionManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/exception/ExceptionType.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/exception/ExceptionType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/AutoNumDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/AutoNumDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/CountryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/CountryDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/CurrencyDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/CurrencyDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ReportDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ReportDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/serversettings/ServerSettingsManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/serversettings/ServerSettingsManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/CommonDBServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/CommonDBServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/ReportServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/ReportServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/SystemServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/SystemServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/UtilityServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/UtilityServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/entity/autonum/AutoNum.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/entity/autonum/AutoNum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/entity/item/Item.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/entity/item/Item.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/entity/template/SiteTemplateData.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/entity/template/SiteTemplateData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/client/ClientStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/client/ClientStatus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/config/ApplicationSettingsItems.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/config/ApplicationSettingsItems.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/config/SiteTemplate.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/config/SiteTemplate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/invoice/InvoiceStatusChangePage.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/invoice/InvoiceStatusChangePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/localstore/LocalStore.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/localstore/LocalStore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/user/UserStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/enums/user/UserStatus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/misc/OS.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/misc/OS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/misc/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/misc/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/misc/VariableManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/misc/VariableManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/AccountDetails.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/AccountDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/AppSettingsInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/AppSettingsInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/ClientInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/ClientInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/CountryInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/CountryInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/CountryItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/CountryItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/GridColSortInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/GridColSortInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/PlanItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/PlanItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/SystemInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/SystemInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/UserInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/model/UserInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/suggestion/CurrencySuggestion.java" afterPath="$PROJECT_DIR$/src/main/java/com/invoicebinder/shared/suggestion/CurrencySuggestion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/invoice.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/invoice.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/loading.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/loading.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/loadingmodaldialog.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/loadingmodaldialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/messagebox.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/messagebox.css" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/.idea/" />
+    <ignored path="$PROJECT_DIR$/../invoicebinder-home/target/" />
+    <ignored path="$PROJECT_DIR$/../invoicebinderhome/target/" />
+    <ignored path="$PROJECT_DIR$/../invoicebindercore/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,42 +128,107 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../invoicebinderhome/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="203">
+              <caret line="364" column="81" lean-forward="true" selection-start-line="364" selection-start-column="81" selection-end-line="364" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sys_signupdb.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/invoicebinder/database/database/sys_signupdb.sql">
+      <file leaf-file-name="ServerSettingsManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/server/serversettings/ServerSettingsManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="132" column="9" lean-forward="true" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
+              <folding>
+                <element signature="method#getApplicationSettingsProperty#0;class#ServerSettingsManager#0" expanded="false" />
+                <element signature="method#getBuildSettings#0;class#ServerSettingsManager#0" expanded="false" />
+                <element signature="method#getPersistentAppConfiguration#0;class#ServerSettingsManager#0" expanded="false" />
+                <element signature="method#setPersistentAppConfiguration#0;class#ServerSettingsManager#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="devbuild.bat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/devbuild.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prodbuild.bat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/prodbuild.bat">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="70" lean-forward="false" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="70" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_gwtvisualization_install.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/invoicebinder/system/run_gwtvisualization_install.sh">
+      <file leaf-file-name="proddeploy.bat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/proddeploy.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigServiceCallbacks.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/config/ConfigServiceCallbacks.java">
+      <file leaf-file-name="proddeploy-mars.bat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/proddeploy-mars.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uatbuild.bat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/uatbuild.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uatdelpoy.bat" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/uatdelpoy.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apache_maintenance_redirection.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/documentation/howtos/apache/apache_maintenance_redirection.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apache_mod_proxy.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/documentation/howtos/apache/apache_mod_proxy.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -64,25 +238,31 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>core</find>
       <find>com.bmgsoft.core</find>
       <find>com.bmgsoft.invoicebinder</find>
+      <find>run_app_create</find>
       <find>bmgsoft</find>
-      <find>2c4ukb11</find>
+      <find>core</find>
       <find>Manpreet</find>
+      <find>msushil</find>
+      <find>2c4ukb11</find>
+      <find>invoicebindersignup</find>
+      <find>contextSettings</find>
     </findStrings>
     <replaceStrings>
       <replace>com.invoicebinder.server.core</replace>
       <replace>com.invoicebinder</replace>
-      <replace>passwd</replace>
       <replace>mon2</replace>
+      <replace>passwd</replace>
     </replaceStrings>
     <dirStrings>
+      <dir>C:\Users\Manpreet\GitHub\invoicebindercore</dir>
       <dir>C:\Users\Manpreet\GitHub\invoicebinder</dir>
+      <dir>C:\Users\Manpreet\GitHub\invoicebinderhome</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../invoicebinderhome" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -92,25 +272,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/exception/ExceptionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/exception/ExceptionType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/file/FileManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/misc/PasswordGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/shell/ProcessExec.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/shell/ShellExecute.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/shell/ShellExecuteResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/shell/SSHExecute.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/pdf/PDFManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/spring4gwt/server/SpringGwtRemoteServiceServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/FileDownloadServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/AutoNumDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ClientDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ConfigDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/CountryDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/CurrencyDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ExpenseDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/InvoiceDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/PaymentDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ProductDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ReportDAO.java" />
@@ -131,6 +292,37 @@
         <option value="$PROJECT_DIR$/src/main/resources/com/invoicebinder/system/run_maven_install.sh" />
         <option value="$PROJECT_DIR$/src/main/resources/com/invoicebinder/system/run_gwtvisualization_install.sh" />
         <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/config/ConfigServiceCallbacks.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/../invoicebinder-home/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/context.xml" />
+        <option value="$PROJECT_DIR$/../invoicebindercore/pom.xml" />
+        <option value="$PROJECT_DIR$/../invoicebindercore/src/main/java/com/invoicebinder/core/dataaccess/DataAccess.java" />
+        <option value="$PROJECT_DIR$/../invoicebindercore/src/main/java/com/invoicebinder/core/email/EmailManager.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/Main.gwt.xml" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/client/ClientServiceClientImpl.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/server/service/ContactUsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/server/service/FileDownloadServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/server/system/SystemManager.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/shared/enums/Menu.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/shared/misc/Constants.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/ui/container/Container.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/ui/controller/Index.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/ui/history/HistoryHandler.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/shared/misc/FieldVerifier.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/ui/hdrmenu/HdrMenu.ui.xml" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/ui/hdrmenu/HdrMenu.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/devbuild.bat" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/service/download/DownloadServiceClientImpl.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/resources/logging.xml" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/service/download/DownloadService.java" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/documentation/howtos/apache/apache_mod_proxy.txt" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/pom.xml" />
+        <option value="$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/server/serversettings/ServerSettingsManager.java" />
       </list>
     </option>
   </component>
@@ -164,25 +356,102 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="InvoiceBinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="invoicebinder" type="462c0819:PsiDirectoryNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InvoiceBinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InvoiceBinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InvoiceBinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InvoiceBinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InvoiceBinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="environment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InvoiceBinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="environment" type="462c0819:PsiDirectoryNode" />
+              <item name="documentation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InvoiceBinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="environment" type="462c0819:PsiDirectoryNode" />
+              <item name="documentation" type="462c0819:PsiDirectoryNode" />
+              <item name="howtos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InvoiceBinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="invoicebinderhome" type="462c0819:PsiDirectoryNode" />
+              <item name="environment" type="462c0819:PsiDirectoryNode" />
+              <item name="documentation" type="462c0819:PsiDirectoryNode" />
+              <item name="howtos" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../invoicebindercore/pom.xml" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.invoicebinderhome" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -238,6 +507,18 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="core" />
+      <envs />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -278,6 +559,10 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="invoicebindercore" type="OdpsQLRunnerConfigurationType" factoryName="MaxCompute SQL">
+      <odps_target_file />
+      <odps_output_dir>C:\Users\Manpreet\AppData\Local\Temp\</odps_output_dir>
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -294,12 +579,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1052" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="MaxCompute Job" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -308,389 +594,275 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="MaxCompute Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20255864" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../invoicebinder-home" />
+    </ignored-roots>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/spring4gwt/server/SpringGwtRemoteServiceServlet.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/shared/model/DemoConfigInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        <state relative-caret-position="180">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/AddressDAO.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/shared/model/DownloadInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/shared/model/RegistrationResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/shared/model/TokenValidationInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/shared/model/ValidationResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/Main.gwt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/ui/container/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1158">
+          <caret line="99" column="4" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+            <element signature="e#1785#1786#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/AutoNumDAO.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/ui/controller/Index.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        <state relative-caret-position="168">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/BaseDAO.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/ui/history/HistoryHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/shared/misc/FieldVerifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="109" column="5" lean-forward="false" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/ui/hdrmenu/HdrMenu.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/ui/hdrmenu/HdrMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-556">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/webapp/manifest.webapp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/database/schema/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/bmgsoft/environment/resources/account_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/contextSettings.uat.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="79" lean-forward="false" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/service/download/DownloadServiceClientImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="51" column="66" lean-forward="false" selection-start-line="51" selection-start-column="66" selection-end-line="51" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ClientDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <caret line="63" column="39" lean-forward="false" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ConfigDAO.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/client/service/download/DownloadService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="189">
+          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/CountryDAO.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/contextSettings.prod.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/CurrencyDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ExpenseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/InvoiceDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/PaymentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ProductDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/ReportDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/dataaccess/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/contextSettings.dev.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+          <caret line="6" column="0" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/ClientServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/appSettings.dev.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/CommonDBServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/ConfigServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/appSettings.prod.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/DashboardServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/logging.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="21">
+          <caret line="1" column="52" lean-forward="false" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/ExpenseServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/FileDownloadServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/FileUploadServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/InstallServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/InvoiceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/LoginServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/email/EmailManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/MailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="61" lean-forward="true" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/PaymentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/ProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/ReportServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/StartupConfigServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/StartupContextServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/SuggestionsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/SystemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/service/UtilityServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/systemtool/SystemSupervisor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/systemtool/ServletRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/server/core/dataaccess/DataAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/client/ui/controller/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="981">
-          <caret line="147" column="32" lean-forward="false" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gwt/.gwt-log">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/scripts/run_user_create.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -698,31 +870,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/contextSettings.dev.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/contextSettings.hibernate.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="506" lean-forward="false" selection-start-line="5" selection-start-column="506" selection-end-line="5" selection-end-column="506" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.wst.common.component">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="81" lean-forward="false" selection-start-line="8" selection-start-column="81" selection-end-line="8" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.classpath">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/scripts/run_tomcat_command.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -730,7 +878,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/scripts/run_dbsql_statement.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -738,45 +886,246 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoicebinder.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/invoicebinder/database/database/sys_signupdb.sql">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/scripts/run_dbschema_create.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="70" lean-forward="false" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="70" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/invoicebinder/system/run_gwtvisualization_install.sh">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/scripts/run_dbobjects_create.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/invoicebinder/client/service/config/ConfigServiceCallbacks.java">
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/scripts/run_curl_command.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/scripts/run_app_create.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/system/run_schema_create.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/system/system_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/documentation/signup-token.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/appSettings.uat.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/documentation/serverinfo/mysql_server.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/documentation/howtos/apache/apache_install.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/documentation/howtos/apache/apache_maintenance_redirection.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/documentation/howtos/apache/apache_mod_proxy.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="364" column="81" lean-forward="true" selection-start-line="364" selection-start-column="81" selection-end-line="364" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/java/com/invoicebinderhome/server/serversettings/ServerSettingsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="132" column="9" lean-forward="true" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
+          <folding>
+            <element signature="method#getApplicationSettingsProperty#0;class#ServerSettingsManager#0" expanded="false" />
+            <element signature="method#getBuildSettings#0;class#ServerSettingsManager#0" expanded="false" />
+            <element signature="method#getPersistentAppConfiguration#0;class#ServerSettingsManager#0" expanded="false" />
+            <element signature="method#setPersistentAppConfiguration#0;class#ServerSettingsManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/devbuild.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/prodbuild.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/proddeploy.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/proddeploy-mars.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/uatbuild.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../invoicebinderhome/src/main/resources/com/invoicebinderhome/environment/builddeploy/jenkins/uatdelpoy.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>InvoiceBinderCore</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ant:ant:1.6.5</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

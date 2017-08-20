@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface ExpenseServiceClientInt {
     void getAllExpenses(int start, int length, ArrayList<GridColSortInfo> sortList, String filter, AsyncDataProvider<ExpenseInfo> provider);

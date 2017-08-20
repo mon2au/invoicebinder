@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class CommonDBServiceClientImpl implements CommonDBServiceClientInt {
     private final CommonDBServiceAsync service;

@@ -14,7 +14,7 @@ import com.google.gwt.core.client.GWT;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class HistoryHandler implements ValueChangeHandler<String>  {
     

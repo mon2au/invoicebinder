@@ -13,7 +13,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 @RemoteServiceRelativePath("/invoicebinder/services/system")
 public interface SystemService extends RemoteService {

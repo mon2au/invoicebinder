@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class ClientServiceClientImpl implements ClientServiceClientInt {
     private final ClientServiceAsync service;

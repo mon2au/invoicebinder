@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.hibernate:hibernate-core:${hibernateVersion}">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/${hibernateVersion}/hibernate-core-${hibernateVersion}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/${hibernateVersion}/hibernate-core-${hibernateVersion}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/${hibernateVersion}/hibernate-core-${hibernateVersion}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

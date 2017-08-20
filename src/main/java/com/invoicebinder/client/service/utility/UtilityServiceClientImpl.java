@@ -19,7 +19,7 @@ import com.google.gwt.user.client.rpc.ServiceDefTarget;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class UtilityServiceClientImpl implements UtilityServiceClientInt {
     private final UtilityServiceAsync service;

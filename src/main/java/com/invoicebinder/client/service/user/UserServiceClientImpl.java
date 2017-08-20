@@ -25,7 +25,7 @@ import java.util.List;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public class UserServiceClientImpl implements UserServiceClientInt {
     private final UserServiceAsync service;

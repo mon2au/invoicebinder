@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 @RemoteServiceRelativePath("/invoicebinder/services/report")
 public interface ReportService extends RemoteService {

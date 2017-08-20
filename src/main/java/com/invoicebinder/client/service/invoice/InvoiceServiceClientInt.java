@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author msushil
+ * @author mon2
  */
 public interface InvoiceServiceClientInt {
     void getAllInvoices(int start, int length, ArrayList<GridColSortInfo> sortList, String invoiceClientNameFilter, InvoiceStatus invoiceStatusFilter, AsyncDataProvider<InvoiceInfo> provider);
