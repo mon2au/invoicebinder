@@ -4,8 +4,8 @@
  */
 package com.invoicebinder.server.dataaccess;
 
-import static com.invoicebinder.server.core.exception.ExceptionManager.getFormattedExceptionMessage;
-import com.invoicebinder.server.core.exception.ExceptionType;
+import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
+import com.invoicebinder.core.exception.ExceptionType;
 import com.invoicebinder.server.logger.ServerLogManager;
 import com.invoicebinder.shared.entity.city.City;
 import com.invoicebinder.shared.entity.country.Country;

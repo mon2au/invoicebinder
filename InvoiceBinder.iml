@@ -12,6 +12,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="InvoiceBinderCore" scope="PROVIDED" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.jcraft:jsch:0.1.50" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.paypal.sdk:rest-api-sdk:1.13.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-api:1.7.21" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.32" level="project" />
     <orderEntry type="library" name="Maven: com.google.gwt:gwt-user:2.8.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.jsinterop:jsinterop-annotations:1.0.1" level="project" />
@@ -66,7 +70,16 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jetty.toolchain:jetty-schemas:3.1.M0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.mortbay.jasper:apache-jsp:8.0.9.M3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.mortbay.jasper:apache-el:8.0.9.M3" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:${hibernateVersion}" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.2.10.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.3.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.javassist:javassist:3.20.0-GA" level="project" />
+    <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss:jandex:2.0.3.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml:classmate:1.3.0" level="project" />
+    <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.1.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jasypt:jasypt:1.9.2" level="project" />
     <orderEntry type="library" name="Maven: org.jasypt:jasypt-spring31:1.9.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-orm:4.3.9.RELEASE" level="project" />
@@ -91,7 +104,8 @@
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.gwt.google-apis:gwt-visualization:1.1.2" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-entitymanager:${hibernateVersion}" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-entitymanager:5.2.10.Final" level="project" />
+    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.6.6" level="project" />
     <orderEntry type="library" name="Maven: javax.transaction:jta:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.gwtupload:gwtupload:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.3.1" level="project" />

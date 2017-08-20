@@ -6,8 +6,8 @@
 
 package com.invoicebinder.server.dataaccess;
 
-import static com.invoicebinder.server.core.exception.ExceptionManager.getFormattedExceptionMessage;
-import com.invoicebinder.server.core.exception.ExceptionType;
+import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
+import com.invoicebinder.core.exception.ExceptionType;
 import com.invoicebinder.server.logger.ServerLogManager;
 import java.util.List;
 import com.invoicebinder.shared.entity.currency.Currency;

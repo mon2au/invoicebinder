@@ -6,8 +6,8 @@
 
 package com.invoicebinder.shared.misc;
 
-import static com.invoicebinder.server.core.exception.ExceptionManager.getFormattedExceptionMessage;
-import com.invoicebinder.server.core.exception.ExceptionType;
+import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
+import com.invoicebinder.core.exception.ExceptionType;
 import com.invoicebinder.server.logger.ServerLogManager;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

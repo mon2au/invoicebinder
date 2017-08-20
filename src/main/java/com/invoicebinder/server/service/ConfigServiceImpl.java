@@ -5,8 +5,8 @@
 */
 package com.invoicebinder.server.service;
 
-import static com.invoicebinder.server.core.exception.ExceptionManager.getFormattedExceptionMessage;
-import com.invoicebinder.server.core.exception.ExceptionType;
+import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
+import com.invoicebinder.core.exception.ExceptionType;
 import com.invoicebinder.client.service.config.ConfigService;
 import com.invoicebinder.server.dataaccess.ConfigDAO;
 import com.invoicebinder.server.logger.ServerLogManager;

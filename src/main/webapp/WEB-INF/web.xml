@@ -3,7 +3,7 @@
     <!-- Servlets -->
     <servlet>
         <servlet-name>springGwtRemoteServiceServlet</servlet-name>
-        <servlet-class>com.invoicebinder.server.core.spring4gwt.server.SpringGwtRemoteServiceServlet</servlet-class>
+        <servlet-class>com.invoicebinder.core.spring4gwt.server.SpringGwtRemoteServiceServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>springGwtRemoteServiceServlet</servlet-name>

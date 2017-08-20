@@ -5,7 +5,7 @@
 */
 package com.invoicebinder.server.service;
 
-import com.invoicebinder.server.core.exception.ExceptionType;
+import com.invoicebinder.core.exception.ExceptionType;
 import com.invoicebinder.client.service.installation.InstallService;
 import com.invoicebinder.server.installation.InstallationManager;
 import com.invoicebinder.server.logger.ServerLogManager;
@@ -21,7 +21,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import org.springframework.stereotype.Service;
-import static com.invoicebinder.server.core.exception.ExceptionManager.getFormattedExceptionMessage;
+import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
 
 /**
  *

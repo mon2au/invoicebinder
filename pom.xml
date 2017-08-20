@@ -25,11 +25,19 @@
         <buildDate>01/01/2014</buildDate>
         <gwtVersion>2.8.1</gwtVersion>
         <springVersion>4.3.9.RELEASE</springVersion>
+        <hibernateVersion>5.2.10.Final</hibernateVersion>
+        <invoiceBinderCoreVersion>1.0-SNAPSHOT</invoiceBinderCoreVersion>
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <runTarget>index.html</runTarget>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>com.invoicebinder</groupId>
+            <artifactId>InvoiceBinderCore</artifactId>
+            <version>${invoiceBinderCoreVersion}</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

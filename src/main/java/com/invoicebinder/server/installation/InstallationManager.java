@@ -5,8 +5,8 @@
 */
 package com.invoicebinder.server.installation;
 
-import com.invoicebinder.server.core.dataaccess.DataAccess;
-import com.invoicebinder.server.core.exception.ExceptionType;
+import com.invoicebinder.core.dataaccess.DataAccess;
+import com.invoicebinder.core.exception.ExceptionType;
 import com.invoicebinder.server.logger.ServerLogManager;
 import com.invoicebinder.server.serversettings.ServerSettingsManager;
 import com.invoicebinder.shared.misc.Constants;
@@ -32,7 +32,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 
-import static com.invoicebinder.server.core.exception.ExceptionManager.getFormattedExceptionMessage;
+import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
 
 /**
  *

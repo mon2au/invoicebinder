@@ -10,8 +10,8 @@ import com.invoicebinder.server.serversettings.ServerSettingsManager;
 import com.invoicebinder.shared.htmltemplates.EmailTemplateMgr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.invoicebinder.server.core.email.EmailManager;
-import com.invoicebinder.server.core.exception.ExceptionType;
+import com.invoicebinder.core.email.EmailManager;
+import com.invoicebinder.core.exception.ExceptionType;
 import com.invoicebinder.client.service.mail.MailService;
 import com.invoicebinder.server.logger.ServerLogManager;
 import com.invoicebinder.shared.model.MailInfo;
@@ -20,7 +20,7 @@ import javax.mail.MessagingException;
 import org.springframework.transaction.annotation.Transactional;
 import com.invoicebinder.shared.model.EmailPropertiesInfo;
 
-import static com.invoicebinder.server.core.exception.ExceptionManager.getFormattedExceptionMessage;
+import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
