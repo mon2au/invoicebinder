@@ -1,0 +1,150 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>      
+    </ui:style>
+    <g:HTMLPanel ui:field="tourPanel">
+        <div id="main" class="maincontainer">
+            <br/>
+            <g:Label ui:field="messageLabel"></g:Label>
+            <div id="tour-form" class="form defaultformwidth">
+                <div id="tour-inner">
+                    <div class="clearfix subheader" id="tourheader">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td>
+                                    <h1>Take a Tour</h1>                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <g:InlineLabel ui:field="t1"></g:InlineLabel> is simple and easy to use invoicing software with a clean and intuitive design. Start now and manage your business with a simple and elegant solution. Create invoices, manage clients, expenses, and products. Generate reports and track your business with ease.                                  
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="8u">
+
+                    <!-- Article list -->
+                    <section class="box-article-list">										
+                        <!-- Excerpt -->
+                        <article class="box-excerpt">
+                            <a href="#" class="image image-left">
+                                <img src="images/tour/cloud.png" alt="" />
+                            </a>
+                            <div>
+                                <header>
+                                    <span class="tour-itemheader">
+                                        Free Invoicing with Cloud option
+                                    </span>
+                                </header>
+                                <p>Free invoicing solution lets you get started with ease. We also offer cloud based deployment so you can access from any location where this is availability of internet. No lengthy installations and configurations just a quick setup 
+                                and you can get going to manage your business with ease.</p>
+                            </div>
+                        </article>
+                        
+                        <!-- Excerpt -->
+                        <article class="box-excerpt">
+                            <a href="#" class="image image-left">
+                                <img src="images/tour/workflow.png" alt="" />
+                            </a>
+                            <div>
+                                <header>
+                                    <span class="tour-itemheader">
+                                        Simple Steamlined Workflow
+                                    </span>
+                                </header>
+                                <p>We offer a simple and easy to follow invoicing workflow. Create clients, products and then invoice them for their purchases.
+                                Straight forward and intuitive interface help to achieve this with ease.</p>
+                            </div>
+                        </article>
+
+                        <!-- Excerpt -->
+                        <article class="box-excerpt">
+                            <a href="#" class="image image-left">
+                                <img src="images/tour/template.png" alt="" />
+                            </a>
+                            <div>
+                                <header>
+                                    <span class="tour-itemheader">
+                                        Show Your Business Identity
+                                    </span>
+                                </header>
+                                <p>Configure the application to show your business identity. upload your business logo to appear in the invoices. 
+                                    configure the application to send emails through your server. Your clients will always see your business identity.</p>
+                            </div>
+                        </article>
+
+                        <!-- Excerpt -->
+                        <article class="box-excerpt">
+                            <a href="#" class="image image-left">
+                                <img src="images/tour/payments.png" alt="" />
+                            </a>
+                            <div>
+                                <header>
+                                    <span class="tour-itemheader">
+                                        Record Payments
+                                    </span>
+                                </header>
+                                <p>Record and categorise your payments that you receive from your clients. Based on the recorded data you can then run reports to 
+                                    view the trend of how your business is progressing.</p>
+                            </div>
+                        </article>
+
+                        <!-- Excerpt -->
+                        <article class="box-excerpt">
+                            <a href="#" class="image image-left">
+                                <img src="images/tour/expenses.png" alt="" />
+                            </a>
+                            <div>
+                                <header>
+                                    <span class="tour-itemheader">
+                                        Record Expenses
+                                    </span>
+                                </header>
+                                <p>Record and categorise your expenses to keep track of your business. Based on the recorded data you can then run reports to 
+                                    view the trend of how your business is progressing.</p>
+                            </div>
+                        </article>
+                        
+                        <!-- Excerpt -->
+                        <article class="box-excerpt">
+                            <a href="#" class="image image-left">
+                                <img src="images/tour/clients.png" alt="" />
+                            </a>
+                            <div>
+                                <header>
+                                    <span class="tour-itemheader">
+                                        Manage Clients and Products
+                                    </span>
+                                </header>
+                                <p>Manage all your clients and business products and services in one place. Record all client data including their contact 
+                                    and address details with an easy to use custom resource management.</p>
+                            </div>
+                        </article>
+                        
+                        <!-- Excerpt -->
+                        <article class="box-excerpt">
+                            <a href="#" class="image image-left">
+                                <img src="images/tour/reports.png" alt="" />
+                            </a>
+                            <div>
+                                <header>
+                                    <span class="tour-itemheader">
+                                        Reporting
+                                    </span>
+                                </header>
+                                <p>Generate reports for a variety of business counters.Manage all your clients and business products and services in one place. Record all client data including their contact 
+                                    and address details with an easy to use custom resource management.</p>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>        
+    </g:HTMLPanel>
+</ui:UiBinder>

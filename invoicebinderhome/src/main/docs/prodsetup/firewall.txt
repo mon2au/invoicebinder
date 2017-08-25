@@ -1,0 +1,10 @@
+Firewall & Security
+#. Install ufw = sudo apt-get install ufw
+#. Default deny incoming = sudo ufw default deny incoming
+#. Default deny outgoing = sudo ufw default allow outgoing (otherwise nothing will work)
+#. Allow ssh from ip = sudo ufw allow from <ipaddress> to any port 22
+#. Allow mysql from ip = sudo ufw allow from <ipaddress> to any port 3306
+#. Allow tomcat from ip = sudo ufw allow from <ipaddress> to any port 8080
+#. install fail2ban = sudo apt-get install fail2ban
+#. show rules numbered = sudo ufw status numbered
+#. delete numbered rule = sudo ufw delete <num>

@@ -1,0 +1,2 @@
+##Install Tomcat8
+sudo apt-get install tomcat8 tomcat8-admin tomcat8-examples tomcat8-docs

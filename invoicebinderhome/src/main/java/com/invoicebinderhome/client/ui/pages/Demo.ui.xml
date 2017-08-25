@@ -1,0 +1,48 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div id="main" class="maincontainer">
+            <br/>
+            <g:Label ui:field="messageLabel"></g:Label>
+            <div id="tour-form" class="form defaultformwidth">
+                <div id="tour-inner">
+                    <div class="clearfix subheader" id="tourheader">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td>
+                                    <h1>Run a Demo</h1>                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Please use the following credentials to login to the demo application.                                 
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <form class="signup-form" id="send" action="">
+                        <p>
+                            <g:Label ui:field="login"></g:Label>
+                        </p>
+                        <p>
+                            <g:Label ui:field="password"></g:Label>
+                        </p>
+                        <br/>
+                        <p>
+                            <g:Anchor ui:field="demo"></g:Anchor>                            
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>        
+    </g:HTMLPanel>
+</ui:UiBinder>

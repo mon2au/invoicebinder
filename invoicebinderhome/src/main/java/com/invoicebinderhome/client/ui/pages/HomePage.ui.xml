@@ -1,0 +1,215 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+        #spanheader {
+        position: relative;
+        font-size: 50px;
+        text-transform: uppercase;
+        margin-top: 0;
+        font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
+        text-shadow: 2px 3px 3px #292929;
+        letter-spacing: -2px;
+        -webkit-text-stroke: 1px white;      
+        }
+        
+        #spanheader span {
+        text-decoration: none;
+        color: #ffffff;
+        position: absolute;
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+        text-shadow: 0 2px 0 #e9e9e9;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+        }
+                
+        #spanheader:after {
+        color: #dbdbdb;
+        content : attr(data-title); 
+        }       
+    </ui:style>
+    <g:HTMLPanel>
+        <div id="featured">
+            <meta itemprop="screenshot" content="http://invoicebinder.com/images/banner/banner.png"/>
+        </div>
+        <div id="banner-wrapper">
+            <div id="banner" class="container">
+                <div class="box-left">
+                    <div id="spanheader" data-title="Simple Invoicing Solution">
+                        <span>Simple Invoicing Solution</span>
+                    </div>
+                    <span id="bannertext">for small businesses, freelancers, tradesmen, professionals and many more business models.</span> 
+                </div>
+                <div class="box-right"> 
+                    <a href="#download" itemprop="downloadUrl" class="yellowbutton">Download</a>
+                    <span style="padding-left:20px;"></span>
+                    <a href="#demo" class="yellowbutton">Demo</a><br/><br/>
+                </div>
+            </div>
+        </div>
+        <div class="versionstrip">
+            <span id="versiontext"><g:InlineLabel ui:field="versionInfo"></g:InlineLabel><g:InlineLabel ui:field="datePublished"></g:InlineLabel></span>
+        </div>        
+        <div id="wrapper">         
+            <div id="page" class="container">
+                <div id="content">
+                    <div class="title">
+                        <span class="mainheadertext">
+                            <h1 style="font-size:30px;">Welcome to <g:InlineLabel ui:field="t0"></g:InlineLabel></h1>Downloaded <strong><g:InlineLabel ui:field="downloadCount"></g:InlineLabel></strong> times so far.
+                        </span>
+                        <span class="byline"></span> 
+                    </div>
+                    <p>
+                        <span class="headertext">What is <g:InlineLabel ui:field="t1"></g:InlineLabel>?</span>
+                    </p>
+                    <p>
+                        <strong>
+                            <g:InlineLabel ui:field="t2"></g:InlineLabel>
+                        </strong>, is a free, 
+                        simple invoicing solution for small businesses, freelancers, tradesmen, 
+                        professionals and many more business models. 
+                        We offer creation of professional invoices and expense tracking for your business along with 
+                        managing your customer accounts in a secure environment. 
+                    </p>
+                    <div id="onecolumn">
+                        <p>
+                            <span class="headertext">Why <g:InlineLabel ui:field="t3"></g:InlineLabel>?</span>
+                        </p>
+                        <p>
+                            <ul class="list-style2">
+                                <li>
+                                    <p>
+                                        Open source and actively in development.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Free invoicing software with generous features to kick start your invoicing.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Create professional invoices to bill your customers quickly and hassle free.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Customize invoices with your business logo to suite your needs.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Manage your customers and expenses at one place.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Install on your server or talk to us for cloud deployment.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Generate reports and track the health of your business with a few clicks.
+                                    </p>
+                                </li>
+                                <p>
+                                    <a href="#tour" class="bluebutton">Take a Tour</a>
+                                </p>
+                            </ul>
+                        </p>
+                        <br/>
+                        <p class="list-divider"></p>
+                        <p>View a demo to see it in action and understand how easy it is to get the service up and running for your business, or simply get started by signing up and creating your own account for free.</p>
+                        <div>
+                            <h4>
+                                <a class="yellowbutton" href="#download">Download</a>
+                            </h4>
+                        </div>
+                        <div>
+                            <h4>
+                                <a class="yellowbutton" href="#demo">Demo</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div id="sidebar">
+                    <ul class="list-style1">
+                        <li class="first">
+                            <p>
+                                <span class="headertext">Don't find the feature that you want?</span>
+                            </p>
+                            <p>
+                                If you dont see a feature that you want, send us your feedback in form of a feature request with your requirements. 
+                                If there is enough demand or the idea is worth considering,  we will implement it and make the functionality available in the software.
+                            </p>
+                            <p>
+                                <a href="https://github.com/mon2au/invoicebinder/issues/new" class="bluebutton">Request a feature</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span class="headertext">Do you want the software deployment done on the cloud?</span>
+                            </p>
+                            <p>
+                                We also support cloud deployment, If you want to run the system for your business on the cloud. 
+                                Please contact us and we will setup the system for you.
+                            </p>
+                            <p>
+                                <a href="#contactus" class="bluebutton">Cloud deployment</a>
+                            </p>
+                        </li>                        
+                        <li>
+                            <p>
+                                <span class="headertext">Found a bug? Please report it. Or visit our repository on github</span>
+                            </p>
+                            <p>
+                                If you find a bug, please report it to our github repository. Help us make invoicebinder better.
+                            </p>
+                            <p>
+                                Visit the github repository page to see the status and roadmap of the project. Help us make invoicebinder better.
+                            </p>                            
+                            <p>
+                                <a href="https://github.com/mon2au/invoicebinder/issues/new" class="bluebutton">Report Bug</a>
+                                <a href="https://github.com/mon2au/invoicebinder" class="bluebutton">Visit GitHub Repo</a>
+                            </p>
+                        </li>
+                        <li></li>
+                    </ul>
+                    <ul class="list-stylesocial">
+                        <li>
+                            <p>
+                                <span class="headertext">Follow Us.</span>
+                            </p>
+                            <p>
+                                <ul class="cv-social-media">
+                                    <a class="animated fadeIn" href="https://www.facebook.com/invoicebinder">
+                                        <li id="facebook" class="icon-facebook facebook"></li>
+                                    </a>
+                                    <a class="animated fadeIn" href="https://plus.google.com/u/2/b/112556444148191044898/112556444148191044898">
+                                        <li id="gplus" class="icon-gplus gplus"></li>
+                                    </a>
+                                    <a class="animated fadeIn" href="https://twitter.com/invoicebinder">
+                                        <li id="twitter" class="icon-twitter"></li>
+                                    </a>
+                                    <a class="animated fadeIn" href="https://www.youtube.com/channel/UC1tLrabvtIpdjoYQj0SPPBw">
+                                        <li id="youtube" class="icon-youtube"></li>
+                                    </a>
+                                    <a class="animated fadeIn" href="mailto:invoicebinder@gmail.com">
+                                        <li id="email" class="icon-email"></li>
+                                    </a>
+                                </ul>
+                            </p>
+                            <div id="clear"></div>                     
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+        <script type="text/javascript">
+        </script>            
+    </g:HTMLPanel>
+</ui:UiBinder>

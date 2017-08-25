@@ -1,0 +1,15 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel>
+        <div id="copyright" class="container">
+            <p>www.invoicebinder.com. Licensed under GNU GPL 3 | <a href="http://www.invoicebinder.com">www.invoicebinder.com</a> | <a href="#terms">Terms &amp; Conditions</a></p>
+        </div>        
+    </g:HTMLPanel>
+</ui:UiBinder>

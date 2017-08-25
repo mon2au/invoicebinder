@@ -1,0 +1,10 @@
+1. Create a custom 404 error page as html.
+
+2. modify the web.xml of the ROOT application (or any other application where the page is required) and add the following.
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.html</location>
+    </error-page> 
+
+3. restart tomcat service or reload application.

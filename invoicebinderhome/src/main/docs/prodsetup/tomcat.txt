@@ -1,0 +1,22 @@
+Tomcat
+#. Install tomcat8 = sudo apt-get install tomcat
+#. Increase tomcat file upload size = go to /usr/share/tomcat8-admin/manager/WEB-INF/web.xml and increase the size of <max-request-size> and <max-file-size> to 125829120 (120MB)
+#. Add mon2 user to tomcat8 group. (This is required for deployments) = sudo usermod -a -G tomcat8 mon2
+#. Give tomcat8 group write permissions in webapps (This is required for deployments) =  sudo chmod g+w /var/lib/tomcat8/webapps
+#. NOTE FOR ABOVE: this requires a password less SSH key to be configured on the client/server.
+
+## A connector setting in tomcat's server.xml.
+## This file is located at /var/lib/tomcat8/conf/server.xml
+
+<Connector port="8080" protocol="HTTP/1.1"
+    connectionTimeout="20000"
+    URIEncoding="utf-8"
+    redirectPort="8443"
+    proxyName="invoicebinder.com"
+    proxyPort="80" />
+
+
+## Increase tomcat JVM memory size
+# modify tomcat8 configuration file
+sudo nano /etc/default/tomcat8
+JAVA_OPTS="-Djava.awt.headless=true -Xmsystes2048m -Xmx1024m -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC"

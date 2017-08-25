@@ -1,0 +1,17 @@
+#Backup mysql databases.
+
+#1. Backup all databases.
+mysqldump -uuser -ppasswd -hhostname --all-databases > sqlfilename.sql
+
+#2. backup specific database.
+mysqldump --user=username --password=passwd --host=127.0.0.1 --port=3307 dbname > sqlfilename.sql
+
+please note, can use either method 1 or 2 for parameters.
+
+#Restore mysql database.
+
+#1. First create the database.
+mysql -uuser -ppasswd -hdbservername -e "CREATE DATABASE IF NOT EXISTS dbname"
+
+#2. now dump the backup back into the database.
+mysql -uuser -ppasswd -hdbservername dbname < /path/to/sqlfilename.sql

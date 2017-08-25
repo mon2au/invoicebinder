@@ -1,0 +1,51 @@
+#1. Install msmtp
+#The first step is to install the msmtp-mta package.
+
+sudo apt-get install msmtp-mta
+
+
+# After the install is complete you'll need to set up the defaults file with your Gmail account information. You need to create a file in your home directory called .msmtprc.
+
+nano ~/.msmtprc
+
+Paste the following into the file and edit the portions in bold to reflect your account information.
+
+#Gmail account
+defaults
+logfile ~/msmtp.log
+account gmail
+auth on
+host smtp.gmail.com
+from your_address@gmail.com
+auth on
+tls on
+tls_trust_file /usr/share/ca-certificates/mozilla/Equifax_Secure_CA.crt
+user your_address@gmail.com
+password your_gmail_password
+port 587
+account default : gmail
+
+Save the file and exit the text editor. Since this file contains your account credentials, you'll want to change the permissions to make the file readable only by you.
+
+chmod 600 .msmtprc
+
+#2. Install mailx
+#Now that your computer is configured to talk to Gmail, you need a command line email program to handle writing your email. For this I'm going to use mailx from the heirloom-mailx package.
+
+sudo apt-get install heirloom-mailx
+
+Now you need to set up the defaults file so that mailx uses msmtp to send out the email. This file is called .mailrc.
+
+nano ~/.mailrc
+Now paste the following into the file and save it.
+
+set sendmail="/usr/bin/msmtp"
+set message-sendmail-extra-arguments="-a gmail"
+
+You should now be able to send email from your terminal command line.
+Sending email from the command line
+
+Now you can send email from the command line like this:
+mail -s "Subject" address@example.com
+The cursor will go to a blank line. Enter your email message. When you're done, hit <Enter> to go to a blank line and then hit <Ctrl>+D to end your message. You have just sent your email.
+Here you can see that I've sent an email to myself from my Gmail account.
