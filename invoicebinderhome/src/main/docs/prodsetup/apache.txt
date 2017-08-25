@@ -1,0 +1,47 @@
+Setup Mod Proxy for Apache and Tomcat Proxy
+# Install mod_proxy and dependency
+## sudo apt-get install libxml2-dev
+
+# Enable the apache proxy module
+## sudo a2enmod proxy proxy_http
+
+# Configure default apache site 000-default.conf in /etc/apache2/sites-enabled/000-default.conf
+## Block proxy for an html page hosted in apache.
+{
+ProxyPass /maintenance.html !
+}
+
+## Allow proxy to tomcat
+## Always use ip address.
+{
+ProxyPass / http://xxx.xxx.xxx.xxx:8080/
+ProxyPassReverse / http://xxx.xxx.xxx.xxx:8080/
+}
+
+## Block/allow tomcat manager only from a certain ip address
+## add this in /etc/apache2/sites-enabled/000-default.conf
+{
+<Location /manager>
+    Order deny,allow
+    deny from all
+    allow from xxx.xxx.xxx.xxx
+</Location>
+} 
+
+##Rewrite Engine to enable/disable maintenance mode
+##Enable Rewrite Module and Headers Module
+sudo a2enmod rewrite
+sudo a2enmod headers
+## Note: this requires a file maintenance.html to be placed in apache root
+## and a file maintenance.enable to turn on maintenance, renaming the file to
+## maintenance.disable will turn off maintenance.
+{
+RewriteEngine On
+RewriteCond %{REMOTE_ADDR} !^XXX\.XXX\.XXX\.XXX
+RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f
+RewriteCond %{DOCUMENT_ROOT}/maintenance.enable -f
+RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+RewriteRule ^.*$ /maintenance.html [R=503,L]
+ErrorDocument 503 /maintenance.html
+Header Set Cache-Control "max-age=0, no-store"
+}

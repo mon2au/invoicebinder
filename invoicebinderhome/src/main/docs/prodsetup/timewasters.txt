@@ -1,0 +1,6 @@
+Time Waster Tasks
+
+1. updating of tomcat version on uat, and test.
+2. os updates
+3. tool updates. e.g. jenkins, tomcat, java, jenkins plugins etc, etc.
+4. database tools. e.g. mysql, sql workbench etc.

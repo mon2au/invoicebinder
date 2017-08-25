@@ -1,0 +1,5 @@
+Delete files older than X days.
+In the example below X=5
+
+find /path/to/files* -mtime +5 -exec rm {} \;
+find * -mtime +3 -exec rm {} \;

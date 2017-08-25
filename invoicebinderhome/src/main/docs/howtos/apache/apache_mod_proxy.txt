@@ -1,0 +1,26 @@
+Proxy Setup from Tomcat to Apache
+
+1. Install ModProxy in Apache
+sudo apt-get install libapache2-mod-proxy-html
+sudo apt-get install libxml2-dev
+a2enmod proxy proxy_http
+
+
+
+Add the following within the VirtualHost tag in apache2's 000-default.conf under sites-enabled folder.
+  ProxyPass /foo http://internalwebserver1.example.com/give/path/of-requested-location
+  ProxyPassReverse /foo http://internalwebserver1.example.com/give/path/of-requested-location
+
+  for example in case of web invoice the following configuration redirects the tomcat url "localhost:8080/invoicebinderhome" to the root url "localhost/" in the local development environment.
+  ProxyPass / http://localhost:8080/invoicebinderhome/
+  ProxyPassReverse / http://localhost:8080/invoicebinderhome/
+
+
+2. Add the following connector information in the tomcat server.xml configuration default location at /var/lib/tomcat7/conf
+
+<Connector port="8080" protocol="HTTP/1.1"
+              connectionTimeout="20000"
+              URIEncoding="UTF-8"
+              redirectPort="8443"
+              proxyName="localhost"
+              proxyPort="80" />

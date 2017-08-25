@@ -1,0 +1,187 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+
+    </ui:style>
+    <g:HTMLPanel ui:field="installStepsPanel">
+        <div id="main" class="maincontainer">
+            <br/>
+            <g:Label ui:field="messageLabel"></g:Label>
+            <div id="signup-form" class="form defaultformwidth">
+                <div id="signup-inner">
+                    <div class="clearfix subheader" id="signupheader">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td>
+                                    <h1>Installation Instructions for Invoice Binder</h1>                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+                        <tr>
+                            <td>
+                                <h3>1. Prerequisites</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java 1.8</a>
+                                    </li>                                     
+                                    <li>
+                                        <a href="https://tomcat.apache.org/download-80.cgi">Apache Tomcat 8.0 or above</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://dev.mysql.com/downloads/mysql/">MySQL Server 5.5 or above</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://wkhtmltopdf.org/">Wkhtmltopdf</a>
+                                    </li>                                      
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                <h3>
+                                    <a href="#ubuntu">2. Installation in Windows</a>
+                                </h3>
+                            </td>
+                            <td style="width:50%">
+                                <h3>
+                                    <a href="#windows">3. Installation in Ubuntu</a>
+                                </h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                <h3>
+                                    <a href="#deployment">4. Deployment Steps</a>
+                                </h3>
+                            </td>
+                            <td style="width:50%">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3 id="ubuntu">2. Installation Steps in Windows</h3>
+                    <ul>
+                        <li>
+                            Install Java
+                        </li>
+                        <li class="install-code-block">
+                            download and install java: <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">java</a>
+                        </li> 
+                        <li>
+                            Install Tomcat
+                        </li>
+                        <li class="install-code-block">
+                            for installation instructions go to: <a href="https://tomcat.apache.org/tomcat-8.0-doc/index.html">tomcat 8 docs</a>
+                        </li>
+                        <li>
+                            Install MySQL Server
+                        </li>
+                        <li class="install-code-block">
+                            download and install mysql server: <a href="http://dev.mysql.com/downloads/mysql/">mysql server</a>
+                        </li>                                               
+                        <li>
+                            Install Wkhtmltopdf
+                        </li>
+                        <li class="install-code-block">
+                            download and install from: <a href="http://wkhtmltopdf.org/">wkhtmltopdf</a>
+                        </li> 
+                    </ul>
+                </div>
+                <div>
+                    <h3 id="windows">3. Installation Steps in Ubuntu</h3>
+                    <p>Open the terminal and execute the following commands to install the required pre-requesites for running InvoiceBinder.</p>
+                    <ul>
+                        <li>
+                            Install Tomcat
+                        </li>
+                        <li class="install-code-block">
+                            sudo apt-get install tomcat8 tomcat8-admin
+                        </li>
+                        <li>
+                            Install Java
+                        </li>
+                        <li class="install-code-block">
+                            sudo apt-get install python-software-properties<br/>
+                            sudo add-apt-repository ppa:webupd8team/java<br/>
+                            sudo apt-get update<br/>
+                            sudo apt-get install oracle-java8-installer
+                        </li>
+                        <li>
+                            Install MySQL Server
+                        </li>
+                        <li class="install-code-block">
+                            sudo apt-get install mysql-server
+                        </li>
+                        <li>
+                            Install Wkhtmltopdf
+                        </li>
+                        <li class="install-code-block">
+                            sudo add-apt-repository ppa:ecometrica/servers<br/>
+                            sudo apt-get update<br/>
+                            sudo apt-get install wkhtmltopdf
+                        </li>                         
+                    </ul>
+                </div>
+                <div>
+                    <h3 id="deployment">4. Deployment Steps</h3>
+                    <ul>
+                        <li>
+                            Check tomcat server is running
+                        </li>
+                        <li class="install-image">
+                            <img style="width: 580px;height: 350px;" src="/images/install/tomcat_home.png"></img>
+                        </li>
+                        <li>
+                            Setup tomcat manager user
+                        </li>
+                        <li class="install-code-block">
+                            go to /var/lib/tomcat8/conf<br/>
+                            edit the file tomcat-users.xml<br/>
+                            uncomment the &lt;tomcat-users&gt;....&lt;/tomcat-users&gt; section<br/>
+                            add role manager-gui to the tomcat user<br/>
+                            your tomcat-users section should look as below
+                        </li>
+                        <li class="install-image">
+                            <img style="width: 580px;height: 180px;" src="/images/install/tomcat_users.png"></img>
+                        </li>                                               
+                        <li>
+                            Increase the file upload limit by following the steps below.
+                        </li>
+                        <li class="install-code-block">
+                            open the file /usr/share/tomcat8-admin/manager/WEB-INF/web.xml<br/>
+                            increase the &lt;max-request-size&gt; and &lt;max-file-size&gt; to 125829120 (120MB)
+                        </li>                        
+                        <li>
+                            Restart tomcat server
+                        </li>
+                        <li class="install-code-block">
+                            sudo service tomcat8 restart
+                        </li> 
+                        <li>
+                            Login to tomcat manager using the credentials set in the tomcat-users file
+                        </li>
+                        <li class="install-image">
+                            <img style="width: 580px;height: 480px;" src="/images/install/tomcat_manager.png"></img>
+                        </li>                        
+                        <li>
+                            Under the "WAR file to deploy" section, choose the invoicebinder war file and click deploy
+                        </li>                        
+                    </ul>
+                </div>                
+            </div>
+        </div>        
+    </g:HTMLPanel>
+</ui:UiBinder>

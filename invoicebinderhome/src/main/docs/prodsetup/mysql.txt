@@ -1,0 +1,4 @@
+MySql   
+# grant privileges to db user. = GRANT ALL PRIVILEGES ON *.* TO  'user'@'server'  IDENTIFIED  BY  'password';
+# comment bind-address in /etc/mysql/my.cnf to allow connections from other hosts.
+Access Remote mySQL via ssh

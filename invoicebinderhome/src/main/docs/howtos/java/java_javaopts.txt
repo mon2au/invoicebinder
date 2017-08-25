@@ -1,0 +1,11 @@
+#Set JAVA opts in tomcat catalina.sh file.
+#Out of memory error.
+#add this to the catalina.sh file located at /usr/share/tomcat7/bin as per tomcat7 version.
+
+#-Xmx sets the maximum amount of memory that can be allocated to the JVM heap; here it is being set to 1024 megabytes.
+#-Xms sets the initial amount of memory allocated to the JVM heap; here it is being set to 256 megabytes.
+#-XX:MaxPermSize set the maximum amount of memory that can be used for PermGen.
+#The NewSize and MaxNewSize parameters control the new generation’s minimum and maximum size. Regulate the new generation size by setting these parameters equal. The bigger the younger generation, the less often minor collections occur.
+
+#Example
+JAVA_OPTS="$JAVA_OPTS -Xms256m -Xmx1024m -XX:NewSize=256m -XX:MaxNewSize=356m -XX:PermSize=256m -XX:MaxPermSize=512m"

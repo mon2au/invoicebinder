@@ -1,0 +1,18 @@
+1. login to mysql prompt.
+
+2. get the password hash.
+select PASSWORD('passwd');
+example output = "*1A76BF4A5319B45A89BAE417AF3DE923AECC19AD"
+ *1A76BF4A5319B45A89BAE417AF3DE923AECC19AD
+
+3. Grant Privileges.
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY PASSWORD '*1A76BF4A5319B45A89BAE417AF3DE923AECC19AD' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'mon2uat' IDENTIFIED BY PASSWORD 'passwd_hash_as_obtained_above' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.0.10' IDENTIFIED BY PASSWORD 'passwd_hash_as_obtained_above' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+4. comment binding of address in /etc/mysql/mysql.conf.d/mysqld.cnf
+# bind-address          = 127.0.0.1
+
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY PASSWORD '*1A76BF4A5319B45A89BAE417AF3DE923AECC19AD' WITH GRANT OPTION;

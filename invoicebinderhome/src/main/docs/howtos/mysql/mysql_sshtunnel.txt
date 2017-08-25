@@ -1,0 +1,3 @@
+##how to connect to production server using an ssh tunnel.
+ssh mon2@mars -i C:\Users\mon2\Documents\Keys\ibkey -L 3307:localhost:3306 -N
+

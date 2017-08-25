@@ -1,0 +1,37 @@
+/* 
+    Created on : 21/02/2014, 2:17:02 PM
+    Author     : mon2
+*/
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/02/2014, 2:14:20 PM
+    Author     : mon2
+*/
+
+.loadingDialog {
+
+}
+
+.loadingDialogDiv {
+    width: 200px;
+    height: 30px;
+    position: fixed;
+    -moz-border-radius: 15px;
+    border-radius: 15px;      
+    -webkit-box-shadow: 0 0 2px 2px grey;
+    box-shadow: 0 0 2px 2px gray;    
+    top: 0px;
+    left: 50%;    /* move the left edge to the center … */
+    margin-left: -100px; /* … and move it to the left half the box’ width. */
+    z-index: 9999;
+    background: #161616 url(../images/loading.gif) top left repeat;    
+}
+
+.loadingInnerDiv {
+    margin-left:0px;
+}

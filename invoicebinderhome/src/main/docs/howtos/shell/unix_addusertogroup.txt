@@ -1,0 +1,3 @@
+#add existing user to group.
+usermod -a -G <group> <user>
+usermod -a -G tomcat7 mon2

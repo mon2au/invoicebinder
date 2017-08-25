@@ -1,0 +1,6 @@
+Host Config
+#. Change root login.
+#. Add hostname = /etc/hostname
+#. create mon2 user = sudo useradd -m mon2
+#. add user to sudo group = sudo usermod -aG sudo mon2
+#. change password for mon2 user = sudo passwd mon2

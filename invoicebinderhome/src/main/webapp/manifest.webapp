@@ -1,0 +1,13 @@
+{
+  "name": "Invoice Binder",
+  "description": "Invoice Binder is simple and easy to use invoicing software. Create invoices and get paid fast.",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/images/icon_128.png"
+  },
+  "developer": {
+    "name": "www.invoicebinder.com",
+    "url": "http://www.invoicebinder.com"
+  },
+  "default_locale": "en"
+}

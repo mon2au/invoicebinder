@@ -1,0 +1,17 @@
+For jenkins deployment to work correctly some permissions need to be set.
+
+artefacts deployed by jenkins need to have mon2 as owner and group.
+
+for example see below.
+
+
+
+drwxrwxr-x  5 tomcat7 tomcat7      4096 Sep  4 22:24 .
+drwxrwxr-x  6 root    root         4096 Oct 19  2015 ..
+drwxr-xr-x 10 tomcat7 tomcat7      4096 Sep  4 22:26 demo
+-rw-r--r--  1 mon2    mon2    106670143 Sep  4 22:24 demo.war
+drwxrwxr-x  2 mon2    mon2         4096 Sep  4 22:24 downloads
+drwxr-xr-x 10 tomcat7 tomcat7      4096 Sep  4 22:24 ROOT
+-rw-r--r--  1 mon2    mon2     60609782 Sep  4 22:23 ROOT.war
+
+

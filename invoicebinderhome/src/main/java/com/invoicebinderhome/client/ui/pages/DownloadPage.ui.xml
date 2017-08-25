@@ -1,0 +1,94 @@
+<!--
+Uncomment this for XHTML entities
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>     
+    </ui:style>
+    <g:HTMLPanel ui:field="downloadPanel">
+        <div id="main" class="maincontainer">
+            <br/>
+            <g:Label ui:field="messageLabel"></g:Label>
+            <div id="signup-form" class="form defaultformwidth">
+                <div id="signup-inner">
+                    <div class="clearfix subheader" id="signupheader">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td>
+                                    <h1>Download Invoice Binder</h1>                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Please download invoicebinder and follow the installation instructions to setup InvoiceBinder. Please read the system requirements to confirm if you have the system setup to satisfy the requirements of InvoiceBinder.                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <form id="send" class="signup-form" action="">
+                    <p>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="email">InvoiceBinder is provided under GNU GPL 3</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="email">I agree to the <a href="#terms">Terms and Conditions</a> *</label>
+                                </td>
+                                <td>
+                                    <g:CheckBox ui:field="checkConditions"></g:CheckBox>                  
+                                </td>                  
+                            </tr>
+                        </table>
+                    </p>                    
+                    <p>
+                        <g:Button ui:field="btnDownload">Download Invoice Binder</g:Button>
+                    </p>
+                    <p>
+                        <h2>Setup</h2>
+                        <ul>
+                            <li>This is a .war file which is deployable in tomcat and works across Windows/MacOS and Linux</li>
+                            <li>
+                                <g:Anchor ui:field="releaseNotes">View release notes for version </g:Anchor>
+                            </li>
+                            <li>
+                                <g:Anchor ui:field="installInstructions">View installation instructions</g:Anchor>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <h2>System Requirements</h2>
+                        <ul>
+                            <li>
+                                <a href="https://tomcat.apache.org/">Apache Tomcat Server 8.0 or above</a>
+                            </li>
+                            <li>
+                                <a href="http://dev.mysql.com/downloads/mysql/">MySQL database server 5.1 or above</a>
+                            </li>
+                            <li>
+                                <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java 8 or above</a>
+                            </li>
+                            <li>
+                                <a href="http://wkhtmltopdf.org/">Wkhtmltopdf</a>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <h2>Previous Releases</h2>
+                        <ul>
+                            <li>
+                                <a href="#">Previous releases are currently not available</a>
+                            </li>
+                        </ul>
+                    </p>
+                </form>
+                <div id="required" class="required">
+                </div>
+            </div>
+        </div>        
+    </g:HTMLPanel>
+</ui:UiBinder>

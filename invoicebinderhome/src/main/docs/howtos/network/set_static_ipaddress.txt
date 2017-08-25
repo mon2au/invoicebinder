@@ -1,0 +1,17 @@
+#Setup static ip address.
+1. modify interfaces config -> sudo nano /etc/network/interfaces 
+2. set the configuration as per the following. 
+       auto lo
+       iface lo inet loopback
+       auto eth0
+       iface eth0 inet static
+           address 192.168.0.10
+           netmask 255.255.255.0
+           network 192.168.0.0
+           broadcast 192.168.0.255
+           gateway 192.168.0.1
+           dns-nameservers 203.12.160.35, 203.12.160.36
+
+
+#ethernet connector name for mars
+enp5s0

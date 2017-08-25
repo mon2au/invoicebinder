@@ -8,7 +8,6 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.8.1/gwt-user-2.8.1-sources.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.8.1/gwt-user-2.8.1.jar!/" />
     </SOURCES>
   </library>
 </component>

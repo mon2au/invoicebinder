@@ -1,0 +1,2 @@
+Last Updated = 2/09/2014
+Version = mysql Ver 14.14 Distrib 5.5.38, for debian-linux-gnu (x86_64) using readline 6.3

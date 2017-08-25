@@ -1,0 +1,28 @@
+#How to enable redirection for apache maintenance mode.
+
+1. enabling and disabling of maintenance mode is handled through the maintenance scripts. refer to [run.sh]
+enabling is done by adding a maintenance.enable file in the apache document root at location /var/www/html/maintenance.enable
+disabling is done by removing the above file.
+
+2. Enable rewrite and headers module.
+sudo a2enmod rewrite
+sudo a2enmod headers
+service apache2 restart
+
+3. Add rewrite config to the Virtual Host.
+RewriteEngine On
+RewriteCond %{REMOTE_ADDR} !^123\.456\.789\.000
+RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f
+RewriteCond %{DOCUMENT_ROOT}/maintenance.enable -f
+RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+RewriteRule ^.*$ /maintenance.html [R=503,L]
+ErrorDocument 503 /maintenance.html
+Header Set Cache-Control "max-age=0, no-store"
+
+4. Add exception to proxy rule so that maintenance page always goes to apache and not tomcat. This needs to be added before
+any other rule.
+ProxyPass /maintenance.html !
+
+5. Reload apache gracefully.
+apachectl graceful
+

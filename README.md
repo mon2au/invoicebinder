@@ -3,6 +3,10 @@
 # Repository Information #
 InvoiceBinder repository - source code repository for http://www.invoicebinder.com
 
+# Repository Contents #
+* invoicebinder - The InvoiceBinder application project in GWT.
+* invoicebinderhome - The InvoiceBinder application home page project in GWT.
+* invoicebindercore - The InvoiceBinder core project in Java.
 
 ## Getting Started? ##
 
@@ -16,7 +20,6 @@ You can get started by either of the 2 ways
 
 ### Building the application from source ###
 * Clone the following repositories
-- https://github.com/mon2au/invoicebindercore.git
 - https://github.com/mon2au/invoicebinder.git
 
 1. Build and install invoicebinder core module - mvn clean install
@@ -24,9 +27,6 @@ You can get started by either of the 2 ways
 3. Build invoicebinder module
 4. follow installation instructions page at: http://invoicebinder.com/#installinstructions
 
-This repository has the following projects.
-
-* invoicebinder - The InvoiceBinder application project in GWT.
 
 ### Contribution guidelines ###
 

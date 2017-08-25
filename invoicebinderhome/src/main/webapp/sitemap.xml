@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://invoicebinder.com/</loc>
+  <lastmod>2014-08-16T02:33:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://invoicebinder.com/#demo</loc>
+  <lastmod>2014-08-16T02:33:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://invoicebinder.com/#home</loc>
+  <lastmod>2014-08-16T02:33:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://invoicebinder.com/#download</loc>
+  <lastmod>2014-08-16T02:33:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://invoicebinder.com/#tour</loc>
+  <lastmod>2014-08-16T02:33:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://invoicebinder.com/#signup</loc>
+  <lastmod>2014-08-16T02:33:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://invoicebinder.com/#contactus</loc>
+  <lastmod>2014-08-16T02:33:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>

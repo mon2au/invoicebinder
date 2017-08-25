@@ -1,0 +1,13 @@
+Static IP Address Example 
+##
+auto eth0
+iface eth0 inet static
+   address 10.0.2.15
+   netmask 255.255.255.0
+   network 10.0.2.0
+   gateway 10.0.2.1
+   dns-nameservers 203.12.160.35, 203.12.160.36
+
+
+
+

@@ -1,0 +1,9 @@
+located in: /var/lib/tomcat8/conf
+
+<tomcat-users>
+     <role rolename="tomcat"/>
+     <role rolename="manager"/>
+     <role rolename="manager-script"/>
+     <role rolename="manager-gui"/>
+     <user username="tomcat" password="tomcat" roles="tomcat, manager, manager-script, manager-gui"/>
+</tomcat-users>
