@@ -7,6 +7,7 @@ cls
 set environment=%1
 set jenkinshost=localhost
 set jenkinsport=8081
+set server=""
 
 rem validate environment must be in "uat", or "prod".
 rem if environment is blank then it deploys to the "uat" environment.
@@ -26,10 +27,20 @@ if NOT "%result%" == "true" (
     exit /b
 )
 
+rem setting default server
+if "%environment%" == "prod" (
+    set server=mars
+)
+
+if "%environment%" == "uat" (
+    set server=bmguat
+)
+
 echo "Deploying to environment - %environment%"
+echo "Deploying to server - %server%"
 echo "Starting deployment [InvoiceBinder] - %environment%"
 echo "Using password: %PASSPHRASE%"
-wget --spider --auth-no-challenge --http-user=mon2 --http-password="%PASSPHRASE%" "http://%jenkinshost%:%jenkinsport%/job/invoicebinder deployer/buildWithParameters?token=ed37a97a-18d3-4bec-98d8-383734157e44&BUILD_TYPE=%environment%&SSH_SERVER=mars&SSH_USER=mon2"
+wget --spider --auth-no-challenge --http-user=mon2 --http-password="%PASSPHRASE%" "http://%jenkinshost%:%jenkinsport%/job/invoicebinder-deployer/buildWithParameters?token=ed37a97a-18d3-4bec-98d8-383734157e44&BUILD_TYPE=%environment%&SSH_SERVER=%server%&SSH_USER=mon2"
 echo "Trigger completed, check progress in Jenkins."
 
 
