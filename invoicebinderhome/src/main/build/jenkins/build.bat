@@ -29,7 +29,7 @@ if NOT "%result%" == "true" (
 
 rem setting default branch
 if "%environment%" == "prod" (
-    set branch=integration
+    set branch=master
 ) ELSE (
     set branch=develop
 )
