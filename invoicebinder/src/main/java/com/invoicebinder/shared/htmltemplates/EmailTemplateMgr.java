@@ -5,7 +5,7 @@
  */
 package com.invoicebinder.shared.htmltemplates;
 
-import com.invoicebinder.core.exception.ExceptionType;
+import com.invoicebinder.invoicebindercore.exception.ExceptionType;
 import com.invoicebinder.server.installation.InstallationManager;
 import com.invoicebinder.server.logger.ServerLogManager;
 import java.io.BufferedReader;
@@ -14,7 +14,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
-import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
+import static com.invoicebinder.invoicebindercore.exception.ExceptionManager.getFormattedExceptionMessage;
 
 
 /**

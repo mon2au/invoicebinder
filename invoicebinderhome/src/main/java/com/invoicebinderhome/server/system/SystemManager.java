@@ -6,11 +6,11 @@
 
 package com.invoicebinderhome.server.system;
 
-import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
-import com.invoicebinder.core.exception.ExceptionType;
-import com.invoicebinder.core.shell.ProcessExec;
-import com.invoicebinder.core.shell.ShellExecute;
-import com.invoicebinder.core.shell.ShellExecuteResult;
+import static com.invoicebinder.invoicebindercore.exception.ExceptionManager.getFormattedExceptionMessage;
+import com.invoicebinder.invoicebindercore.exception.ExceptionType;
+import com.invoicebinder.invoicebindercore.shell.ProcessExec;
+import com.invoicebinder.invoicebindercore.shell.ShellExecute;
+import com.invoicebinder.invoicebindercore.shell.ShellExecuteResult;
 import com.invoicebinderhome.server.logger.ServerLogManager;
 import java.io.File;
 import java.io.IOException;

@@ -5,9 +5,9 @@
 */
 package com.invoicebinder.server.service;
 
-import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
-import com.invoicebinder.core.exception.ExceptionType;
-import com.invoicebinder.core.shell.ShellExecuteResult;
+import static com.invoicebinder.invoicebindercore.exception.ExceptionManager.getFormattedExceptionMessage;
+import com.invoicebinder.invoicebindercore.exception.ExceptionType;
+import com.invoicebinder.invoicebindercore.shell.ShellExecuteResult;
 import com.invoicebinder.client.service.utility.UtilityService;
 import com.invoicebinder.server.dataaccess.AutoNumDAO;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
@@ -16,8 +16,8 @@ import com.invoicebinder.server.serversettings.ServerSettingsManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.invoicebinder.core.file.FileManager;
-import com.invoicebinder.core.pdf.PDFManager;
+import com.invoicebinder.invoicebindercore.file.FileManager;
+import com.invoicebinder.invoicebindercore.pdf.PDFManager;
 
 import java.io.IOException;
 import java.util.UUID;

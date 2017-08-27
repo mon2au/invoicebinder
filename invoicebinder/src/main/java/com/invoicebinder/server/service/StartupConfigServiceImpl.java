@@ -5,7 +5,7 @@
 */
 package com.invoicebinder.server.service;
 
-import com.invoicebinder.core.exception.ExceptionType;
+import com.invoicebinder.invoicebindercore.exception.ExceptionType;
 import com.invoicebinder.client.service.startup.startupconfig.StartupConfigService;
 import com.invoicebinder.server.dataaccess.ConfigDAO;
 import com.invoicebinder.server.logger.ServerLogManager;
@@ -22,7 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
+import static com.invoicebinder.invoicebindercore.exception.ExceptionManager.getFormattedExceptionMessage;
 
 /**
  *

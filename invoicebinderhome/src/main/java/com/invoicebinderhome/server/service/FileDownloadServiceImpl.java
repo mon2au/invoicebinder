@@ -1,9 +1,9 @@
 package com.invoicebinderhome.server.service;
 
-import com.invoicebinder.core.email.EmailManager;
-import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
-import com.invoicebinder.core.exception.ExceptionType;
-import com.invoicebinder.core.file.FileManager;
+import com.invoicebinder.invoicebindercore.email.EmailManager;
+import static com.invoicebinder.invoicebindercore.exception.ExceptionManager.getFormattedExceptionMessage;
+import com.invoicebinder.invoicebindercore.exception.ExceptionType;
+import com.invoicebinder.invoicebindercore.file.FileManager;
 import com.invoicebinderhome.server.logger.ServerLogManager;
 import com.invoicebinderhome.server.serversettings.ServerSettingsManager;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;

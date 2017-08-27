@@ -4,7 +4,7 @@
 * and open the template in the editor.
 */
 
-package com.invoicebinder.core.misc;
+package com.invoicebinder.invoicebindercore.misc;
 
 public class PasswordGenerator {
     

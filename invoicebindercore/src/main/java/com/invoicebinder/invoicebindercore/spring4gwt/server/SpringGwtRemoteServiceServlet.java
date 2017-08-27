@@ -1,4 +1,4 @@
-package com.invoicebinder.core.spring4gwt.server;
+package com.invoicebinder.invoicebindercore.spring4gwt.server;
 
 import javax.servlet.http.HttpServletRequest;
 

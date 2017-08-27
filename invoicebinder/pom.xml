@@ -36,7 +36,6 @@
             <groupId>com.invoicebinder</groupId>
             <artifactId>InvoiceBinderCore</artifactId>
             <version>${invoiceBinderCoreVersion}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -294,6 +293,34 @@
                                               tofile="${project.build.outputDirectory}/appSettings.properties" />
                                         <copy file="src/main/resources/contextSettings.uat.properties"
                                               tofile="${project.build.outputDirectory}/contextSettings.properties"/>                                            
+                                    </tasks>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>test</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>initialize</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <tasks>
+                                        <delete file="${project.build.outputDirectory}/appSettings.properties" />
+                                        <delete file="${project.build.outputDirectory}/contextSettings.properties"/>
+                                        <copy file="src/main/resources/appSettings.test.unix.properties"
+                                              tofile="${project.build.outputDirectory}/appSettings.properties" />
+                                        <copy file="src/main/resources/contextSettings.test.properties"
+                                              tofile="${project.build.outputDirectory}/contextSettings.properties"/>
                                     </tasks>
                                 </configuration>
                             </execution>

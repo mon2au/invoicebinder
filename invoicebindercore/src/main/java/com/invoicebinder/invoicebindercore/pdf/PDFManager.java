@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-package com.invoicebinder.core.pdf;
+package com.invoicebinder.invoicebindercore.pdf;
 
-import com.invoicebinder.core.shell.ShellExecute;
-import com.invoicebinder.core.shell.ShellExecuteResult;
+import com.invoicebinder.invoicebindercore.shell.ShellExecute;
+import com.invoicebinder.invoicebindercore.shell.ShellExecuteResult;
 
 import java.io.IOException;
 

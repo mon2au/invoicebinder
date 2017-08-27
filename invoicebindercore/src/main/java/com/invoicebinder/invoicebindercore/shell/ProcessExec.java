@@ -4,7 +4,7 @@
 * and open the template in the editor.
 */
 
-package com.invoicebinder.core.shell;
+package com.invoicebinder.invoicebindercore.shell;
 
 import java.io.File;
 import java.io.FileNotFoundException;

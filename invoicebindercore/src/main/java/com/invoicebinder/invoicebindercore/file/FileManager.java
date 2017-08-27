@@ -4,7 +4,7 @@
 * and open the template in the editor.
 */
 
-package com.invoicebinder.core.file;
+package com.invoicebinder.invoicebindercore.file;
 
 import java.io.BufferedWriter;
 import java.io.File;

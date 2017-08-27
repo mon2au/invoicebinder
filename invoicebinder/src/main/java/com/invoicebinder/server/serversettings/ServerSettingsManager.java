@@ -6,7 +6,7 @@
 
 package com.invoicebinder.server.serversettings;
 
-import com.invoicebinder.core.exception.ExceptionType;
+import com.invoicebinder.invoicebindercore.exception.ExceptionType;
 import com.invoicebinder.server.logger.ServerLogManager;
 import com.invoicebinder.shared.misc.Constants;
 import java.io.FileInputStream;
@@ -19,7 +19,7 @@ import java.net.URISyntaxException;
 import java.util.Properties;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.jasypt.properties.EncryptableProperties;
-import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
+import static com.invoicebinder.invoicebindercore.exception.ExceptionManager.getFormattedExceptionMessage;
 
 /**
  *

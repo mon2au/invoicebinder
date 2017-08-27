@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.invoicebinder.core.exception;
+package com.invoicebinder.invoicebindercore.exception;
 
 /**
  *

@@ -1,6 +1,6 @@
 package com.invoicebinder.server.service;
 
-import com.invoicebinder.core.misc.PasswordGenerator;
+import com.invoicebinder.invoicebindercore.misc.PasswordGenerator;
 import com.invoicebinder.client.service.login.LoginService;
 import com.invoicebinder.server.dataaccess.ClientDAO;
 import com.invoicebinder.server.dataaccess.InvoiceDAO;

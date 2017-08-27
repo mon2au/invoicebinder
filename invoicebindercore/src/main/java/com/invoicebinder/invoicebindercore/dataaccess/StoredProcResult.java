@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.invoicebinder.core.dataaccess;
+package com.invoicebinder.invoicebindercore.dataaccess;
 
 import java.util.List;
 
