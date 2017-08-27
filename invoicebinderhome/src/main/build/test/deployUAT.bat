@@ -4,5 +4,4 @@ rem Invoicebinder test server is a linux machine.
 rem This script uses WinScp to copy the files.
 rem WinScp must be installed.
 
-winscp /script=test-winscp.script
-
+winscp /script=uat-winscp.script
