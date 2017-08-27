@@ -1,0 +1,4 @@
+open scp://mon2:%PASSPHRASE%@127.0.0.1:2222
+cd /opt/tomcat/webapps/
+put C:\Users\Manpreet\GitHub\invoicebinder\invoicebinder\target\invoicebinder.war
+exit

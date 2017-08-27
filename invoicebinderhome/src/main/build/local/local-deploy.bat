@@ -1,6 +1,6 @@
 @echo off
 SET tomcatpackage="C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\invoicebinder.war"
-SET buildpackage="C:\Users\mon2\Projects\InvoiceBinder\invoicebinder\target"
+SET buildpackage="C:\Users\Manpreet\GitHub\invoicebinder\invoicebinder\target"
 echo "Cleanup...."
 del %tomcatpackage% | more
 echo "Cleanup Completed...."
