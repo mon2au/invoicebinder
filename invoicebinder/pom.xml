@@ -365,7 +365,7 @@
                         <artifactId>maven-antrun-plugin</artifactId>
                         <executions>
                             <execution>
-                                <phase>install</phase>
+                                <phase>compile</phase>
                                 <goals>
                                     <goal>run</goal>
                                 </goals>
@@ -565,6 +565,7 @@
                     <packagingExcludes>
                         WEB-INF/classes/com/invoicebinder/system/**,
                         WEB-INF/classes/appSettings.dev.unix.properties,
+                        WEB-INF/classes/appSettings.test.unix.properties,
                         WEB-INF/classes/appSettings.dev.win.properties,
                         WEB-INF/classes/appSettings.demo.properties,
                         WEB-INF/classes/appSettings.uat.properties,
@@ -573,6 +574,7 @@
                         WEB-INF/classes/contextSettings.uat.properties,
                         WEB-INF/classes/contextSettings.prod.properties,
                         WEB-INF/classes/contextSettings.demo.properties,
+                        WEB-INF/classes/contextSettings.test.properties,
                         WEB-INF/classes/contextSettings.hibernate.properties
                     </packagingExcludes>
                 </configuration>
