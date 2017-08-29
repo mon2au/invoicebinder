@@ -1,7 +1,9 @@
 @echo off
-rem This script deploys invoicebinder to the test server.
-rem Invoicebinder test server is a linux machine.
-rem This script uses WinScp to copy the files.
-rem WinScp must be installed.
+rem **** TEST DEPLOYMENT ****
 
+set ibhome="C:\\Users\\Manpreet\\GitHub\\invoicebinder\\invoicebinder"
+
+echo "Build Invoicebinder"
+start /wait mvn -f %ibhome% clean install -Ptest -Pcontext
+echo "Finished Building Invoicebinder"
 winscp /script=test-winscp.script
