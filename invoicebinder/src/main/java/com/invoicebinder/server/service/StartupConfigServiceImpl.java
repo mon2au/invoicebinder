@@ -34,12 +34,13 @@ import static com.invoicebinder.invoicebindercore.exception.ExceptionManager.get
 @Service("startupconfig")
 public class StartupConfigServiceImpl extends RemoteServiceServlet implements
         StartupConfigService {
-    
+
     @Autowired
     private ConfigDAO configDAO;
-    
+
     @Override
     public AppSettingsInfo loadApplicationSettings() {
+        ServerLogManager.writeInformationLog(StartupConfigServiceImpl.class, "Loading application settings");
         HashMap<String, String> configData = new HashMap();
         List<ConfigData> lstConfig;
         AppSettingsInfo settings = new AppSettingsInfo();

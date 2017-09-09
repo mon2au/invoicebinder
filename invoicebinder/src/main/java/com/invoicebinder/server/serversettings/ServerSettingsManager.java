@@ -34,7 +34,7 @@ public class ServerSettingsManager {
         Properties prop = new EncryptableProperties(encryptor);
 
         try {
-            path = ServerSettingsManager.class.getResource("../../../../../" + propertyFileName).toURI().getPath();
+            path = ServerSettingsManager.class.getResource("../../../../" + propertyFileName).toURI().getPath();
             InputStream in = new FileInputStream(path);
             prop.load(in);
         } catch (IOException | URISyntaxException ex) {
@@ -49,7 +49,7 @@ public class ServerSettingsManager {
         String path;
 
         try {
-            path = ServerSettingsManager.class.getResource("../../../../../" + propertyFileName).toURI().getPath();
+            path = ServerSettingsManager.class.getResource("../../../../" + propertyFileName).toURI().getPath();
             ServerLogManager.writeDebugLog(ServerSettingsManager.class, String.format("saving property %s to %s%s with value %s.", key, path, propertyFileName, value));
             if (path.equals("")) {
                 throw new IOException("Cannot determine context settings file path");

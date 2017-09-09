@@ -32,7 +32,7 @@ public class ConfigDAO extends BaseDAO<Configuration,Long>{
     
     @SuppressWarnings("unchecked")
     public ArrayList<ConfigData> getConfigData(ConfigurationSection section) {
-    	ArrayList<ConfigData> configList = new ArrayList<ConfigData>();
+    	ArrayList<ConfigData> configList = new ArrayList<>();
         ConfigData data;
         List<Configuration> rawList;
         

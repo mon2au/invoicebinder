@@ -59,7 +59,7 @@ public class MailServiceImpl extends RemoteServiceServlet implements
         String payButtonDisplay;
         ArrayList<ConfigData> configItems;
         String template = EmailTemplateMgr.getInvoiceEmailTemplate();
-        String logoPath = MailServiceImpl.class.getResource("../../../../../").getPath();
+        String logoPath = MailServiceImpl.class.getResource("../../../../").getPath();
         HashMap<String, String> templateVariables = new HashMap<>();
         HashMap<String, String> dataMap = new HashMap();
 
