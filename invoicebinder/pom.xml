@@ -304,7 +304,7 @@
             </build>
         </profile>
         <profile>
-            <id>test</id>
+            <id>test-unix</id>
             <build>
                 <plugins>
                     <plugin>
@@ -320,6 +320,34 @@
                                         <delete file="${project.build.outputDirectory}/appSettings.properties" />
                                         <delete file="${project.build.outputDirectory}/contextSettings.properties"/>
                                         <copy file="src/main/resources/appSettings.test.unix.properties"
+                                              tofile="${project.build.outputDirectory}/appSettings.properties" />
+                                        <copy file="src/main/resources/contextSettings.test.properties"
+                                              tofile="${project.build.outputDirectory}/contextSettings.properties"/>
+                                    </tasks>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>test-win</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>initialize</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <tasks>
+                                        <delete file="${project.build.outputDirectory}/appSettings.properties" />
+                                        <delete file="${project.build.outputDirectory}/contextSettings.properties"/>
+                                        <copy file="src/main/resources/appSettings.test.win.properties"
                                               tofile="${project.build.outputDirectory}/appSettings.properties" />
                                         <copy file="src/main/resources/contextSettings.test.properties"
                                               tofile="${project.build.outputDirectory}/contextSettings.properties"/>
@@ -568,6 +596,7 @@
                         WEB-INF/classes/com/invoicebinder/system/**,
                         WEB-INF/classes/appSettings.dev.unix.properties,
                         WEB-INF/classes/appSettings.test.unix.properties,
+                        WEB-INF/classes/appSettings.test.win.properties,
                         WEB-INF/classes/appSettings.dev.win.properties,
                         WEB-INF/classes/appSettings.demo.properties,
                         WEB-INF/classes/appSettings.uat.properties,

@@ -10,7 +10,7 @@ echo "Cleanup."
 del %tomcatpackage% | more
 echo "Cleanup Completed."
 echo "Building Invoicebinder."
-call mvn -f %ibhome% clean install -Ptest,context
+call mvn -f %ibhome% clean install -Ptest-win,context
 echo "Finished Building Invoicebinder."
 echo f | xcopy /f /y %buildpackage% %tomcatpackage% | more
 echo "Deploy Completed."
