@@ -1,4 +1,6 @@
-open scp://mon2:%PASSPHRASE%@127.0.0.1:2222
-cd /opt/tomcat/webapps/
+open scp://mon2:%PASSPHRASE%@127.0.0.1:2223
+cd /var/lib/tomcat8/webapps/
+put C:\Users\Manpreet\GitHub\invoicebinder\invoicebinderhome\target\ROOT.war
+cd /var/lib/tomcat8/webapps/ROOT/download
 put C:\Users\Manpreet\GitHub\invoicebinder\invoicebinder\target\invoicebinder.war
 exit
