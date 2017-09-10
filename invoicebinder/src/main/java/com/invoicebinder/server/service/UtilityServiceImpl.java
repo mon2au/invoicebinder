@@ -40,11 +40,11 @@ public class UtilityServiceImpl extends RemoteServiceServlet implements UtilityS
     
     @Override
     public String createPDFFile(String contentHtml, String invoiceNumber) {
-        String path = "";
-        String wkhtmltopdflocation = "";
+        String path = "", htmlFilePath, pdfFilePath, wkhtmltopdflocation;
         ShellExecuteResult result;
         String pdfFileName = invoiceNumber + ".pdf";
         String tempFileName = UUID.randomUUID().toString() + ".html";
+        String OS = System.getProperty("os.name").toLowerCase();
         ServerLogManager.writeInformationLog(UtilityServiceImpl.class, "Creating PDF file");
         
         try {
@@ -54,11 +54,24 @@ public class UtilityServiceImpl extends RemoteServiceServlet implements UtilityS
             if (FileManager.writeFile(path + tempFileName, contentHtml)) {
                 ServerLogManager.writeDebugLog(UtilityServiceImpl.class, String.format("Creating temp file: %s%s", path, tempFileName));
                 ServerLogManager.writeDebugLog(UtilityServiceImpl.class, "wkhtmltopdf location: " + wkhtmltopdflocation);
-                ServerLogManager.writeDebugLog(UtilityServiceImpl.class, String.format("html file path: %s%s",path, tempFileName));
-                ServerLogManager.writeDebugLog(UtilityServiceImpl.class, String.format("pdf file path: %s%s",path, pdfFileName));
+
                 ServerLogManager.writeInformationLog(UtilityServiceImpl.class, "Creating PDF file");
-                
-                result = PDFManager.convertHTMLToPDF(wkhtmltopdflocation, new java.io.File(path + tempFileName).getAbsolutePath(),new java.io.File(path + pdfFileName).getAbsolutePath());
+
+                //handle spaces in path for windows
+                if ((OS.contains("win"))) {
+                    //enclose path in quotes to deal with spaces
+                    htmlFilePath = String.format("\"%s%s\"", path,tempFileName);
+                    pdfFilePath = String.format("\"%s%s\"", path,pdfFileName);
+                }
+                else {
+                    htmlFilePath = String.format("%s%s", path,tempFileName);
+                    pdfFilePath = String.format("%s%s", path,pdfFileName);
+                }
+
+                ServerLogManager.writeDebugLog(UtilityServiceImpl.class, htmlFilePath);
+                ServerLogManager.writeDebugLog(UtilityServiceImpl.class, pdfFilePath);
+
+                result = PDFManager.convertHTMLToPDF(wkhtmltopdflocation, htmlFilePath,pdfFilePath);
                 if (!result.isSuccess()){
                     throw new IOException(result.getErrorOutput());
                 }
