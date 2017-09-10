@@ -13,6 +13,6 @@ import java.io.IOException;
 
 public class PDFManager {
     public static ShellExecuteResult convertHTMLToPDF(String wkHtmlToPdfAppPath, String htmlFilePath, String pdfFilePath) throws IOException, InterruptedException {
-        return ShellExecute.executeCommand(wkHtmlToPdfAppPath + " -s A4" + " " + htmlFilePath + " " + pdfFilePath);
+        return ShellExecute.executeCommand(wkHtmlToPdfAppPath + " -s A4 " + htmlFilePath + " " + pdfFilePath);
     }
 }

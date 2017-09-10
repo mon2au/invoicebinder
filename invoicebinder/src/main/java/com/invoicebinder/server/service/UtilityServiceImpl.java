@@ -41,17 +41,24 @@ public class UtilityServiceImpl extends RemoteServiceServlet implements UtilityS
     @Override
     public String createPDFFile(String contentHtml, String invoiceNumber) {
         String path = "";
+        String wkhtmltopdflocation = "";
         ShellExecuteResult result;
         String pdfFileName = invoiceNumber + ".pdf";
         String tempFileName = UUID.randomUUID().toString() + ".html";
         ServerLogManager.writeInformationLog(UtilityServiceImpl.class, "Creating PDF file");
         
         try {
+            wkhtmltopdflocation = ServerSettingsManager.ApplicationSettings.getWKHTMLtoPDFLocation();
             path = ServerSettingsManager.ApplicationSettings.getUploadPath();
             ServerLogManager.writeInformationLog(UtilityServiceImpl.class, "Upload path: " + path);
             if (FileManager.writeFile(path + tempFileName, contentHtml)) {
                 ServerLogManager.writeDebugLog(UtilityServiceImpl.class, String.format("Creating temp file: %s%s", path, tempFileName));
-                result = PDFManager.convertHTMLToPDF(ServerSettingsManager.ApplicationSettings.getWKHTMLtoPDFLocation(), path + tempFileName, path + pdfFileName);
+                ServerLogManager.writeDebugLog(UtilityServiceImpl.class, "wkhtmltopdf location: " + wkhtmltopdflocation);
+                ServerLogManager.writeDebugLog(UtilityServiceImpl.class, String.format("html file path: %s%s",path, tempFileName));
+                ServerLogManager.writeDebugLog(UtilityServiceImpl.class, String.format("pdf file path: %s%s",path, pdfFileName));
+                ServerLogManager.writeInformationLog(UtilityServiceImpl.class, "Creating PDF file");
+                
+                result = PDFManager.convertHTMLToPDF(wkhtmltopdflocation, new java.io.File(path + tempFileName).getAbsolutePath(),new java.io.File(path + pdfFileName).getAbsolutePath());
                 if (!result.isSuccess()){
                     throw new IOException(result.getErrorOutput());
                 }
