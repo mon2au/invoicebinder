@@ -4,6 +4,16 @@
  */
 package com.invoicebinder.client.ui.pages.invoices.view;
 
+import com.google.gwt.dom.client.InputElement;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.DisclosurePanel;
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.TextArea;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
 import com.invoicebinder.client.service.utility.UtilityServiceClientImpl;
 import com.invoicebinder.client.ui.alert.Loading;
 import com.invoicebinder.client.ui.controller.Main;
@@ -25,20 +35,10 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.DisclosurePanel;
-import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.TextArea;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.datepicker.client.DateBox;
 import com.invoicebinder.client.ui.controller.Views;
 import com.invoicebinder.shared.enums.invoice.InvoiceStatus;
 import com.invoicebinder.shared.misc.Utils;
-import com.invoicebinder.shared.model.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -72,6 +72,10 @@ public class ViewInvoice extends Composite {
     @UiField protected TableRowElement trPaypalPayment;
     @UiField protected TableRowElement trPaypalPaymentSpacing;
     @UiField protected FormElement frmPaypal;
+    @UiField protected InputElement ppBusiness;
+    @UiField protected InputElement ppCurrency;
+    @UiField protected InputElement ppAmount;
+    @UiField protected InputElement ppItemName;
 
     private final VerticalPanel invoicePanel;
     private final Invoice invoice;
@@ -345,6 +349,11 @@ public class ViewInvoice extends Composite {
                 event.getNativeEvent().preventDefault();
             }
             if (sender == btnPayPaypal) {
+                frmPaypal.setAction("https://www.sandbox.paypal.com/cgi-bin/webscr");
+                ppBusiness.setValue("invoicebinder@gmail.com");
+                ppCurrency.setValue("AUD");
+                ppAmount.setValue("100.00");
+                ppItemName.setValue("Invoice INV13");
                 frmPaypal.submit();
                 event.getNativeEvent().preventDefault();
             }

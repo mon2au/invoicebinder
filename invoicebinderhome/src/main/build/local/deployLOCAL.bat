@@ -6,9 +6,6 @@ SET tomcatpackage="C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\we
 SET ibhome="C:\\Users\\Manpreet\\GitHub\\invoicebinder\\invoicebinder"
 SET buildpackage="%ibhome%\\target\\invoicebinder.war"
 
-echo "Cleanup."
-del %tomcatpackage% | more
-echo "Cleanup Completed."
 echo "Building Invoicebinder."
 call mvn -f %ibhome% clean install -Ptest-win,context
 echo "Finished Building Invoicebinder."
