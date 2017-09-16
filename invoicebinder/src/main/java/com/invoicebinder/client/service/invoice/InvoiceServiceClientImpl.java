@@ -144,28 +144,28 @@ public class InvoiceServiceClientImpl implements InvoiceServiceClientInt {
         this.service.getOverdueInvoiceInfoForClient(clientId, new GetOverdueInvoiceInfoForClientCallback());
     }
     
-    private class GetOverdueInvoicesCountCallback implements AsyncCallback {
+    private class GetOverdueInvoicesCountCallback implements AsyncCallback<Integer> {
         @Override
         public void onFailure(Throwable caught) {
             Alert.show(caught.getMessage(), AlertLevel.ERROR);
         }
         
         @Override
-        public void onSuccess(Object result) {
-            mainui.updateOverdueInvoicesCount((Integer)result);
+        public void onSuccess(Integer result) {
+            mainui.updateOverdueInvoicesCount(result);
         }
     }
     
     // <editor-fold defaultstate="collapsed" desc="Callback Handlers">
-    private class LoadInvoiceDetailsForViewInvoicePageCallback implements AsyncCallback {
+    private class LoadInvoiceDetailsForViewInvoicePageCallback implements AsyncCallback<ViewInvoiceInfo> {
         @Override
         public void onFailure(Throwable caught) {
             Alert.show(caught.getMessage(), AlertLevel.ERROR);
         }
         
         @Override
-        public void onSuccess(Object result) {
-            mainui.updateInvoiceDetailsForInvoicePage((ViewInvoiceInfo)result);
+        public void onSuccess(ViewInvoiceInfo result) {
+            mainui.updateInvoiceDetailsForInvoicePage(result);
         }
     }
     private class LoadInvoiceDetailsForInvoicePreviewPageCallback implements AsyncCallback {

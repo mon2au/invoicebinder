@@ -21,7 +21,6 @@ import com.invoicebinder.client.ui.notification.ValidationPopup;
 import com.invoicebinder.shared.enums.invoice.InvoiceMode;
 import com.invoicebinder.shared.enums.invoice.ViewInvoicePageMode;
 import com.invoicebinder.shared.misc.Constants;
-import static com.invoicebinder.shared.misc.Utils.isDemoApplication;
 import com.invoicebinder.shared.misc.VariableManager;
 import com.invoicebinder.shared.model.*;
 import com.google.gwt.core.client.GWT;
@@ -103,9 +102,18 @@ public class ViewInvoice extends Composite {
     }
 
     public void updateInvoiceDetails(ViewInvoiceInfo viewInvoiceInfo) {
+        String amount = String.valueOf(viewInvoiceInfo.getInvoiceInfo().getAmount());
+
         //update view invoice page information and invoice page.       
         this.setEmailMessage(viewInvoiceInfo);
         this.invoice.updateInvoiceDetails(viewInvoiceInfo);
+
+        //set paypal form data
+        frmPaypal.setAction(viewInvoiceInfo.getPayPalSubmitUrl());
+        ppBusiness.setValue(viewInvoiceInfo.getPaypalEmail());
+        ppCurrency.setValue(viewInvoiceInfo.getCurrencyCode());
+        ppAmount.setValue(amount);
+        ppItemName.setValue("Payment for Invoice: " + viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber());
 
         //set client data.
         this.invoiceNumber = viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber();
@@ -113,7 +121,7 @@ public class ViewInvoice extends Composite {
         this.companyName = viewInvoiceInfo.getBusinessInfo().getCompanyName();
         this.clientId = viewInvoiceInfo.getInvoiceInfo().getClientId();
         this.clientName = viewInvoiceInfo.getInvoiceInfo().getClientName();
-        this.paymentAmount = String.valueOf(viewInvoiceInfo.getInvoiceInfo().getAmount());
+        this.paymentAmount = amount;
         this.currencyCode = viewInvoiceInfo.getCurrencyCode();
         this.lblInvoiceStatus.setText("Status: " + viewInvoiceInfo.getInvoiceInfo().getInvoiceStatus());
         this.lblInvoiceStatus.setStyleName("invoice-status");
@@ -349,11 +357,7 @@ public class ViewInvoice extends Composite {
                 event.getNativeEvent().preventDefault();
             }
             if (sender == btnPayPaypal) {
-                frmPaypal.setAction("https://www.sandbox.paypal.com/cgi-bin/webscr");
-                ppBusiness.setValue("invoicebinder@gmail.com");
-                ppCurrency.setValue("AUD");
-                ppAmount.setValue("100.00");
-                ppItemName.setValue("Invoice INV13");
+
                 frmPaypal.submit();
                 event.getNativeEvent().preventDefault();
             }

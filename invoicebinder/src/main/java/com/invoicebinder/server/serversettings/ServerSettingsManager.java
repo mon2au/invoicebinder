@@ -172,6 +172,9 @@ public class ServerSettingsManager {
         public static void setWKHTMLtoPDFLocation(String htmlToPdfAppLocation) {
            setApplicationSettings("app.settings.wkhtmltopdflocation", htmlToPdfAppLocation);
         }
+        public static String getPaypalSubmitUrl() {
+            return getApplicationSettings().getProperty("payments.paypalbutton.url");
+        }
     }
     public static class BuildInformation {
         public static String getBuildVersion() {
