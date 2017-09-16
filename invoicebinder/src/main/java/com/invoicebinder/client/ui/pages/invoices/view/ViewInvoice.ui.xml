@@ -103,6 +103,7 @@ Uncomment this for XHTML entities
                     <input type="hidden" name="currency_code" ui:field="ppCurrency" />
                     <input type="hidden" name="amount" ui:field="ppAmount" />
                     <input type="hidden" name="item_name" ui:field="ppItemName" />
+                    <input type="hidden" name="return" ui:field="ppReturnUrl" />
                 </form>
             </g:HTMLPanel>
         </g:VerticalPanel>

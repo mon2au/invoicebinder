@@ -75,6 +75,7 @@ public class ViewInvoice extends Composite {
     @UiField protected InputElement ppCurrency;
     @UiField protected InputElement ppAmount;
     @UiField protected InputElement ppItemName;
+    @UiField protected InputElement ppReturnUrl;
 
     private final VerticalPanel invoicePanel;
     private final Invoice invoice;
@@ -114,6 +115,10 @@ public class ViewInvoice extends Composite {
         ppCurrency.setValue(viewInvoiceInfo.getCurrencyCode());
         ppAmount.setValue(amount);
         ppItemName.setValue("Payment for Invoice: " + viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber());
+        //set the return url
+        //example//[INVOICEBINDER_URL]/view=[AUTOLOGIN_VIEW]&amount=[AUTH_AMOUNT]&token=[AUTH_TOKEN]&invnum=[INVOICE_NUMBER]&invoiceId=[INVOICE_ID]
+        ppReturnUrl.setValue("");
+        
 
         //set client data.
         this.invoiceNumber = viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber();
