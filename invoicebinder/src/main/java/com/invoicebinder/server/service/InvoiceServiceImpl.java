@@ -250,6 +250,7 @@ public class InvoiceServiceImpl extends RemoteServiceServlet implements
         HashMap<String, String> configDataHash;
         
         inv = invoiceDAO.loadInvoice(invoiceId);
+        viewInvoiceInfo.getInvoiceInfo().setId(invoiceId);
         viewInvoiceInfo.getInvoiceInfo().setInvoiceNumber(inv.getInvoiceNumber());
         viewInvoiceInfo.getInvoiceInfo().setDescription(inv.getDescription());
         viewInvoiceInfo.getInvoiceInfo().setInvoiceDate(inv.getInvoiceDate());
