@@ -18,6 +18,7 @@ import com.invoicebinder.client.service.utility.UtilityServiceClientImpl;
 import com.invoicebinder.client.ui.alert.Loading;
 import com.invoicebinder.client.ui.controller.Main;
 import com.invoicebinder.client.ui.notification.ValidationPopup;
+import com.invoicebinder.shared.enums.AutoLoginViews;
 import com.invoicebinder.shared.enums.invoice.InvoiceMode;
 import com.invoicebinder.shared.enums.invoice.ViewInvoicePageMode;
 import com.invoicebinder.shared.misc.Constants;
@@ -75,7 +76,7 @@ public class ViewInvoice extends Composite {
     @UiField protected InputElement ppCurrency;
     @UiField protected InputElement ppAmount;
     @UiField protected InputElement ppItemName;
-    @UiField protected InputElement ppReturnUrl;
+    @UiField protected InputElement ppNotifyUrl;
 
     private final VerticalPanel invoicePanel;
     private final Invoice invoice;
@@ -104,8 +105,15 @@ public class ViewInvoice extends Composite {
 
     public void updateInvoiceDetails(ViewInvoiceInfo viewInvoiceInfo) {
         String amount = String.valueOf(viewInvoiceInfo.getInvoiceInfo().getAmount());
+        //example//[INVOICEBINDER_URL]/view=[AUTOLOGIN_VIEW]&amount=[AUTH_AMOUNT]&token=[AUTH_TOKEN]&invnum=[INVOICE_NUMBER]&invoiceId=[INVOICE_ID]
+        String notifyUrl = GWT.getHostPageBaseURL() +"index.html#autologin/view=" + AutoLoginViews.paypalnotify.toString() +
+                "&amount=" + viewInvoiceInfo.getInvoiceInfo().getAmount().toString() +
+                "&token=" + viewInvoiceInfo.getInvoiceInfo().getAuthToken() +
+                "&invnum=" + viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber() +
+                "&invoiceId=" + String.valueOf(viewInvoiceInfo.getInvoiceInfo().getId());
 
-        //update view invoice page information and invoice page.       
+
+        //update view invoice page information and invoice page.
         this.setEmailMessage(viewInvoiceInfo);
         this.invoice.updateInvoiceDetails(viewInvoiceInfo);
 
@@ -115,10 +123,7 @@ public class ViewInvoice extends Composite {
         ppCurrency.setValue(viewInvoiceInfo.getCurrencyCode());
         ppAmount.setValue(amount);
         ppItemName.setValue("Payment for Invoice: " + viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber());
-        //set the return url
-        //example//[INVOICEBINDER_URL]/view=[AUTOLOGIN_VIEW]&amount=[AUTH_AMOUNT]&token=[AUTH_TOKEN]&invnum=[INVOICE_NUMBER]&invoiceId=[INVOICE_ID]
-        ppReturnUrl.setValue("");
-        
+        ppNotifyUrl.setValue(notifyUrl);
 
         //set client data.
         this.invoiceNumber = viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber();

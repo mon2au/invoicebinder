@@ -88,7 +88,7 @@ public class MailServiceImpl extends RemoteServiceServlet implements
             templateVariables.put("[AUTH_AMOUNT]", invoiceInfo.getAmount().toString());
             templateVariables.put("[INVOICE_ID]", Long.toString(invoiceInfo.getId()));
             templateVariables.put("[INVOICEBINDER_URL]", baseUrl + "index.html#autologin");
-            templateVariables.put("[AUTOLOGIN_VIEW]", AutoLoginViews.invoice.toString());
+            templateVariables.put("[AUTOLOGIN_VIEW]", AutoLoginViews.viewinvoice.toString());
             templateVariables.put("[PAY_BUTTON_DISPLAY]", payButtonDisplay);
 
             //find and replace variables in the template.

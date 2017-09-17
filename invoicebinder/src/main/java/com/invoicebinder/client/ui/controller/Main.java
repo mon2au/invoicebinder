@@ -291,7 +291,15 @@ public class Main extends Composite {
         AutoLoginViews view = AutoLoginViews.valueOf(paramView);
 
         switch (view) {
-            case invoice: {
+            case viewinvoice: {
+                String amount = getParamFromHref("amount");
+                AutoLoginProps loginProps = new AutoLoginProps(getParamFromHref("token"), getParamFromHref("invnum"), new BigDecimal(amount));
+                loginService.authenticateAutoLogin(loginProps, view);
+            }
+            break;
+
+            case paypalnotify: {
+                GWT.debugger();
                 String amount = getParamFromHref("amount");
                 AutoLoginProps loginProps = new AutoLoginProps(getParamFromHref("token"), getParamFromHref("invnum"), new BigDecimal(amount));
                 loginService.authenticateAutoLogin(loginProps, view);
@@ -303,7 +311,6 @@ public class Main extends Composite {
             }
             break;
         }
-
     }
     public void show(Views view) {
         this.container.show(view);
@@ -448,11 +455,14 @@ public class Main extends Composite {
     public void displayAutoLoginView(AuthenticationResult result, AutoLoginViews view) {
         if (result.isAuthenticated()) {
             switch (view) {
-                case invoice: {
+                case viewinvoice: {
                     this.show(Views.auto_showinvoice);
                 }
                 break;
-                
+                case paypalnotify: {
+                    this.show(Views.auto_showpaypal_notify);
+                }
+                break;
                 default: {
                     this.showLoginDialog(false);
                 }

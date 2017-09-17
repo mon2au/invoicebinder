@@ -26,6 +26,7 @@ public enum Views {
     //autologin views
     autologin,
     auto_showinvoice,
+    auto_showpaypal_notify,
 
     //authenticated views others
     logout,
