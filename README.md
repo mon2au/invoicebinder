@@ -1,5 +1,7 @@
 # README #
 
+[![Build Status](https://travis-ci.org/mon2au/invoicebinder.svg?branch=develop)](https://travis-ci.org/mon2au/invoicebinder) 
+
 # Repository Information #
 InvoiceBinder repository - source code repository for http://www.invoicebinder.com
 
