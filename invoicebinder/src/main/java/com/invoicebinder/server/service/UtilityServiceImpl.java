@@ -5,9 +5,9 @@
 */
 package com.invoicebinder.server.service;
 
-import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
-import com.invoicebinder.core.exception.ExceptionType;
-import com.invoicebinder.core.shell.ShellExecuteResult;
+import static com.invoicebinder.invoicebindercore.exception.ExceptionManager.getFormattedExceptionMessage;
+import com.invoicebinder.invoicebindercore.exception.ExceptionType;
+import com.invoicebinder.invoicebindercore.shell.ShellExecuteResult;
 import com.invoicebinder.client.service.utility.UtilityService;
 import com.invoicebinder.server.dataaccess.AutoNumDAO;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
@@ -16,8 +16,8 @@ import com.invoicebinder.server.serversettings.ServerSettingsManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.invoicebinder.core.file.FileManager;
-import com.invoicebinder.core.pdf.PDFManager;
+import com.invoicebinder.invoicebindercore.file.FileManager;
+import com.invoicebinder.invoicebindercore.pdf.PDFManager;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -40,18 +40,38 @@ public class UtilityServiceImpl extends RemoteServiceServlet implements UtilityS
     
     @Override
     public String createPDFFile(String contentHtml, String invoiceNumber) {
-        String path = "";
+        String path = "", htmlFilePath, pdfFilePath, wkhtmltopdflocation;
         ShellExecuteResult result;
         String pdfFileName = invoiceNumber + ".pdf";
         String tempFileName = UUID.randomUUID().toString() + ".html";
+        String OS = System.getProperty("os.name").toLowerCase();
         ServerLogManager.writeInformationLog(UtilityServiceImpl.class, "Creating PDF file");
         
         try {
+            wkhtmltopdflocation = ServerSettingsManager.ApplicationSettings.getWKHTMLtoPDFLocation();
             path = ServerSettingsManager.ApplicationSettings.getUploadPath();
             ServerLogManager.writeInformationLog(UtilityServiceImpl.class, "Upload path: " + path);
             if (FileManager.writeFile(path + tempFileName, contentHtml)) {
                 ServerLogManager.writeDebugLog(UtilityServiceImpl.class, String.format("Creating temp file: %s%s", path, tempFileName));
-                result = PDFManager.convertHTMLToPDF(ServerSettingsManager.ApplicationSettings.getWKHTMLtoPDFLocation(), path + tempFileName, path + pdfFileName);
+                ServerLogManager.writeDebugLog(UtilityServiceImpl.class, "wkhtmltopdf location: " + wkhtmltopdflocation);
+
+                ServerLogManager.writeInformationLog(UtilityServiceImpl.class, "Creating PDF file");
+
+                //handle spaces in path for windows
+                if ((OS.contains("win"))) {
+                    //enclose path in quotes to deal with spaces
+                    htmlFilePath = String.format("\"%s%s\"", path,tempFileName);
+                    pdfFilePath = String.format("\"%s%s\"", path,pdfFileName);
+                }
+                else {
+                    htmlFilePath = String.format("%s%s", path,tempFileName);
+                    pdfFilePath = String.format("%s%s", path,pdfFileName);
+                }
+
+                ServerLogManager.writeDebugLog(UtilityServiceImpl.class, htmlFilePath);
+                ServerLogManager.writeDebugLog(UtilityServiceImpl.class, pdfFilePath);
+
+                result = PDFManager.convertHTMLToPDF(wkhtmltopdflocation, htmlFilePath,pdfFilePath);
                 if (!result.isSuccess()){
                     throw new IOException(result.getErrorOutput());
                 }

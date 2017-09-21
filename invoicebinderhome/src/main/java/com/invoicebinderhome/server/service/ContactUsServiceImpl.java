@@ -6,9 +6,9 @@
 
 package com.invoicebinderhome.server.service;
 
-import com.invoicebinder.core.email.EmailManager;
-import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
-import com.invoicebinder.core.exception.ExceptionType;
+import com.invoicebinder.invoicebindercore.email.EmailManager;
+import static com.invoicebinder.invoicebindercore.exception.ExceptionManager.getFormattedExceptionMessage;
+import com.invoicebinder.invoicebindercore.exception.ExceptionType;
 import com.invoicebinderhome.client.service.contactus.ContactUsService;
 import com.invoicebinderhome.server.logger.ServerLogManager;
 import com.invoicebinderhome.server.serversettings.ServerSettingsManager;

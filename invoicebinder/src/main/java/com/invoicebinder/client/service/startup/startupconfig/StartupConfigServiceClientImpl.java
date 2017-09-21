@@ -20,14 +20,12 @@ import com.google.gwt.user.client.rpc.ServiceDefTarget;
  */
 public class StartupConfigServiceClientImpl implements StartupConfigServiceClientInt {
     private final StartupConfigServiceAsync service;
-    private final Main mainui;
 
-    public StartupConfigServiceClientImpl(String url, Main mainui) {
+    public StartupConfigServiceClientImpl(String url) {
         System.out.print(url);
         this.service = GWT.create(StartupConfigService.class);
         ServiceDefTarget endpoint = (ServiceDefTarget) this.service;
         endpoint.setServiceEntryPoint(url);
-        this.mainui = mainui;
     }     
 
     @Override
@@ -44,6 +42,7 @@ public class StartupConfigServiceClientImpl implements StartupConfigServiceClien
         
         @Override
         public void onFailure(Throwable caught) {
+            GWT.log("Error loading application config", caught);
             Alert.show(caught.getMessage(), AlertLevel.ERROR);
         }
 

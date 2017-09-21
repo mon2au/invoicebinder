@@ -6,8 +6,8 @@
 
 package com.invoicebinderhome.server.serversettings;
 
-import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
-import com.invoicebinder.core.exception.ExceptionType;
+import static com.invoicebinder.invoicebindercore.exception.ExceptionManager.getFormattedExceptionMessage;
+import com.invoicebinder.invoicebindercore.exception.ExceptionType;
 import com.invoicebinderhome.server.logger.ServerLogManager;
 import com.invoicebinderhome.shared.misc.Constants;
 import java.io.FileInputStream;

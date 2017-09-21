@@ -4,11 +4,11 @@
        xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
   http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-  http://www.springframework.org/schema/aop 
+  http://www.springframework.org/schema/aop
   http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
-  http://www.springframework.org/schema/context 
+  http://www.springframework.org/schema/context
   http://www.springframework.org/schema/context/spring-context-4.3.xsd
-  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx
   http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
     <!-- data sources -->
     <bean id="dataSourceWebInvoice" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -20,7 +20,7 @@
     <!-- data sources -->
     
     <!-- session factories -->             
-    <bean id="sessionFactoryWebInvoice" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+    <bean id="sessionFactoryWebInvoice" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSourceWebInvoice" />
         <property name="packagesToScan" value="com.invoicebinder.shared.entity" />
         <property name="hibernateProperties">
@@ -36,7 +36,7 @@
     <!-- session factories -->   
     
     <!-- transaction managers -->      
-    <bean id="txManagerWebInvoice" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    <bean id="txManagerWebInvoice" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactoryWebInvoice" />
     </bean>
     <!-- transaction managers -->  

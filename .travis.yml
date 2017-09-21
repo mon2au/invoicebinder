@@ -1,0 +1,14 @@
+language: java
+script:
+- mvn -f ./invoicebindercore/pom.xml clean install
+- mvn install:install-file -Dfile=./invoicebinder/lib/gwt-visualization.jar -DgroupId=com.google.gwt.google-apis
+  -DartifactId=gwt-visualization -Dversion=1.1.2 -Dpackaging=jar
+- mvn -f ./invoicebinder/pom.xml clean install -Ptest-unix,context
+deploy:
+  provider: heroku
+  api_key:
+    secure: KiVLRFtfD9ThBqxTfcxwSREdDCYFHSdxPGKW2weCpCLj6xIqWU9wKjuKBj8sPhnPFTgq/n0993dNQkDx6saNFPq1NBsdSi0Z8WuH1LMTyJ1ZqOQI8HYvRVa3Ml5UGj1tjcBi0CaOXVyi3WnexZXuPeBnwP2QV9tZ7FAF0Ct7NH2TqgOaSeC2jWavAJkzKvGxPJA+DA53TDLBUAJuYmdnoTvPValGohMBnLXILgUtK16nuIjHjocqqGWYUcIvNa1lC1xMIG3ThDbXoF0ionPmOTVlXHxpkLd/w4OdpZoqi0052leTx0Cti+g4wz30f2KqQxwtJxdgIu3GlSjJ3srTtZaJhCAL8aXPq0jOq3m3MlrzV0PXesEGef1sxPybmcCZj4IC/kYHFr6v2eWYb2l3RDnKdcSSMF8CVbdXQ/1mpexHvjSZGog1eafYeWBu9vMLN6QUneysSigQNw8YmF/NbV5qLT1FQZqDdYF9gubFX+fmKJWauWB4OhNudhsS/LfhMXado2CmknH9MwsJGr9fabfwwwkX0FQLt2U9CM0w6+tAVo5ljbjZfOSarS3El9N0ZT5oenLRtBo2BO9+uMSn7UUaky/tJUxHwo82Kx7pxD7fzr2Ui3d7JWx+4s5h1Pn1VeVCl1NymRAjyuk0LBofm9yckkh9HxkxpNqRIhvEQYw=
+    app: invoicebinder
+    on:
+      repo: mon2/invoicebinder
+      branch: develop

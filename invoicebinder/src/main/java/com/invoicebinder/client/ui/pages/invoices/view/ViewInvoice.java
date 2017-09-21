@@ -4,14 +4,24 @@
  */
 package com.invoicebinder.client.ui.pages.invoices.view;
 
+import com.google.gwt.dom.client.InputElement;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.DisclosurePanel;
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.TextArea;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
 import com.invoicebinder.client.service.utility.UtilityServiceClientImpl;
 import com.invoicebinder.client.ui.alert.Loading;
 import com.invoicebinder.client.ui.controller.Main;
 import com.invoicebinder.client.ui.notification.ValidationPopup;
+import com.invoicebinder.shared.enums.AutoLoginViews;
 import com.invoicebinder.shared.enums.invoice.InvoiceMode;
 import com.invoicebinder.shared.enums.invoice.ViewInvoicePageMode;
 import com.invoicebinder.shared.misc.Constants;
-import static com.invoicebinder.shared.misc.Utils.isDemoApplication;
 import com.invoicebinder.shared.misc.VariableManager;
 import com.invoicebinder.shared.model.*;
 import com.google.gwt.core.client.GWT;
@@ -25,20 +35,10 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.DisclosurePanel;
-import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.TextArea;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.datepicker.client.DateBox;
 import com.invoicebinder.client.ui.controller.Views;
 import com.invoicebinder.shared.enums.invoice.InvoiceStatus;
 import com.invoicebinder.shared.misc.Utils;
-import com.invoicebinder.shared.model.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -72,6 +72,11 @@ public class ViewInvoice extends Composite {
     @UiField protected TableRowElement trPaypalPayment;
     @UiField protected TableRowElement trPaypalPaymentSpacing;
     @UiField protected FormElement frmPaypal;
+    @UiField protected InputElement ppBusiness;
+    @UiField protected InputElement ppCurrency;
+    @UiField protected InputElement ppAmount;
+    @UiField protected InputElement ppItemName;
+    @UiField protected InputElement ppNotifyUrl;
 
     private final VerticalPanel invoicePanel;
     private final Invoice invoice;
@@ -99,9 +104,26 @@ public class ViewInvoice extends Composite {
     }
 
     public void updateInvoiceDetails(ViewInvoiceInfo viewInvoiceInfo) {
-        //update view invoice page information and invoice page.       
+        String amount = String.valueOf(viewInvoiceInfo.getInvoiceInfo().getAmount());
+        //example//[INVOICEBINDER_URL]/view=[AUTOLOGIN_VIEW]&amount=[AUTH_AMOUNT]&token=[AUTH_TOKEN]&invnum=[INVOICE_NUMBER]&invoiceId=[INVOICE_ID]
+        String notifyUrl = GWT.getHostPageBaseURL() +"index.html#autologin/view=" + AutoLoginViews.paypalnotify.toString() +
+                "&amount=" + viewInvoiceInfo.getInvoiceInfo().getAmount().toString() +
+                "&token=" + viewInvoiceInfo.getInvoiceInfo().getAuthToken() +
+                "&invnum=" + viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber() +
+                "&invoiceId=" + String.valueOf(viewInvoiceInfo.getInvoiceInfo().getId());
+
+
+        //update view invoice page information and invoice page.
         this.setEmailMessage(viewInvoiceInfo);
         this.invoice.updateInvoiceDetails(viewInvoiceInfo);
+
+        //set paypal form data
+        frmPaypal.setAction(viewInvoiceInfo.getPayPalSubmitUrl());
+        ppBusiness.setValue(viewInvoiceInfo.getPaypalEmail());
+        ppCurrency.setValue(viewInvoiceInfo.getCurrencyCode());
+        ppAmount.setValue(amount);
+        ppItemName.setValue("Payment for Invoice: " + viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber());
+        ppNotifyUrl.setValue(notifyUrl);
 
         //set client data.
         this.invoiceNumber = viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber();
@@ -109,7 +131,7 @@ public class ViewInvoice extends Composite {
         this.companyName = viewInvoiceInfo.getBusinessInfo().getCompanyName();
         this.clientId = viewInvoiceInfo.getInvoiceInfo().getClientId();
         this.clientName = viewInvoiceInfo.getInvoiceInfo().getClientName();
-        this.paymentAmount = String.valueOf(viewInvoiceInfo.getInvoiceInfo().getAmount());
+        this.paymentAmount = amount;
         this.currencyCode = viewInvoiceInfo.getCurrencyCode();
         this.lblInvoiceStatus.setText("Status: " + viewInvoiceInfo.getInvoiceInfo().getInvoiceStatus());
         this.lblInvoiceStatus.setStyleName("invoice-status");
@@ -345,6 +367,7 @@ public class ViewInvoice extends Composite {
                 event.getNativeEvent().preventDefault();
             }
             if (sender == btnPayPaypal) {
+
                 frmPaypal.submit();
                 event.getNativeEvent().preventDefault();
             }

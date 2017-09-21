@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
 <module rename-to='invoicebinder'>
-  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <!-- Inherit the invoicebindercore Web Toolkit stuff.                        -->
   <inherits name='com.google.gwt.user.User' />
 
   <!-- Inherit the default GWT style sheet.  You can change       -->

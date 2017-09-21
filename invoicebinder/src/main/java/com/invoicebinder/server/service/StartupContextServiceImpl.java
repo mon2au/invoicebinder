@@ -31,13 +31,13 @@ public class StartupContextServiceImpl extends RemoteServiceServlet implements
     
     private Boolean isContextConfigAvailable() {
         Boolean result = false;
-        InputStream in = StartupContextServiceImpl.class.getResourceAsStream("../../../../../" + Constants.CONTEXT_FILENAME);
+        InputStream in = StartupContextServiceImpl.class.getResourceAsStream("../../../../" + Constants.CONTEXT_FILENAME);
         
         if (in != null) {
             result = true;
         }
         
-         ServerLogManager.writeInformationLog(StartupContextServiceImpl.class, "Application context available: " + result.toString());
+        ServerLogManager.writeInformationLog(StartupContextServiceImpl.class, "Application context available: " + result.toString());
         return result;
     }    
     

@@ -43,7 +43,7 @@ public class InvoiceBinder implements EntryPoint {
     public void setAppContextAvailable(final Boolean response) {
         
         if (response) {
-            StartupConfigServiceClientImpl startupConfigService = new StartupConfigServiceClientImpl(GWT.getModuleBaseURL() + "services/startupconfig", this.main);
+            StartupConfigServiceClientImpl startupConfigService = new StartupConfigServiceClientImpl(GWT.getModuleBaseURL() + "services/startupconfig");
             startupConfigService.loadApplicationSettings(this);
         }
         else {

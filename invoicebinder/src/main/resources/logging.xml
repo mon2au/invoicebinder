@@ -3,29 +3,35 @@
 <Configuration status="warn" name="webinvoice" packages="">
     <Appenders>
         <File name="error-log" fileName="${web:rootDir}/console/errors.log">
-            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>            
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout>
                 <Pattern>%d{dd-MMM-yyyy HH:mm} %p %c{1}:%L - %m%n</Pattern>
             </PatternLayout>
         </File>
         <File name="warn-log" fileName="${web:rootDir}/console/warns.log">
-            <ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>            
+            <ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout>
                 <Pattern>%d{dd-MMM-yyyy HH:mm} %p %c{1}:%L - %m%n</Pattern>
             </PatternLayout>
         </File>
         <File name="trace-log" fileName="${web:rootDir}/console/trace.log">
-            <ThresholdFilter level="TRACE" onMatch="ACCEPT" onMismatch="DENY"/>            
+            <ThresholdFilter level="TRACE" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout>
                 <Pattern>%d{dd-MMM-yyyy HH:mm} %p %c{1}:%L - %m%n</Pattern>
             </PatternLayout>
         </File>
         <File name="info-log" fileName="${web:rootDir}/console/info.log">
-            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>        
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout>
                 <Pattern>%d{dd-MMM-yyyy HH:mm} %p %c{1}:%L - %m%n</Pattern>
             </PatternLayout>
-        </File>        
+        </File>
+        <File name="spring-log" fileName="${web:rootDir}/console/spring.log">
+            <ThresholdFilter level="TRACE" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>%d{dd-MMM-yyyy HH:mm} %p %c{1}:%L - %m%n</Pattern>
+            </PatternLayout>
+        </File>
     </Appenders>
     <Loggers>
         <Root level="debug" additivity="false">
@@ -33,6 +39,9 @@
             <AppenderRef ref="error-log" level="error"/>
             <AppenderRef ref="warn-log" level="warn"/>
             <AppenderRef ref="info-log" level="info"/>
-        </Root> 
+        </Root>
+        <Logger name="org.springframework.beans.factory" level="debug">
+            <AppenderRef ref="spring-log" level="debug"/>
+        </Logger>
     </Loggers>
 </Configuration>

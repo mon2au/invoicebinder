@@ -20,6 +20,8 @@ public class ViewInvoiceInfo implements IsSerializable {
     private String currencyCode;
     private String taxLabel;
     private String invoiceEmailMessage;
+    private String paypalEmail;
+    private String payPalSubmitUrl;
     
     public ViewInvoiceInfo() {
         this.invoiceInfo = new InvoiceInfo();
@@ -81,5 +83,21 @@ public class ViewInvoiceInfo implements IsSerializable {
 
     public void setInvoiceEmailMessage(String invoiceEmailMessage) {
         this.invoiceEmailMessage = invoiceEmailMessage;
+    }
+
+    public String getPaypalEmail() {
+        return paypalEmail;
+    }
+
+    public void setPaypalEmail(String paypalEmail) {
+        this.paypalEmail = paypalEmail;
+    }
+
+    public String getPayPalSubmitUrl() {
+        return payPalSubmitUrl;
+    }
+
+    public void setPayPalSubmitUrl(String payPalSubmitUrl) {
+        this.payPalSubmitUrl = payPalSubmitUrl;
     }
 }

@@ -4,8 +4,8 @@
 */
 package com.invoicebinder.server.dataaccess;
 
-import static com.invoicebinder.core.exception.ExceptionManager.getFormattedExceptionMessage;
-import com.invoicebinder.core.exception.ExceptionType;
+import static com.invoicebinder.invoicebindercore.exception.ExceptionManager.getFormattedExceptionMessage;
+import com.invoicebinder.invoicebindercore.exception.ExceptionType;
 import com.invoicebinder.server.logger.ServerLogManager;
 import com.invoicebinder.shared.entity.item.Product;
 import com.invoicebinder.shared.model.GridColSortInfo;

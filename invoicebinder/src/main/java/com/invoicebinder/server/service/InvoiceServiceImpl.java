@@ -7,10 +7,12 @@ package com.invoicebinder.server.service;
 import com.invoicebinder.client.service.invoice.InvoiceService;
 import com.invoicebinder.server.dataaccess.AutoNumDAO;
 import com.invoicebinder.server.dataaccess.InvoiceDAO;
+import com.invoicebinder.server.serversettings.ServerSettingsManager;
 import com.invoicebinder.shared.entity.client.Client;
 import com.invoicebinder.shared.entity.invoice.Invoice;
 import com.invoicebinder.shared.entity.item.Item;
 import com.invoicebinder.shared.enums.autonum.AutoNumType;
+import com.invoicebinder.shared.enums.config.*;
 import com.invoicebinder.shared.enums.invoice.InvoiceStatus;
 import com.invoicebinder.shared.model.ClientInfo;
 import com.invoicebinder.shared.model.GridColSortInfo;
@@ -18,12 +20,6 @@ import com.invoicebinder.shared.model.InvoiceInfo;
 import com.invoicebinder.shared.model.ItemInfo;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.invoicebinder.server.dataaccess.ConfigDAO;
-import com.invoicebinder.shared.enums.config.ApplicationSettingsItems;
-import com.invoicebinder.shared.enums.config.BusinessConfigItems;
-import com.invoicebinder.shared.enums.config.ConfigurationSection;
-import com.invoicebinder.shared.enums.config.CustomAttribConfigItems;
-import com.invoicebinder.shared.enums.config.EmailConfigItems;
-import com.invoicebinder.shared.enums.config.InvoiceTemplateConfigItems;
 import com.invoicebinder.shared.enums.invoice.InvoiceTemplate;
 import static com.invoicebinder.shared.misc.Utils.convertNullToBlank;
 import com.invoicebinder.shared.model.ConfigData;
@@ -175,7 +171,7 @@ public class InvoiceServiceImpl extends RemoteServiceServlet implements
         invoiceDAO.saveInvoice(invoice);
         autonumDAO.incAutoNum(AutoNumType.INVOICE.toString());
 
-        //TODO - to be implimented.
+        //TODO - to be implemented.
         //if (invoiceInfo.isSendEmail()) {
         //}        
         return invoice.getId();
@@ -254,6 +250,7 @@ public class InvoiceServiceImpl extends RemoteServiceServlet implements
         HashMap<String, String> configDataHash;
         
         inv = invoiceDAO.loadInvoice(invoiceId);
+        viewInvoiceInfo.getInvoiceInfo().setId(invoiceId);
         viewInvoiceInfo.getInvoiceInfo().setInvoiceNumber(inv.getInvoiceNumber());
         viewInvoiceInfo.getInvoiceInfo().setDescription(inv.getDescription());
         viewInvoiceInfo.getInvoiceInfo().setInvoiceDate(inv.getInvoiceDate());
@@ -298,7 +295,7 @@ public class InvoiceServiceImpl extends RemoteServiceServlet implements
         }   
         
         //load template from config.
-        configData = (ArrayList<ConfigData>) configDAO.getConfigData(ConfigurationSection.InvoiceTemplates);
+        configData = configDAO.getConfigData(ConfigurationSection.InvoiceTemplates);
         configDataHash = new HashMap();
         for (ConfigData cdata : configData) { configDataHash.put(cdata.getKey(), cdata.getValue()); }       
         if (configDataHash.size() > 0) { 
@@ -306,7 +303,7 @@ public class InvoiceServiceImpl extends RemoteServiceServlet implements
         }
         
         //load business data from config
-        configData = (ArrayList<ConfigData>) configDAO.getConfigData(ConfigurationSection.Business);       
+        configData = configDAO.getConfigData(ConfigurationSection.Business);
         configDataHash = new HashMap();
         for (ConfigData cdata : configData) { configDataHash.put(cdata.getKey(), cdata.getValue()); }
         if (configDataHash.size() > 0) { 
@@ -324,14 +321,14 @@ public class InvoiceServiceImpl extends RemoteServiceServlet implements
         }     
         
         //load appSettings data from config
-        configData = (ArrayList<ConfigData>) configDAO.getConfigData(ConfigurationSection.ApplicationSettings);       
+        configData = configDAO.getConfigData(ConfigurationSection.ApplicationSettings);
         configDataHash = new HashMap();
         for (ConfigData cdata : configData) { configDataHash.put(cdata.getKey(), cdata.getValue()); }       
         viewInvoiceInfo.setCurrencyCode(configDataHash.get(ApplicationSettingsItems.CURRENCY.toString()));
         viewInvoiceInfo.setTaxLabel(configDataHash.get(ApplicationSettingsItems.TAXLABEL.toString()));
         
         //load custom attribute configuration
-        configData = (ArrayList<ConfigData>) configDAO.getConfigData(ConfigurationSection.CustomAttributes);       
+        configData = configDAO.getConfigData(ConfigurationSection.CustomAttributes);
         configDataHash = new HashMap();        
         for (ConfigData cdata : configData) { configDataHash.put(cdata.getKey(), cdata.getValue()); }
        
@@ -347,11 +344,20 @@ public class InvoiceServiceImpl extends RemoteServiceServlet implements
         viewInvoiceInfo.getCustomAttributes().setAttrib10(configDataHash.get(CustomAttribConfigItems.ATTR10.toString())); 
      
         //load email template for invoice email.
-        configData = (ArrayList<ConfigData>) configDAO.getConfigData(ConfigurationSection.Email);       
-        configDataHash = new HashMap();        
+        configData = configDAO.getConfigData(ConfigurationSection.Email);
+        configDataHash = new HashMap();
         for (ConfigData cdata : configData) { configDataHash.put(cdata.getKey(), cdata.getValue()); }
         viewInvoiceInfo.setInvoiceEmailMessage(configDataHash.get(EmailConfigItems.EMAILINVOICETEMPLATE.toString()));
-        
+
+        //load payment paypal email from config
+        configData = configDAO.getConfigData(ConfigurationSection.Payments);
+        configDataHash = new HashMap();
+        for (ConfigData cdata : configData) { configDataHash.put(cdata.getKey(), cdata.getValue()); }
+        viewInvoiceInfo.setPaypalEmail(configDataHash.get(PaymentConfigItems.PAYPALEMAIL.toString()));
+
+        //set PayPal submit url
+        viewInvoiceInfo.setPayPalSubmitUrl(ServerSettingsManager.ApplicationSettings.getPaypalSubmitUrl());
+
         return viewInvoiceInfo;
     }
 

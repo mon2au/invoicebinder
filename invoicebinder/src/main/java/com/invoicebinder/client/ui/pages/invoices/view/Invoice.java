@@ -96,8 +96,8 @@ public class Invoice extends Composite {
     interface InvoiceUiBinder extends UiBinder<Widget, Invoice> {
     }
     
-    public Invoice(Object main, long invoiceId, InvoiceMode mode) {
-        this.main = (Main)main;
+    public Invoice(Main main, long invoiceId, InvoiceMode mode) {
+        this.main = main;
         this.invoiceId = (int)invoiceId;
         this.invoiceMode = mode;
         initWidget(uiBinder.createAndBindUi(this));
