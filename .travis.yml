@@ -7,8 +7,8 @@ script:
 deploy:
   provider: heroku
   app: limitless-dawn-78972
-      on:
-        repo: mon2/invoicebinder
-        branch: master
+    on:
+      repo: mon2/invoicebinder
+      branch: master
   api_key:
     secure: D5EE88MsHAb8qRrdGiUsU+cVfUfqSwhxKt71X+xPB4yAVlpuhFXcsvQ43i58bdpqaIlRDdlnCn9YWyaiT/rtL4wsrguREZ4dliCSNfI6ut6fRAyHke4s1ZJ76WcBk26ahVg1W/YYGflQL+Uny9AtgUSU+ADaH9sGnWihEyxWwoMBUwRWZIkXOSniOBTkvOUAw+GLO6uPukE5eG4/+AyO/8aEpFZJYOff4MRZ+4HByDPbo7+3DwMFZ82t6/oWh11nGzGLj7EQSOYsM4SF9ONcWAb+xJF5lYN9krh/9A8f39UU1AEtGgXwehl8zWEj7omNwCXGDOXexY0REKLADfP1lLOl4C6hh3Ef80pKHDQZ0f3jTdSCVDZ3Tn5Xp+RDzRMciPPHa8gnfRoc3yqDh/TntgGXpsqWZl+9yf1DD1tAeXI2cg+16oIj+thzLrD9cVJ2QnRmcjZGSx5djtsZcdoyO4SCn8eW5qGO8epXD2Hn9hLiAMLYilvuhXg/7PFcaVXVHdU4aYKmm69Tocbzyc35cKBxsfQ0uIMbnQKid1Jxw4NsUm9siRp6E/Chkq/joEi5w7+ep2H7+duHbgg53XYici/b5Y7f9+4A0lhVQJZQncyWjxOWuXCtlGywVPyMfrU+qPcvUVlIxU+U0o5utJew1rBoc1CoCLZQUQ3bwBBueZ4=
