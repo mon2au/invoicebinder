@@ -7,4 +7,4 @@ script:
 deploy:
   provider: heroku
   api_key: f3d866a0-b3f1-4827-8c3b-2831eda7ae7e
-  app: limitless-dawn-78972
+  app: invoicebinder
