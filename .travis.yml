@@ -6,5 +6,5 @@ script:
 - mvn -f ./invoicebinder/pom.xml clean install -Ptest-unix,context
 deploy:
   provider: heroku
-  api_key: f3d866a0-b3f1-4827-8c3b-2831eda7ae7e
+  api_key: c5db2b62-bb8e-4453-8947-1c47a803d9f7
   app: invoicebinder
