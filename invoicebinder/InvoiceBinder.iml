@@ -12,7 +12,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="InvoiceBinderCore" />
+    <orderEntry type="library" name="Maven: com.invoicebinder:InvoiceBinderCore:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.jcraft:jsch:0.1.50" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.32" level="project" />
     <orderEntry type="library" name="Maven: com.google.gwt:gwt-user:2.8.1" level="project" />
