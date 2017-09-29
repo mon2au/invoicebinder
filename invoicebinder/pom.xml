@@ -274,7 +274,52 @@
                     </plugin>
                 </plugins>
             </build>
-        </profile>        
+        </profile>
+        <profile>
+            <id>heroku</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                </os>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>initialize</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <tasks>
+                                        <delete file="${project.build.outputDirectory}/appSettings.properties" />
+                                        <delete file="${project.build.outputDirectory}/contextSettings.properties"/>
+                                        <copy file="src/main/resources/appSettings.heroku.properties"
+                                              tofile="${project.build.outputDirectory}/appSettings.properties" />
+                                        <copy file="src/main/resources/contextSettings.heroku.properties"
+                                              tofile="${project.build.outputDirectory}/contextSettings.properties"/>
+                                    </tasks>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>remove-javax</id>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <tasks>
+                                <delete dir="${project.build.directory}/classes/javax" />
+                            </tasks>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <profile>
             <id>uat</id>
             <build>
@@ -601,12 +646,14 @@
                         WEB-INF/classes/appSettings.demo.properties,
                         WEB-INF/classes/appSettings.uat.properties,
                         WEB-INF/classes/appSettings.prod.properties,
+                        WEB-INF/classes/appSettings.heroku.properties,
                         WEB-INF/classes/contextSettings.dev.properties,
                         WEB-INF/classes/contextSettings.uat.properties,
                         WEB-INF/classes/contextSettings.prod.properties,
                         WEB-INF/classes/contextSettings.demo.properties,
                         WEB-INF/classes/contextSettings.test.properties,
-                        WEB-INF/classes/contextSettings.hibernate.properties
+                        WEB-INF/classes/contextSettings.hibernate.properties,
+                        WEB-INF/classes/contextSettings.heroku.properties
                     </packagingExcludes>
                 </configuration>
             </plugin>

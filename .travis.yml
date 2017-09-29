@@ -3,7 +3,7 @@ script:
 - mvn -f ./invoicebindercore/pom.xml clean install
 - mvn install:install-file -Dfile=./invoicebinder/lib/gwt-visualization.jar -DgroupId=com.google.gwt.google-apis
   -DartifactId=gwt-visualization -Dversion=1.1.2 -Dpackaging=jar
-- mvn -f ./invoicebinder/pom.xml clean install -Ptest-unix,context
+- mvn -f ./invoicebinder/pom.xml clean install -Pheroku,context
 deploy:
   provider: heroku
   api_key: c5db2b62-bb8e-4453-8947-1c47a803d9f7
