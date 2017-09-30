@@ -1,4 +1,6 @@
 language: java
+before_install:
+- chmod +x ./gwtvisualization/lib/run_gwtvisualization_install.sh
 script:
 - mvn clean install -Pheroku,context
 deploy:
