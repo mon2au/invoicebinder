@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.invoicebinder</groupId>
+    <artifactId>InvoiceBinderParent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>InvoiceBinderParent</name>
+    <url>http://invoicebinder.com</url>
+
+    <modules>
+        <module>gwtvisualization</module>
+        <module>invoicebindercore</module>
+        <module>invoicebinder</module>
+        <module>invoicebinderhome</module>
+    </modules>
+</project>
