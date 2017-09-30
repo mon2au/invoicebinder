@@ -1,6 +1,5 @@
 language: java
 script:
-- chmod +x ./gwtvisualization/lib/*.sh
 - mvn clean install -Pheroku,context
 deploy:
   provider: heroku
