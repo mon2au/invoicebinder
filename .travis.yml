@@ -7,3 +7,5 @@ deploy:
   provider: heroku
   api_key: c5db2b62-bb8e-4453-8947-1c47a803d9f7
   app: invoicebinder
+  on:
+    branch: develop
