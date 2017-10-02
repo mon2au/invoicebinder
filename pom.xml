@@ -14,6 +14,7 @@
         <module>gwtvisualization</module>
         <module>invoicebindercore</module>
         <module>invoicebinder</module>
-        <module>invoicebinderhome</module>
+        <!-- Not needed for heroku builds -->
+        <!-- <module>invoicebinderhome</module> -->
     </modules>
 </project>
