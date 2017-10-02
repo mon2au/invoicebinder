@@ -295,11 +295,14 @@
                                 <configuration>
                                     <tasks>
                                         <delete file="${project.build.outputDirectory}/appSettings.properties" />
+                                        <delete file="${project.build.outputDirectory}/logging.xml" />
                                         <delete file="${project.build.outputDirectory}/contextSettings.properties"/>
                                         <copy file="src/main/resources/appSettings.heroku.properties"
                                               tofile="${project.build.outputDirectory}/appSettings.properties" />
                                         <copy file="src/main/resources/contextSettings.heroku.properties"
                                               tofile="${project.build.outputDirectory}/contextSettings.properties"/>
+                                        <copy file="src/main/resources/logging.heroku.xml"
+                                              tofile="${project.build.outputDirectory}/logging.xml"/>
                                     </tasks>
                                 </configuration>
                             </execution>
@@ -653,7 +656,8 @@
                         WEB-INF/classes/contextSettings.demo.properties,
                         WEB-INF/classes/contextSettings.test.properties,
                         WEB-INF/classes/contextSettings.hibernate.properties,
-                        WEB-INF/classes/contextSettings.heroku.properties
+                        WEB-INF/classes/contextSettings.heroku.properties,
+                        WEB-INF/classes/logging.heroku.xml
                     </packagingExcludes>
                 </configuration>
             </plugin>
