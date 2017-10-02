@@ -278,9 +278,9 @@
         <profile>
             <id>heroku</id>
             <activation>
-                <os>
-                    <family>unix</family>
-                </os>
+                <property>
+                    <name>env.HEROKU</name>
+                </property>
             </activation>
             <build>
                 <plugins>
@@ -437,6 +437,11 @@
         </profile>
         <profile>
             <id>context</id>
+            <activation>
+                <property>
+                    <name>env.HEROKU</name>
+                </property>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
