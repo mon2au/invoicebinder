@@ -12,9 +12,12 @@ import java.util.ArrayList;
 public interface ConfigServiceClientInt {
     void saveConfigData(ArrayList<ConfigData> config, ConfigurationSection section);
     void loadConfigData(ConfigurationSection section);
-    void loadBusinessConfigDataForNewInvoicePage();  
+    void loadBusinessConfigData(ConfigServiceCallbacks.BusinessConfigTargetPage page);
     void loadCustomAttrConfigDataForNewInvoicePage();      
     void loadAppSettingConfigDataForDashboardPage();
     void loadInvoiceTemplateName(ConfigServiceCallbacks.TemplateNameTargetPage page);
+    void loadEmailConfigData(ConfigServiceCallbacks.EmailConfigTargetPage page);
+    void loadSocialMediaConfigForHomePage();
+    void loadApplicationSettingsForGettingLogoutPrefs();
     void loadPaymentConfig();
 }

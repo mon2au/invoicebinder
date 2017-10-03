@@ -14,11 +14,15 @@ import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.invoicebinder.client.service.config.ConfigServiceCallbacks;
 import com.invoicebinder.client.service.utility.UtilityServiceClientImpl;
+import com.invoicebinder.client.service.config.ConfigServiceClientImpl;
 import com.invoicebinder.client.ui.alert.Loading;
 import com.invoicebinder.client.ui.controller.Main;
 import com.invoicebinder.client.ui.notification.ValidationPopup;
 import com.invoicebinder.shared.enums.AutoLoginViews;
+import com.invoicebinder.shared.enums.config.ConfigurationSection;
+import com.invoicebinder.shared.enums.config.EmailConfigItems;
 import com.invoicebinder.shared.enums.invoice.InvoiceMode;
 import com.invoicebinder.shared.enums.invoice.ViewInvoicePageMode;
 import com.invoicebinder.shared.misc.Constants;
@@ -87,6 +91,7 @@ public class ViewInvoice extends Composite {
     private final Label lblEmailResult;
     private final Label lblMarkPaidResult;
     private final UtilityServiceClientImpl utilityService;
+    private final ConfigServiceClientImpl configService;
     private final Main main;
     private final ViewInvoicePageMode mode;
     private final Loading loading;
@@ -99,8 +104,120 @@ public class ViewInvoice extends Composite {
     private String paymentAmount;
     private String currencyCode;
     private String authToken;
+    private Boolean attachInvoicePDF;
 
     interface ViewInvoiceUiBinder extends UiBinder<Widget, ViewInvoice> {
+    }
+
+    public ViewInvoice(Main main) {
+        this(main, ViewInvoicePageMode.VIEWINVOICE_ADMIN_USER);
+    }
+    public ViewInvoice(Main main, ViewInvoicePageMode mode) {
+        this.main = main;
+        this.mode = mode;
+        this.loading = new Loading();
+        this.attachInvoicePDF = false;
+        initWidget(uiBinder.createAndBindUi(this));
+        this.utilityService = new UtilityServiceClientImpl(GWT.getModuleBaseURL() + "services/utility", this.main);
+        this.configService = new ConfigServiceClientImpl(GWT.getModuleBaseURL() + "services/config", this.main);
+        this.txtEmail = new TextBox();
+        this.txtEmail.getElement().setId("txtEmail");
+        this.txtEmailMessage = new TextArea();
+        this.txtEmailMessage.getElement().setId("txtEmailMessage");
+        this.btnEmailSend = new Button();
+        this.paymentDate = new DateBox();
+        this.invoicePanel = new VerticalPanel();
+        this.lblEmailResult = new Label();
+        this.lblMarkPaidResult = new Label();
+        this.lblEmailResult.setVisible(false);
+        this.lblMarkPaidResult.setVisible(false);
+
+        this.invoiceId = Integer.parseInt(Utils.getParamFromHref("invoiceId"));
+        this.invoice = new Invoice(main, invoiceId, InvoiceMode.VIEWINVOICEDETAILS);
+        this.lblHeader.getElement().setInnerHTML("<h5><span>View Invoice</span></h5>");
+        this.lblInvoiceHeader.getElement().setInnerHTML("<h6><span>Invoice Details</span></h6>");
+
+        invoicePanel.add(invoice);
+        contentPanel.insert(invoicePanel, 0);
+        discPnlEmail.setContent(getEmailContent());
+        //event handlers
+        this.btnPrint.addClickHandler(new DefaultClickHandler(this));
+        this.btnExportPdf.addClickHandler(new DefaultClickHandler(this));
+        this.btnSendEmail.addClickHandler(new DefaultClickHandler(this));
+        this.btnProcessPayment.addClickHandler(new DefaultClickHandler(this));
+        this.btnEmailSend.addClickHandler(new DefaultClickHandler(this));
+        this.btnChangeTemplate.addClickHandler(new DefaultClickHandler(this));
+        this.btnPayPaypal.addClickHandler(new DefaultClickHandler(this));
+        setStyles();
+        setMode();
+        this.configService.loadEmailConfigData(ConfigServiceCallbacks.EmailConfigTargetPage.ViewInvoicePage);
+    }
+
+    private void setMode() {
+        switch (this.mode) {
+            case VIEWINVOICE_AUTOLOGIN_USER: {
+                trEmail.removeFromParent();
+                trEmailDisc.removeFromParent();
+                trRecordPayment.removeFromParent();
+                trRecordPaymentSpacing.removeFromParent();
+                trChangeTemplate.removeFromParent();
+                trChangeTemplateSpacing.removeFromParent();
+            }
+            break;
+
+            case VIEWINVOICE_ADMIN_USER: {
+                trPaypalPayment.removeFromParent();
+                trPaypalPaymentSpacing.removeFromParent();
+            }
+            break;
+        }
+    }
+
+    private void setStyles() {
+        invoicePanel.setStyleName("invoice-main-container");
+        mainPanel.setStyleName("container");
+        txtEmail.setStyleName("small-text-box");
+        txtEmailMessage.setStyleName("text-area");
+        paymentDate.setStyleName("small-text-box");
+        btnPrint.setStyleName("appbutton-default");
+        btnExportPdf.setStyleName("appbutton-default");
+        btnProcessPayment.setStyleName("appbutton-default");
+        btnSendEmail.setStyleName("appbutton-default");
+        btnChangeTemplate.setStyleName("appbutton-default");
+        btnPayPaypal.setStyleName("appbutton-default");
+        btnPrint.setWidth("150px");
+        btnExportPdf.setWidth("150px");
+        btnProcessPayment.setWidth("150px");
+        btnSendEmail.setWidth("150px");
+        btnEmailSend.setStyleName("appbutton-default");
+
+    }
+    private VerticalPanel getEmailContent() {
+        VerticalPanel emailContent = new VerticalPanel();
+        emailContent.setSpacing(Constants.PANEL_CELL_SPACING);
+        emailContent.setWidth("210px");
+        txtEmailMessage.setSize("200px", "150px");
+        btnEmailSend.setText("Send");
+        emailContent.add(new Label("Client email address"));
+        emailContent.add(txtEmail);
+        emailContent.add(new Label("Message"));
+        emailContent.add(txtEmailMessage);
+        emailContent.add(btnEmailSend);
+        emailContent.add(lblEmailResult);
+        return emailContent;
+    }
+    private String generateContentsForInvoicePDF() {
+        StringBuilder contents = new StringBuilder();
+
+        contents.append("<html>");
+        contents.append("<head>");
+        contents.append("<link href=\"").append(GWT.getHostPageBaseURL()).append("css/default.css\" rel=\"stylesheet\" type=\"text/css\" />");
+        contents.append("</head>");
+        contents.append("<body>");
+        contents.append(invoice.getElement().getInnerHTML());
+        contents.append("</body>");
+        contents.append("</html>");
+        return contents.toString();
     }
 
     public void updateInvoiceDetails(ViewInvoiceInfo viewInvoiceInfo) {
@@ -201,116 +318,17 @@ public class ViewInvoice extends Composite {
         }
     }
 
+    public void updateEmailConfig(ArrayList<ConfigData> list) {
+
+        HashMap<String, String> templateData = new HashMap();
+        for (ConfigData data : list) {
+            templateData.put(data.getKey(), data.getValue());
+        }
+        this.attachInvoicePDF = Boolean.valueOf(templateData.get(EmailConfigItems.EMAILINVOICEPDF.toString()));
+    }
+
     public void createInvoiceBasedOnInvoiceTemplateForInvoicePage(ArrayList<ConfigData> templateData) {
         this.invoice.createInvoiceBasedOnInvoiceTemplate(templateData);
-    }
-
-    public ViewInvoice(Main main) {
-        this(main, ViewInvoicePageMode.VIEWINVOICE_ADMIN_USER);
-    }
-    public ViewInvoice(Main main, ViewInvoicePageMode mode) {
-        this.main = main;
-        this.mode = mode;
-        this.loading = new Loading();
-        initWidget(uiBinder.createAndBindUi(this));
-        this.utilityService = new UtilityServiceClientImpl(GWT.getModuleBaseURL() + "services/utility", this.main);
-        this.txtEmail = new TextBox();
-        this.txtEmail.getElement().setId("txtEmail");
-        this.txtEmailMessage = new TextArea();
-        this.txtEmailMessage.getElement().setId("txtEmailMessage");
-        this.btnEmailSend = new Button();
-        this.paymentDate = new DateBox();
-        this.invoicePanel = new VerticalPanel();
-        this.lblEmailResult = new Label();
-        this.lblMarkPaidResult = new Label();
-        this.lblEmailResult.setVisible(false);
-        this.lblMarkPaidResult.setVisible(false);
-
-        this.invoiceId = Integer.parseInt(Utils.getParamFromHref("invoiceId"));
-        this.invoice = new Invoice(main, invoiceId, InvoiceMode.VIEWINVOICEDETAILS);
-        this.lblHeader.getElement().setInnerHTML("<h5><span>View Invoice</span></h5>");
-        this.lblInvoiceHeader.getElement().setInnerHTML("<h6><span>Invoice Details</span></h6>");
-
-        invoicePanel.add(invoice);
-        contentPanel.insert(invoicePanel, 0);
-        discPnlEmail.setContent(getEmailContent());
-        //event handlers
-        this.btnPrint.addClickHandler(new DefaultClickHandler(this));
-        this.btnExportPdf.addClickHandler(new DefaultClickHandler(this));
-        this.btnSendEmail.addClickHandler(new DefaultClickHandler(this));
-        this.btnProcessPayment.addClickHandler(new DefaultClickHandler(this));
-        this.btnEmailSend.addClickHandler(new DefaultClickHandler(this));
-        this.btnChangeTemplate.addClickHandler(new DefaultClickHandler(this));
-        this.btnPayPaypal.addClickHandler(new DefaultClickHandler(this));
-        setStyles();
-        setMode();
-    }
-
-    private void setMode() {
-        switch (this.mode) {
-            case VIEWINVOICE_AUTOLOGIN_USER: {
-                trEmail.removeFromParent();
-                trEmailDisc.removeFromParent();
-                trRecordPayment.removeFromParent();
-                trRecordPaymentSpacing.removeFromParent();
-                trChangeTemplate.removeFromParent();
-                trChangeTemplateSpacing.removeFromParent();
-            }
-            break;
-
-            case VIEWINVOICE_ADMIN_USER: {
-                trPaypalPayment.removeFromParent();
-                trPaypalPaymentSpacing.removeFromParent();
-            }
-            break;
-        }
-    }
-
-    private void setStyles() {
-        invoicePanel.setStyleName("invoice-main-container");
-        mainPanel.setStyleName("container");
-        txtEmail.setStyleName("small-text-box");
-        txtEmailMessage.setStyleName("text-area");
-        paymentDate.setStyleName("small-text-box");
-        btnPrint.setStyleName("appbutton-default");
-        btnExportPdf.setStyleName("appbutton-default");
-        btnProcessPayment.setStyleName("appbutton-default");
-        btnSendEmail.setStyleName("appbutton-default");
-        btnChangeTemplate.setStyleName("appbutton-default");
-        btnPayPaypal.setStyleName("appbutton-default");
-        btnPrint.setWidth("150px");
-        btnExportPdf.setWidth("150px");
-        btnProcessPayment.setWidth("150px");
-        btnSendEmail.setWidth("150px");
-        btnEmailSend.setStyleName("appbutton-default");
-
-    }
-    private VerticalPanel getEmailContent() {
-        VerticalPanel emailContent = new VerticalPanel();
-        emailContent.setSpacing(Constants.PANEL_CELL_SPACING);
-        emailContent.setWidth("210px");
-        txtEmailMessage.setSize("200px", "150px");
-        btnEmailSend.setText("Send");
-        emailContent.add(new Label("Client email address"));
-        emailContent.add(txtEmail);
-        emailContent.add(new Label("Message"));
-        emailContent.add(txtEmailMessage);
-        emailContent.add(btnEmailSend);
-        emailContent.add(lblEmailResult);
-        return emailContent;
-    }
-    private String generateContentsForInvoicePDF() {
-        StringBuilder contents = new StringBuilder();
-
-        contents.append("<html>");
-        contents.append("<head>");
-        contents.append("<link href=\"").append(GWT.getHostPageBaseURL()).append("css/default.css\" rel=\"stylesheet\" type=\"text/css\" />");
-        contents.append("</head>");
-        contents.append("<body>");
-        contents.append(invoice.getElement().getInnerHTML());
-        contents.append("</body>");
-        contents.append("</html>");
-        return contents.toString();
     }
 
     // <editor-fold defaultstate="collapsed" desc="Event Handlers">        
@@ -351,7 +369,13 @@ public class ViewInvoice extends Composite {
                 mailInfo.setMessage(txtEmailMessage.getText());
                 mailInfo.setRecipientEmail(txtEmail.getText());
 
-                utilityService.sendInvoiceEmailWithPDF(this.pageReference.generateContentsForInvoicePDF(), invoiceInfo, mailInfo, this.pageReference.main, this.pageReference.loading);
+                //check if we need to attach PDF.
+                if (!attachInvoicePDF) {
+                    utilityService.sendInvoiceEmail(invoiceInfo, mailInfo, this.pageReference.main, this.pageReference.loading);
+                }
+                else {
+                    utilityService.sendInvoiceEmailWithPDF(this.pageReference.generateContentsForInvoicePDF(), invoiceInfo, mailInfo, this.pageReference.main, this.pageReference.loading);
+                }
                 event.getNativeEvent().preventDefault();
             }
             if (sender == btnSendEmail) {

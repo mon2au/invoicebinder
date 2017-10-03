@@ -18,4 +18,5 @@ public interface UtilityServiceClientInt {
     void getNextAutoNum(String autoNumId);  
     void createPDFFile(String contentHtml, String downloadFileName);
     void sendInvoiceEmailWithPDF(String contentHtml, InvoiceInfo invoiceInfo, MailInfo mailInfo, Main main, Loading loading);
+    void sendInvoiceEmail(InvoiceInfo invoiceInfo, MailInfo mailInfo, Main main, Loading loading);
 }

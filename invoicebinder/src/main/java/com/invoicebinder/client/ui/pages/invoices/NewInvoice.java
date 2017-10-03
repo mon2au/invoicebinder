@@ -5,6 +5,7 @@
 package com.invoicebinder.client.ui.pages.invoices;
 
 import com.invoicebinder.client.service.client.ClientServiceClientImpl;
+import com.invoicebinder.client.service.config.ConfigServiceCallbacks;
 import com.invoicebinder.client.service.config.ConfigServiceClientImpl;
 import com.invoicebinder.client.service.invoice.InvoiceServiceClientImpl;
 import com.invoicebinder.client.service.product.ProductServiceClientImpl;
@@ -588,7 +589,7 @@ public class NewInvoice extends Composite {
             productService.isProductsTableEmpty();
         }     
 
-        configService.loadBusinessConfigDataForNewInvoicePage();
+        configService.loadBusinessConfigData(ConfigServiceCallbacks.BusinessConfigTargetPage.NewInvoicePage);
         configService.loadCustomAttrConfigDataForNewInvoicePage();
     }
     

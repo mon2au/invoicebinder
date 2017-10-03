@@ -1,5 +1,6 @@
 package com.invoicebinder.client.ui.pages.unrestricted;
 
+import com.invoicebinder.client.service.config.ConfigServiceCallbacks;
 import com.invoicebinder.client.service.config.ConfigServiceClientImpl;
 import com.invoicebinder.client.ui.controller.Main;
 import com.invoicebinder.shared.enums.config.BusinessConfigItems;
@@ -95,6 +96,6 @@ public class HomePage extends Composite {
                 + "output=embed\"></iframe>";
         divMap.setInnerHTML(mapUrl);
         this.configService.loadSocialMediaConfigForHomePage();
-        this.configService.loadBusinessConfigDataForHomePage();
+        this.configService.loadBusinessConfigData(ConfigServiceCallbacks.BusinessConfigTargetPage.HomePage);
     }
 }

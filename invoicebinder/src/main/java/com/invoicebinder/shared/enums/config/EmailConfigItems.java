@@ -10,5 +10,6 @@ package com.invoicebinder.shared.enums.config;
  * @author mon2
  */
 public enum EmailConfigItems {
-    EMAILINVOICETEMPLATE
+    EMAILINVOICETEMPLATE,
+    EMAILINVOICEPDF
 }

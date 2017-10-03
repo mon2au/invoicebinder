@@ -48,7 +48,17 @@ public class UtilityServiceClientImpl implements UtilityServiceClientInt {
         this.service.createPDFFile(contentHtml, invoiceInfo.getInvoiceNumber(),
                 new CreatePDFFileForEmailAttachmentCallback(mailInfo, invoiceInfo, main, loading));
     }
-    
+
+    @Override
+    public void sendInvoiceEmail(InvoiceInfo invoiceInfo, MailInfo mailInfo, Main main, Loading loading) {
+        this.sendInvoiceEmailMessage(invoiceInfo, mailInfo, main, loading);
+    }
+
+    private void sendInvoiceEmailMessage(InvoiceInfo invoiceInfo, MailInfo mailInfo, Main main, Loading loading) {
+        MailServiceClientImpl mailService = new MailServiceClientImpl(GWT.getModuleBaseURL() + "services/mail", main);
+        mailService.sendInvoiceMail(mailInfo, invoiceInfo, loading);
+    }
+
     // <editor-fold defaultstate="collapsed" desc="Callback Handlers"> 
     private class LoadNextAutoNumCallback implements AsyncCallback<String> {
         @Override
@@ -87,7 +97,7 @@ public class UtilityServiceClientImpl implements UtilityServiceClientInt {
                     this.main,
                     this.loading);
         }
-        
+
         private void sendInvoiceEmailAndPDF(String fileName, MailInfo mailInfo, InvoiceInfo invoiceInfo, Main main, Loading loading) {
 
             String[] attachments = new String[1];

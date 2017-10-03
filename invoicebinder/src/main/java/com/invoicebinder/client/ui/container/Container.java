@@ -423,6 +423,9 @@ public class Container extends Composite {
     public void updateCustomAttrDataForNewInvoicePage(ConfigurationSection section, ArrayList<ConfigData> arrayList) {
         this.newInvoice.setConfigData(section, arrayList);
     }
+    public void updateEmailConfigForViewInvoicePage(ArrayList<ConfigData> list) {
+        this.viewInvoice.updateEmailConfig(list);
+    }
     public void updateClientsCount(int count) {
         this.clients.updateTableCount(count);
     }
@@ -470,9 +473,6 @@ public class Container extends Composite {
     }
     public void updateDashboardStats(DashStatsInfo dashStatsInfo) {
         this.dashboard.updateStats(dashStatsInfo);
-    }
-    public void updateApplicationSettingsConfigForApplicationSettingsPage(ConfigurationSection configurationSection, ArrayList<ConfigData> arrayList) {
-        this.config.setConfiguration(configurationSection, arrayList);
     }
     public void updateInvoiceTemplateName(ConfigServiceCallbacks.TemplateNameTargetPage page, ArrayList<ConfigData> arrayList) {
         switch (page) {

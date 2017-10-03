@@ -96,14 +96,20 @@ public class MailServiceImpl extends RemoteServiceServlet implements
                 template = template.replace(entry.getKey(), entry.getValue());
             }
 
-            //add logo
-            if (info.getAttachments() != null && info.getAttachments().length > 0) {
+            if (info.getAttachments() != null) {
+                //add logo attachment at end of array
                 attachmentSize = info.getAttachments().length;
                 String[] attachments = new String[attachmentSize + 1];
                 for (int i = 0; i<attachmentSize; i++) {
                     attachments[i] = info.getAttachments()[i];
                 }
                 attachments[attachmentSize] = new File(logoPath).getAbsolutePath() + "/../../logo/logo.png";
+                info.setAttachments(attachments);
+            }
+            else {
+                //add just the logo attachment
+                String[] attachments = new String[1];
+                attachments[0] = new File(logoPath).getAbsolutePath() + "/../../logo/logo.png";
                 info.setAttachments(attachments);
             }
 

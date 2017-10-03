@@ -11,6 +11,11 @@ public class ConfigServiceCallbacks {
     }
 
     public enum BusinessConfigTargetPage {
-        //TODO
+        NewInvoicePage,
+        HomePage
+    }
+
+    public enum EmailConfigTargetPage {
+        ViewInvoicePage
     }
 }

@@ -14,9 +14,9 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
  * @author mon2
  */
 public interface MailServiceAsync {
-    public void sendContactUsMail(MailInfo info, AsyncCallback<Boolean> asyncCallback);     
-    public void sendInvoiceMail(MailInfo info, InvoiceInfo invoiceInfo, String baseUrl, AsyncCallback<Boolean> asyncCallback);
-    public void sendTestEmail(String recipientEmail, EmailPropertiesInfo emailConfig, AsyncCallback<Boolean> asyncCallback);        
-    public void saveEmailConfigData(EmailPropertiesInfo emailConfig, AsyncCallback<Boolean> asyncCallback); 
-    public void loadEmailConfigData(AsyncCallback<EmailPropertiesInfo> asyncCallback);
+    void sendContactUsMail(MailInfo info, AsyncCallback<Boolean> asyncCallback);
+    void sendInvoiceMail(MailInfo info, InvoiceInfo invoiceInfo, String baseUrl, AsyncCallback<Boolean> asyncCallback);
+    void sendTestEmail(String recipientEmail, EmailPropertiesInfo emailConfig, AsyncCallback<Boolean> asyncCallback);
+    void saveEmailConfigData(EmailPropertiesInfo emailConfig, AsyncCallback<Boolean> asyncCallback);
+    void loadEmailConfigData(AsyncCallback<EmailPropertiesInfo> asyncCallback);
 }

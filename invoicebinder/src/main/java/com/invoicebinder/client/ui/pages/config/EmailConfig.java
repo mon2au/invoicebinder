@@ -49,6 +49,7 @@ public class EmailConfig extends Composite {
     private final TextBox txtEmailFromAddress;
     private final CheckBox chkUseSecureTransport;
     private final TextArea txtInvoiceEmailTemplate;
+    private final CheckBox chkAttachInvoicePDF;
     private final Label lblTestEmailMessage;
     private final Label lblSaveResult;
     private final Label lblSaveResultTemplate;
@@ -77,6 +78,7 @@ public class EmailConfig extends Composite {
             });
             
             txtInvoiceEmailTemplate.setText(emailConfigData.get(EmailConfigItems.EMAILINVOICETEMPLATE.toString()));
+            chkAttachInvoicePDF.setValue(Boolean.valueOf(emailConfigData.get(EmailConfigItems.EMAILINVOICEPDF.toString())));
         }
     }
     
@@ -160,6 +162,7 @@ public class EmailConfig extends Composite {
         lblSaveResultTemplate = new Label();
         lblSaveResultTemplate.setVisible(false);
         chkUseSecureTransport = new CheckBox();
+        chkAttachInvoicePDF = new CheckBox();
         noticePanel = new HorizontalPanel();
         buttonPanel = new HorizontalPanel();
         btnTest = new Button();
@@ -169,6 +172,7 @@ public class EmailConfig extends Composite {
         emailConfigPanel.add(getEmailConfigTable());
         emailConfigPanel.add(getEmailTemplateTable());
         chkUseSecureTransport.setStyleName("check-box");
+        chkAttachInvoicePDF.setStyleName("check-box");
         //buttons
         btnSave = new Button();
         btnSave.setStyleName("appbutton-default");
@@ -243,6 +247,8 @@ public class EmailConfig extends Composite {
         //template information
         table.setHTML(1, 0, "Invoice mail:");
         table.setWidget(1, 1, txtInvoiceEmailTemplate);
+        table.setHTML(2,0,"Attach Invoice PDF:");
+        table.setWidget(2,1,chkAttachInvoicePDF);
         return table;
     }
     
@@ -285,7 +291,9 @@ public class EmailConfig extends Composite {
         mailService.saveEmailConfigData(emailConfig);
         
         data = new ConfigData(EmailConfigItems.EMAILINVOICETEMPLATE.toString(), ConfigurationSection.Email.toString(), txtInvoiceEmailTemplate.getText());
-        lstConfig.add(data);        
+        lstConfig.add(data);
+        data = new ConfigData(EmailConfigItems.EMAILINVOICEPDF.toString(), ConfigurationSection.Email.toString(), chkAttachInvoicePDF.getValue().toString());
+        lstConfig.add(data);
         configService.saveConfigData(lstConfig, ConfigurationSection.Email);
     }
 }

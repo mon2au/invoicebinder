@@ -349,9 +349,6 @@ public class Main extends Composite {
     public void updateInvoiceStatusForInvoicesPage(Boolean aBoolean) {
         this.container.updateInvoicesStatusForInvoicesPage(aBoolean);
     }
-    public void updateNewInvoiceConfig(ConfigurationSection section, ArrayList<ConfigData> arrayList) {
-        this.container.updateNewInvoiceConfig(section, arrayList);
-    }
     public void updateConfigurationPagesConfig(ConfigurationSection section, ArrayList<ConfigData> arrayList) {
         this.container.updateConfigurationPagesConfig(section, arrayList);
     }
@@ -361,8 +358,18 @@ public class Main extends Composite {
     public void updateCustomAttrInNewInvoicePage(ConfigurationSection section, ArrayList<ConfigData> arrayList) {
         this.container.updateCustomAttrDataForNewInvoicePage(section, arrayList);
     }
-    public void updateHomePageConfig(ConfigurationSection section, ArrayList<ConfigData> arrayList) {
-        this.container.updateSocialMediaConfigForHomePage(section, arrayList);
+    public void updateBusinessConfigData(ConfigurationSection section, ConfigServiceCallbacks.BusinessConfigTargetPage page, ArrayList<ConfigData> arrayList) {
+        if (page == ConfigServiceCallbacks.BusinessConfigTargetPage.HomePage) {
+            this.container.updateSocialMediaConfigForHomePage(section, arrayList);
+        }
+        else if(page == ConfigServiceCallbacks.BusinessConfigTargetPage.NewInvoicePage) {
+            this.container.updateNewInvoiceConfig(section, arrayList);
+        }
+    }
+    public void updateEmailConfigData(ConfigServiceCallbacks.EmailConfigTargetPage page, ArrayList<ConfigData> list) {
+        if (page == ConfigServiceCallbacks.EmailConfigTargetPage.ViewInvoicePage) {
+            this.container.updateEmailConfigForViewInvoicePage(list);
+        }
     }
     public void updateClientsCount(int count) {
         this.container.updateClientsCount(count);
@@ -419,10 +426,7 @@ public class Main extends Composite {
     }    
     public void updateDashboardStats(DashStatsInfo dashStatsInfo) {
         this.container.updateDashboardStats(dashStatsInfo);
-    }  
-    public void updateApplicationSettingsConfig(ConfigurationSection configurationSection, ArrayList<ConfigData> arrayList) {
-        this.container.updateApplicationSettingsConfigForApplicationSettingsPage(configurationSection, arrayList);
-    }  
+    }
     public void updateSystemInfo(SystemInfo systemInfo) {
         this.container.updateSystemInfo(systemInfo);
     }
