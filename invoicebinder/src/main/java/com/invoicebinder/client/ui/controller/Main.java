@@ -299,7 +299,6 @@ public class Main extends Composite {
             break;
 
             case paypalnotify: {
-                GWT.debugger();
                 String amount = getParamFromHref("amount");
                 AutoLoginProps loginProps = new AutoLoginProps(getParamFromHref("token"), getParamFromHref("invnum"), new BigDecimal(amount));
                 loginService.authenticateAutoLogin(loginProps, view);

@@ -21,7 +21,6 @@ import com.invoicebinder.client.ui.alert.Loading;
 import com.invoicebinder.client.ui.controller.Main;
 import com.invoicebinder.client.ui.notification.ValidationPopup;
 import com.invoicebinder.shared.enums.AutoLoginViews;
-import com.invoicebinder.shared.enums.config.ConfigurationSection;
 import com.invoicebinder.shared.enums.config.EmailConfigItems;
 import com.invoicebinder.shared.enums.invoice.InvoiceMode;
 import com.invoicebinder.shared.enums.invoice.ViewInvoicePageMode;
