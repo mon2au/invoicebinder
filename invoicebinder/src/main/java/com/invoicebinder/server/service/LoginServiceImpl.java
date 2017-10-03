@@ -71,7 +71,9 @@ public class LoginServiceImpl extends RemoteServiceServlet implements
         AuthenticationResult result = new AuthenticationResult();
         Invoice invoice;
 
-        ServerLogManager.writeInformationLog(LoginServiceImpl.class, "Auto login authentication from view: " + view.name());
+        ServerLogManager.writeDebugLog(LoginServiceImpl.class, "Auto Login View: " + view.name());
+        ServerLogManager.writeDebugLog(LoginServiceImpl.class, String.format("Login Props: InvoiceNumber=%s, InvoiceAmount=%s, AuthToken=%s",
+                loginProps.getInvoiceNumber(),loginProps.getInvoiceAmount(), loginProps.getInvoiceAuthToken()));
 
         invoice = invoiceDAO.authenticateInvoice(loginProps.getInvoiceAmount(), loginProps.getInvoiceAuthToken(), loginProps.getInvoiceNumber());
 

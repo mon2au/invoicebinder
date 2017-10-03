@@ -291,13 +291,7 @@ public class Main extends Composite {
         AutoLoginViews view = AutoLoginViews.valueOf(paramView);
 
         switch (view) {
-            case viewinvoice: {
-                String amount = getParamFromHref("amount");
-                AutoLoginProps loginProps = new AutoLoginProps(getParamFromHref("token"), getParamFromHref("invnum"), new BigDecimal(amount));
-                loginService.authenticateAutoLogin(loginProps, view);
-            }
-            break;
-
+            case viewinvoice:
             case paypalnotify: {
                 String amount = getParamFromHref("amount");
                 AutoLoginProps loginProps = new AutoLoginProps(getParamFromHref("token"), getParamFromHref("invnum"), new BigDecimal(amount));

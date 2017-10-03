@@ -154,6 +154,7 @@ public class ViewInvoice extends Composite {
 
     private void setMode() {
         switch (this.mode) {
+            case VIEWINVOICE_PAYPAL_NOTIFY:
             case VIEWINVOICE_AUTOLOGIN_USER: {
                 trEmail.removeFromParent();
                 trEmailDisc.removeFromParent();
@@ -221,7 +222,6 @@ public class ViewInvoice extends Composite {
 
     public void updateInvoiceDetails(ViewInvoiceInfo viewInvoiceInfo) {
         String amount = String.valueOf(viewInvoiceInfo.getInvoiceInfo().getAmount());
-        //example//[INVOICEBINDER_URL]/view=[AUTOLOGIN_VIEW]&amount=[AUTH_AMOUNT]&token=[AUTH_TOKEN]&invnum=[INVOICE_NUMBER]&invoiceId=[INVOICE_ID]
         String notifyUrl = GWT.getHostPageBaseURL() +"index.html#autologin/view=" + AutoLoginViews.paypalnotify.toString() +
                 "&amount=" + viewInvoiceInfo.getInvoiceInfo().getAmount().toString() +
                 "&token=" + viewInvoiceInfo.getInvoiceInfo().getAuthToken() +

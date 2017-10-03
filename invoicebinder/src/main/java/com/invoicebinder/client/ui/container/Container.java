@@ -757,7 +757,7 @@ public class Container extends Composite {
                 break;
             }
             case auto_showpaypal_notify: {
-                this.viewInvoice = new ViewInvoice(mainPanel, ViewInvoicePageMode.VIEWINVOICE_AUTOLOGIN_USER);
+                this.viewInvoice = new ViewInvoice(mainPanel, ViewInvoicePageMode.VIEWINVOICE_PAYPAL_NOTIFY);
                 this.containerPanel.add(viewInvoice);
                 break;
             }

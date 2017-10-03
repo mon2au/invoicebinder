@@ -5,5 +5,6 @@ package com.invoicebinder.shared.enums.invoice;
  */
 public enum ViewInvoicePageMode {
     VIEWINVOICE_AUTOLOGIN_USER,
+    VIEWINVOICE_PAYPAL_NOTIFY,
     VIEWINVOICE_ADMIN_USER
 }
