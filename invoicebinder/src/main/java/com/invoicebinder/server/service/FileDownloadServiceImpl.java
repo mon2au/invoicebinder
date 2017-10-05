@@ -35,7 +35,7 @@ public class FileDownloadServiceImpl extends HttpServlet {
         String path;
         String[] queryParams;
         
-        ServerLogManager.writeInformationLog(FileDownloadServiceImpl.class, "doGet from FileDiwnloadServiceImpl has been called.");           
+        ServerLogManager.writeInformationLog(FileDownloadServiceImpl.class, "doGet from FileDownloadServiceImpl has been called.");
         
         try {
             ServerLogManager.writeInformationLog(FileDownloadServiceImpl.class, "Query String: " + req.getQueryString());             
@@ -66,7 +66,7 @@ public class FileDownloadServiceImpl extends HttpServlet {
             ServerLogManager.writeErrorLog(FileDownloadServiceImpl.class, getFormattedExceptionMessage(ExceptionType.ServiceException, e));            
         }
         
-        ServerLogManager.writeInformationLog(FileDownloadServiceImpl.class, "doGet from FileDiwnloadServiceImpl call completed.");             
+        ServerLogManager.writeInformationLog(FileDownloadServiceImpl.class, "doGet from FileDownloadServiceImpl call completed.");
     }
 }
 

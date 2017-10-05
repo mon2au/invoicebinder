@@ -25,6 +25,14 @@
         <servlet-name>downloadServlet</servlet-name>
         <url-pattern>/invoicebinder/filedownload</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>paypalNotifyServlet</servlet-name>
+        <servlet-class>com.invoicebinder.server.service.PaypalNotifyServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>paypalNotifyServlet</servlet-name>
+        <url-pattern>/invoicebinder/paypalnotify</url-pattern>
+    </servlet-mapping>
     <!-- Listeners -->
     <listener>
         <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
