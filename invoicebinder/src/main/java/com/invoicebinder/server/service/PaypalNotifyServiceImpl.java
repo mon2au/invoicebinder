@@ -43,5 +43,20 @@ public class PaypalNotifyServiceImpl extends HttpServlet {
         
         ServerLogManager.writeDebugLog(PaypalNotifyServiceImpl.class, "doGet from PaypalNotifyServiceImpl call completed.");
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        ServerLogManager.writeDebugLog(PaypalNotifyServiceImpl.class, "doPost from PaypalNotifyServiceImpl has been called.");
+
+        try {
+            ServerLogManager.writeInformationLog(PaypalNotifyServiceImpl.class, "Query String: " + req.getQueryString());
+        }
+        catch (Exception e) {
+            ServerLogManager.writeErrorLog(PaypalNotifyServiceImpl.class, getFormattedExceptionMessage(ExceptionType.ServiceException, e));
+        }
+
+        ServerLogManager.writeDebugLog(PaypalNotifyServiceImpl.class, "doPost from PaypalNotifyServiceImpl call completed.");
+    }
 }
 
