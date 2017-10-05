@@ -10,5 +10,11 @@
         <Root level="debug" additivity="false">
             <AppenderRef ref="Console" level="debug"/>
         </Root>
+        <Logger name="org.hibernate" level="info" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+        <Logger name="com.invoicebinder.invoicebindercore.spring4gwt" level="info" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
     </Loggers>
 </Configuration>
