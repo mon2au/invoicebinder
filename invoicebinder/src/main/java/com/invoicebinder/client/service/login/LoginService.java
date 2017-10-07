@@ -11,9 +11,9 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
  */
 @RemoteServiceRelativePath("/invoicebinder/services/login")
 public interface LoginService extends RemoteService {
-    public AuthenticationResult authenticateUser(String name, String password, String appName);
-    public AuthenticationResult authenticateAutoLogin(AutoLoginProps loginProps, AutoLoginViews view);
-    public String sendForgotPasswordEmail(String login);
-    public AuthenticationResult getUserFromSession();
-    public void removeUserFromSession();
+    AuthenticationResult authenticateUser(String name, String password, String appName);
+    AuthenticationResult authenticateAutoLogin(AutoLoginProps loginProps, AutoLoginViews view);
+    String sendForgotPasswordEmail(String login);
+    AuthenticationResult getUserFromSession();
+    void removeUserFromSession();
 }

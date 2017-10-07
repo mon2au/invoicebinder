@@ -222,8 +222,9 @@ public class ViewInvoice extends Composite {
 
     public void updateInvoiceDetails(ViewInvoiceInfo viewInvoiceInfo) {
         String amount = String.valueOf(viewInvoiceInfo.getInvoiceInfo().getAmount());
-        String notifyUrl = GWT.getHostPageBaseURL() +"index.html#autologin/view=" + AutoLoginViews.paypalnotify.toString() +
-                "&amount=" + viewInvoiceInfo.getInvoiceInfo().getAmount().toString() +
+
+        String notifyUrl = GWT.getHostPageBaseURL() + "invoicebinder/paypalnotify?" +
+                "amount=" + viewInvoiceInfo.getInvoiceInfo().getAmount().toString() +
                 "&token=" + viewInvoiceInfo.getInvoiceInfo().getAuthToken() +
                 "&invnum=" + viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber() +
                 "&invoiceId=" + String.valueOf(viewInvoiceInfo.getInvoiceInfo().getId());
@@ -390,7 +391,6 @@ public class ViewInvoice extends Composite {
                 event.getNativeEvent().preventDefault();
             }
             if (sender == btnPayPaypal) {
-
                 frmPaypal.submit();
                 event.getNativeEvent().preventDefault();
             }

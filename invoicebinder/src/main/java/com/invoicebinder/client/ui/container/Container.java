@@ -756,11 +756,11 @@ public class Container extends Composite {
                 this.containerPanel.add(viewInvoice);
                 break;
             }
-            case auto_showpaypal_notify: {
-                this.viewInvoice = new ViewInvoice(mainPanel, ViewInvoicePageMode.VIEWINVOICE_PAYPAL_NOTIFY);
-                this.containerPanel.add(viewInvoice);
-                break;
-            }
+//            case auto_showpaypal_notify: {
+//                this.viewInvoice = new ViewInvoice(mainPanel, ViewInvoicePageMode.VIEWINVOICE_PAYPAL_NOTIFY);
+//                this.containerPanel.add(viewInvoice);
+//                break;
+//            }
         }
     }
     // </editor-fold>    

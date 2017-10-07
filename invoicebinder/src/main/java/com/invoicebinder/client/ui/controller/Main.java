@@ -292,7 +292,8 @@ public class Main extends Composite {
 
         switch (view) {
             case viewinvoice:
-            case paypalnotify: {
+            //case paypalnotify:
+                {
                 String amount = getParamFromHref("amount");
                 AutoLoginProps loginProps = new AutoLoginProps(getParamFromHref("token"), getParamFromHref("invnum"), new BigDecimal(amount));
                 loginService.authenticateAutoLogin(loginProps, view);
@@ -456,10 +457,10 @@ public class Main extends Composite {
                     this.show(Views.auto_showinvoice);
                 }
                 break;
-                case paypalnotify: {
-                    this.show(Views.auto_showpaypal_notify);
-                }
-                break;
+//                case paypalnotify: {
+//                    this.show(Views.auto_showpaypal_notify);
+//                }
+//                break;
                 default: {
                     this.showLoginDialog(false);
                 }
