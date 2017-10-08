@@ -14,6 +14,7 @@ import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.invoicebinder.client.logger.ClientLogManager;
 import com.invoicebinder.client.service.config.ConfigServiceCallbacks;
 import com.invoicebinder.client.service.utility.UtilityServiceClientImpl;
 import com.invoicebinder.client.service.config.ConfigServiceClientImpl;
@@ -223,12 +224,13 @@ public class ViewInvoice extends Composite {
     public void updateInvoiceDetails(ViewInvoiceInfo viewInvoiceInfo) {
         String amount = String.valueOf(viewInvoiceInfo.getInvoiceInfo().getAmount());
 
-        String notifyUrl = GWT.getHostPageBaseURL() + "/invoicebinder/paypalnotify?" +
+        String notifyUrl = GWT.getHostPageBaseURL() + "invoicebinder/paypalnotify?" +
                 "amount=" + viewInvoiceInfo.getInvoiceInfo().getAmount().toString() +
                 "&token=" + viewInvoiceInfo.getInvoiceInfo().getAuthToken() +
                 "&invnum=" + viewInvoiceInfo.getInvoiceInfo().getInvoiceNumber() +
                 "&invoiceId=" + String.valueOf(viewInvoiceInfo.getInvoiceInfo().getId());
 
+        ClientLogManager.writeLog("NotifyUrl: " + notifyUrl);
 
         //update view invoice page information and invoice page.
         this.setEmailMessage(viewInvoiceInfo);
