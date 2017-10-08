@@ -17,6 +17,7 @@ public class Constants {
     public static final int COOKIE_TIMEOUT = 1000 * 60 * 60 * 24; //one day
     public static final String DEMOAPP_BASE_URL = "demo";
     public static final String BASEAPP_URL = "index.html";
+    public static final String HEROKUAPP_URL = "herokuapp";
     public static final String DEMOAPP_MESSAGE = "Action not allowed in demo mode.";
     public static final String CONTEXT_FILENAME = "contextFile";
     public static final String DEFAULT_DBNAME = "invoicebinder";

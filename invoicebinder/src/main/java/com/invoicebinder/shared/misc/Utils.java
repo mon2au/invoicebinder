@@ -105,7 +105,7 @@ public class Utils {
         appPath = appPath.replaceAll("/", "");
         
         //enable client logging if this is the demo url or if this is dev mode.
-        if (appPath.equals(Constants.BASEAPP_URL) || appPath.equals(Constants.DEMOAPP_BASE_URL)) {
+        if (appPath.equals(Constants.BASEAPP_URL) || appPath.equals(Constants.DEMOAPP_BASE_URL) || appPath.contains(Constants.HEROKUAPP_URL)) {
             ClientLogManager.EnableClientLogging = true;
         }     
     }
