@@ -113,6 +113,7 @@ public class ViewInvoice extends Composite {
         this(main, ViewInvoicePageMode.VIEWINVOICE_ADMIN_USER);
     }
     public ViewInvoice(Main main, ViewInvoicePageMode mode) {
+        ClientLogManager.writeLog("ViewInvoice Mode: " + mode.toString());
         this.main = main;
         this.mode = mode;
         this.loading = new Loading();
