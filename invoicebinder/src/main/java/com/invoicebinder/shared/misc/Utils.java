@@ -106,7 +106,11 @@ public class Utils {
         
         //enable client logging if this is the demo url or if this is dev mode.
         if (appPath.equals(Constants.BASEAPP_URL) || appPath.equals(Constants.DEMOAPP_BASE_URL) || appPath.contains(Constants.HEROKUAPP_URL)) {
+            GWT.log("Client Logging Enabled.");
             ClientLogManager.EnableClientLogging = true;
-        }     
+        }
+        else {
+            GWT.log("Client Logging Disabled.");
+        }
     }
 }
