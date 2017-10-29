@@ -232,6 +232,7 @@ public class ViewInvoice extends Composite {
                 "&invoiceId=" + String.valueOf(viewInvoiceInfo.getInvoiceInfo().getId());
 
         ClientLogManager.writeLog("NotifyUrl: " + notifyUrl);
+        GWT.log("NotifyUrl: " + notifyUrl);
 
         //update view invoice page information and invoice page.
         this.setEmailMessage(viewInvoiceInfo);
