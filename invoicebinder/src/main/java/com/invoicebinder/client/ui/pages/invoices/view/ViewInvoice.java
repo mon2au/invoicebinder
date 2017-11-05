@@ -47,6 +47,10 @@ import com.invoicebinder.shared.misc.Utils;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import static java.util.logging.Level.*;
 
 /**
  *
@@ -55,6 +59,7 @@ import java.util.HashMap;
 public class ViewInvoice extends Composite {
 
     private static final ViewInvoiceUiBinder uiBinder = GWT.create(ViewInvoiceUiBinder.class);
+    Logger logger = Logger.getLogger(this.getClass().getName());
     @UiField protected VerticalPanel mainPanel;
     @UiField protected HorizontalPanel contentPanel;
     @UiField protected Label lblHeader;
@@ -113,7 +118,7 @@ public class ViewInvoice extends Composite {
         this(main, ViewInvoicePageMode.VIEWINVOICE_ADMIN_USER);
     }
     public ViewInvoice(Main main, ViewInvoicePageMode mode) {
-        GWT.log("ViewInvoice Mode: " + mode.toString());
+        logger.log(INFO, "ViewInvoice Mode: " + mode.toString());
         ClientLogManager.writeLog("ViewInvoice Mode: " + mode.toString());
         this.main = main;
         this.mode = mode;
@@ -234,6 +239,7 @@ public class ViewInvoice extends Composite {
 
         ClientLogManager.writeLog("NotifyUrl: " + notifyUrl);
         GWT.log("NotifyUrl: " + notifyUrl);
+        logger.log(INFO, "NotifyUrl: " + notifyUrl);
 
         //update view invoice page information and invoice page.
         this.setEmailMessage(viewInvoiceInfo);
