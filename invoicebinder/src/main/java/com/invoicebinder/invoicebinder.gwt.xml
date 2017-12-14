@@ -25,7 +25,7 @@
   
   <set-configuration-property name="CssResource.style" value="pretty"/>
 
-  <set-property name="user.agent" value="gecko1_8,safari" />
+  <set-property name="user.agent" value="safari" />
 
   <set-property name="gwt.logging.enabled" value="TRUE"/>
 </module>
