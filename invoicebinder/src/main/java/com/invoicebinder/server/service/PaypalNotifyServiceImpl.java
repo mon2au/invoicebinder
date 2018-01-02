@@ -57,13 +57,13 @@ public class PaypalNotifyServiceImpl extends HttpServlet {
 
         try {
             ServerLogManager.writeInformationLog(PaypalNotifyServiceImpl.class, "Query String: " + req.getQueryString());
-            String amount = getParamFromHref("amount");
-            AutoLoginProps loginProps = new AutoLoginProps(getParamFromHref("token"), getParamFromHref("invnum"), new BigDecimal(amount));
-            AuthenticationResult result = service.authenticateAutoLogin(loginProps, null);
+            //String amount = getParamFromHref("amount");
+            //AutoLoginProps loginProps = new AutoLoginProps(getParamFromHref("token"), getParamFromHref("invnum"), new BigDecimal(amount));
+            //AuthenticationResult result = service.authenticateAutoLogin(loginProps, null);
 
-            if (result.isAuthenticated()) {
-                ServerLogManager.writeDebugLog(PaypalNotifyServiceImpl.class, "Authenticated from PaypalNotify.");
-            }
+            //if (result.isAuthenticated()) {
+            //    ServerLogManager.writeDebugLog(PaypalNotifyServiceImpl.class, "Authenticated from PaypalNotify.");
+            //}
 
         }
         catch (Exception e) {
